@@ -1,5 +1,5 @@
 
-PageStudio Developer Guide
+PageStudioCMS Developer Guide
 ==========================
 
 .. contents::
@@ -21,7 +21,7 @@ Basic Info
     general/multilangual-setup
     general/themes
 
-Installation
+Guides
 ############
 
 .. toctree::
@@ -29,6 +29,7 @@ Installation
     :maxdepth: 2
     
     installation/index
+    guides/tags
 
 Modules
 #######

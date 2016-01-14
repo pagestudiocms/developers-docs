@@ -84,3 +84,7 @@ include_home="true"
 The #ID of the navigation of which to output.
 
 nav_id="15"
+
+.. toctree::
+   :maxdepth: 2
+   

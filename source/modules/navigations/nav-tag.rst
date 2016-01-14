@@ -4,11 +4,15 @@ Nav Tag
 
 Generates and outputs a navigational list of links.
 
+.. contents::
+   :local:
+   :depth: 1
+
 .. code-block:: php 
 
     {{ navigations:nav nav_id="12" }}
 
-By default the single {{ navigations:nav }} tag will return your links as an unordered list with the following html formatting:
+By default the single ``{{ navigations:nav }}`` tag will return your links as an unordered list with the following html formatting:
 
 .. code-block:: php 
 
@@ -51,29 +55,18 @@ When using the tag block the following tags are available for use in the content
 Parameters
 ##########
 
-    backspace=
-    class=
-    disable_current=
-    id=
-    max_depth=
-    nav_id= *Required
-    nested=
-    start_nav_from_parent_depth=
-    start_nav_on_level_of_current=
-    start_nav_with_kids_of_current=
-    start_node=
-    start_x_levels_above_current=
-    subnav_visiblity=
+.. contents::
+   :local:
+   :depth: 2
 
 backspace=
-**********
+--------
 
 The number of characters to remove from the end of the content on the last iteration. This is used to trim unwanted formatting such as a comma or a line break on the last navigation item.
 
 backspace="2"
 
 Example:
---------
 
 .. code-block:: php 
 
@@ -87,6 +80,7 @@ Home, Page Not Found, About Us
 .. note:: In this example the backspace is 2 because we trimmed a space and a comma. In order for there to be no space after the comma and be able to use a backspace of 1 there whould have to be no whitespace between the comma and the closing {{ /navigations:nav }} tag.
 
 class=
+--------
 
 Allows you to add a class name to the navigation's parent unordered list tag (ex: <ul class="my_class">).
 
@@ -95,37 +89,44 @@ class="my_class"
 .. note:: The nested parameter must not be disabled for this parameter to work.
 
 disable_current=
+--------
 
 Setting this to true will disable adding current and current_trail classes to navigation items. Enabling this parameter will decrease navigation processing times on large navigations.
 
 disable_current="true"
 
 id=
+--------
 
 Allows you to add a id to the navigation's parent unordered list tag (ex: <ul id="my_id">).
 
 id="my_id"
 
 .. note:: The nested parameter must not be disabled for this parameter to work.
+
 max_depth=
+--------
 
 The depth at which to stop outputting navigation links. For example a max depth of 1 would ouput only the root level of the navigation with no children. A max depth of 2 would output the root level and the first level of children.
 
 max_depth="2"
 
 nav_id= *Required
+-------
 
 The #ID of the navigation of which to output.
 
 nav_id="15"
 
 nested=
+--------
 
 By default navigation items are nested in an unordered list. This can be disabled by setting the nested parameter to false.
 
 nested="false"
 
 start_nav_from_parent_depth=
+--------
 
 Returns a navigation subset at the specified depth starting from the root parent of the current nav item.
 
@@ -152,30 +153,35 @@ A parent depth of 1 would return the tree as is, however, a parent depth of 2 wo
     -Sub Page 2
 
 start_nav_on_level_of_current=
+--------
 
 Returns a navigation subset starting at the depth that the current page and it's siblings reside in the navigation.
 
 start_nav_on_level_of_current="true"
 
 start_nav_with_kids_of_current=
+--------
 
 Returns a navigation subset starting with the children of the current page.
 
 start_nav_with_kids_of_current="true"
 
 start_node=
+--------
 
 Returns a navigation subset starting at the depth of the specified navigation id and its siblings reside.
 
 start_node="15"
 
 start_x_levels_above_current=
+--------
 
 This parameter functions similiar to start_nav_from_parent_depth only rather than starting from the top parent and counting down, this parameter starts at the current depth and counts ups.
 
 start_x_levels_above_current="2"
 
 subnav_visiblity=
+--------
 
 Sets the visibility of sub-navigations. There are 3 options available. By default the setting is set as show.
 
@@ -184,3 +190,36 @@ subnav_visibility="hide"    subnav_visibility="current_trail"    subnav_visibili
     hide - Doesn't show any sub-navigations
     current_trail - Only shows sub-navigations that are in the current trail
     show - Shows all sub-navigations (Default)
+    
+framework=
+-------
+
+Allows for Bootstrap html markup. As of version 1.2.0 only allows ``bootstrap`` as an option.
+
+.. code-block:: html
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Brand</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        
+          {{ navigations:nav nav_id="1" framework="bootstrap" }}
+          
+        </div>
+      </div>
+    </nav>
+    
+.. toctree::
+   :maxdepth: 2
+   
