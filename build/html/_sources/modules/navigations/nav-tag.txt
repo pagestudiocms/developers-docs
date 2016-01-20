@@ -14,7 +14,7 @@ Generates and outputs a navigational list of links.
 
 By default the single ``{{ navigations:nav }}`` tag will return your links as an unordered list with the following html formatting:
 
-.. code-block:: php 
+.. code-block:: html
 
     <ul>
         <li class="first"><a href="http://somedomain.com/link1">Link 1</a></li>
@@ -35,7 +35,7 @@ Tag Block
 
 To be much more flexible you can use the nav tag as a tag block and define your own custom formatting.
 
-.. code-block:: php 
+.. code-block:: html
 
     {{ navigations:nav nav_id="12" backspace="34" nested="false" }}
       <span><a href="{{ url }}" target="{{ target}}">{{ title }}</a></span> <span class="delimiter">|</span>

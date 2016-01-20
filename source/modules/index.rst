@@ -25,4 +25,5 @@ Core Modules
     galleries/index
     navigations/index
     settings/index
+    social/index
     users/index

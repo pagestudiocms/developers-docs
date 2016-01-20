@@ -110,6 +110,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../navigations/index.html">Navigations Module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../settings/index.html">Settings Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../social/index.html">Social Module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../users/index.html">Users Module</a></li>
 </ul>
 </li>
@@ -169,59 +170,93 @@
   <div class="section" id="gallery-tag">
 <h1>Gallery Tag<a class="headerlink" href="#gallery-tag" title="Permalink to this headline">¶</a></h1>
 <p>This tag block allows you to output and format a gallery&#8217;s images.</p>
-<div class="highlight-php"><div class="highlight"><pre><span class="x">{{ galleries:gallery gallery_id=&quot;1&quot; }}</span>
-<span class="x">    &lt;div&gt;</span>
-<span class="x">        &lt;img src=&quot;{{ helper:image_thumb image=image width=&quot;150&quot; height=&quot;150&quot; crop=&quot;true&quot; }}&quot; alt=&quot;{{ alt }}&quot; /&gt;</span>
-<span class="x">        &lt;h3&gt;{{ title }}&lt;/h3&gt;</span>
-<span class="x">        {{ description }}</span>
-<span class="x">    &lt;/div&gt;</span>
-<span class="x">{{ /galleries:gallery }}</span>
+<div class="highlight-html"><div class="highlight"><pre>{{ galleries:gallery gallery_id=&quot;1&quot; }}
+    &lt;div&gt;
+        &lt;img src=&quot;{{ helper:image_thumb image=image width=&quot;150&quot; height=&quot;150&quot; crop=&quot;true&quot; }}&quot; alt=&quot;{{ alt }}&quot; /&gt;
+        &lt;h3&gt;{{ title }}&lt;/h3&gt;
+        {{ description }}
+    &lt;/div&gt;
+{{ /galleries:gallery }}
 </pre></div>
 </div>
+<div class="section" id="tags">
+<h2>Tags<a class="headerlink" href="#tags" title="Permalink to this headline">¶</a></h2>
 <p>The following tags are available for use in the tag block&#8217;s content.</p>
-<div class="highlight-php"><div class="highlight"><pre><span class="x">{{ alt }} = Outputs alternative text defined for the image. Intended for use in the &lt;img&gt; alt attribute.</span>
-<span class="x">{{ description }} = Outputs the description that was defined for the image.</span>
-<span class="x">{{ image }} = Outputs the full url for the current image. (Note: Optional parameters are available for thie tag.)</span>
-<span class="x">{{ title }} = Outputs the title that was defined for the current image.</span>
-</pre></div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="75%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Tag</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>{{ alt }}</td>
+<td>Outputs alternative text defined for the image. Intended
+for use in the &lt;img&gt; alt attribute.</td>
+</tr>
+<tr class="row-odd"><td>{{ count }}</td>
+<td>Outputs the current image pointer in the array.</td>
+</tr>
+<tr class="row-even"><td>{{ description }}</td>
+<td>Outputs the description that was defined for the image.</td>
+</tr>
+<tr class="row-odd"><td>{{ image }}</td>
+<td>Outputs the full url for the current image. (Note:
+Optional parameters are available for thie tag.)</td>
+</tr>
+<tr class="row-even"><td>{{ link }}</td>
+<td>Outputs an optional link. Provides the ability to link
+the image to another page.</td>
+</tr>
+<tr class="row-odd"><td>{{ link_text }}</td>
+<td>Outputs (optional) link text.</td>
+</tr>
+<tr class="row-even"><td>{{ title }}</td>
+<td>Outputs the title that was defined for the current image.</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="section" id="parameters">
 <h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
-<p><code class="docutils literal"><span class="pre">gallery_id=</span> <span class="pre">*Required</span></code> The id of the gallery you would like to render and output.</p>
+<p><code class="docutils literal"><span class="pre">gallery_id=</span> <span class="pre">*Required</span></code> The id or the variable name of the gallery you would like to render and output.</p>
 <div class="section" id="example">
 <h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
 <p>Using the glallery module to render a slideshow.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">You can use the <strong>gallery_exists</strong> function to check if a given gallery exists before displaying any HTML to the screen.</p>
+<p class="last">You can use the <code class="docutils literal"><span class="pre">gallery_exists</span></code> function to check if a given gallery exists before displaying any HTML to the screen.</p>
 </div>
-<div class="highlight-php"><div class="highlight"><pre><span class="x">{{ if {galleries:gallery_exists gallery_id=slideshow} }}</span>
-<span class="x">    &lt;!-- flexSlider --&gt;</span>
-<span class="x">    &lt;div class=&quot;flexslider&quot;&gt;</span>
-<span class="x">        &lt;ul class=&quot;slides&quot;&gt;</span>
-<span class="x">            {{ galleries:gallery gallery_id=slideshow }}</span>
-<span class="x">            &lt;li&gt;</span>
-<span class="x">                &lt;img src=&quot;{{ helper:image_thumb image=image crop=&quot;false&quot;}}&quot; alt=&quot;{{ alt }}&quot; /&gt;</span>
-<span class="x">            &lt;/li&gt;</span>
-<span class="x">            {{ /galleries:gallery }}</span>
-<span class="x">        &lt;/ul&gt;</span>
-<span class="x">    &lt;/div&gt;</span>
-<span class="x">{{ endif }}</span>
+<div class="highlight-html"><div class="highlight"><pre>{{ if {galleries:gallery_exists gallery_id=&quot;1&quot;} }}
+    &lt;!-- flexSlider --&gt;
+    &lt;div class=&quot;flexslider&quot;&gt;
+        &lt;ul class=&quot;slides&quot;&gt;
+            {{ galleries:gallery gallery_id=&quot;1&quot; }}
+            &lt;li&gt;
+                &lt;img src=&quot;{{ helper:image_thumb image=image crop=&quot;false&quot;}}&quot; alt=&quot;{{ alt }}&quot; /&gt;
+            &lt;/li&gt;
+            {{ /galleries:gallery }}
+        &lt;/ul&gt;
+    &lt;/div&gt;
+{{ endif }}
 </pre></div>
 </div>
-<p>Alter native option to validate if a slideshow exists.</p>
-<div class="highlight-php"><div class="highlight"><pre><span class="x">{{ if slideshow }}</span>
-<span class="x">    &lt;!-- flexSlider --&gt;</span>
-<span class="x">    &lt;div class=&quot;flexslider&quot;&gt;</span>
-<span class="x">        &lt;ul class=&quot;slides&quot;&gt;</span>
-<span class="x">            {{ galleries:gallery gallery_id=slideshow }}</span>
-<span class="x">            &lt;li&gt;</span>
-<span class="x">                &lt;img src=&quot;{{ helper:image_thumb image=image crop=&quot;false&quot;}}&quot; alt=&quot;{{ alt }}&quot; /&gt;</span>
-<span class="x">            &lt;/li&gt;</span>
-<span class="x">            {{ /galleries:gallery }}</span>
-<span class="x">        &lt;/ul&gt;</span>
-<span class="x">    &lt;/div&gt;</span>
-<span class="x">{{ endif }}</span>
+<p>Alternative option to validate if a slideshow exists.</p>
+<div class="highlight-html"><div class="highlight"><pre>{{ if slideshow }}
+    &lt;!-- flexSlider --&gt;
+    &lt;div class=&quot;flexslider&quot;&gt;
+        &lt;ul class=&quot;slides&quot;&gt;
+            {{ galleries:gallery gallery_id=slideshow }}
+            &lt;li&gt;
+                &lt;img src=&quot;{{ helper:image_thumb image=image crop=&quot;false&quot;}}&quot; alt=&quot;{{ alt }}&quot; /&gt;
+            &lt;/li&gt;
+            {{ /galleries:gallery }}
+        &lt;/ul&gt;
+    &lt;/div&gt;
+{{ endif }}
 </pre></div>
 </div>
 <div class="admonition note">
