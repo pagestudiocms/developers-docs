@@ -7,16 +7,18 @@ Version 1.2.0
 
 **Release Date:** Not yet released
 
-- **New feature:** Auto generating URL slugs for entries | Issue #10 
-- **Update** Navigation plugin now supports Bootstrap navbar HTML markup | Issue #11
+- **Bugfix:** Fixed `Issue #14 <https://github.com/cosmointeractive/pagestudiocms/issues/14>`_ "Unknown column 'published_date' in field list". 
+- **New feature:** Added new variables/fields to the galleries module | `Issue #13 <https://github.com/cosmointeractive/pagestudiocms/issues/13>`_
+- **New feature:** Auto generating URL slugs for entries | `Issue #10 <https://github.com/cosmointeractive/pagestudiocms/issues/10>`_ 
+- **Update** Navigation plugin now supports Bootstrap navbar HTML markup | `Issue #11 <https://github.com/cosmointeractive/pagestudiocms/issues/11>`_ 
 - **New feature:** New Facebook Plugin that displays albums and photos
 - **New feature:** Entry search, ability to build forms that search entry field data
 - **Update** Added html undeordered list markup as default for pagination links
-- **Update** Fixed issue (#6) by upgrading to the latest Google PHP API
-- **Update:** Issue #2 support for recurring events
-- **Bugfix:** Fixed issue #4 dropdowns in editor navigation overlapping each other
+- **Update** Fixed `issue #6 <https://github.com/cosmointeractive/pagestudiocms/issues/6>`_  by upgrading to the latest Google PHP API
+- **Update:** `#2 <https://github.com/cosmointeractive/pagestudiocms/issues/2>`_ support for recurring events
+- **Bugfix:** Fixed `Issue #4 <https://github.com/cosmointeractive/pagestudiocms/issues/4>`_  dropdowns in editor navigation overlapping each other
 - **Update:** Added support to calendar module for reocurring events
-- **Bug Fix:** Fixed issue #1 improperly formatted events json
+- **Bug Fix:** Fixed `Issue #1 <https://github.com/cosmointeractive/pagestudiocms/issues/1>`_  improperly formatted events json
 - **Update:** Upgraded to CodeIniter 2.2.4
 - **New feature:** Ellipsis helper now accepts template tag variable
 - **New feature:** Image Thumnail helper now accepts template tag variable
