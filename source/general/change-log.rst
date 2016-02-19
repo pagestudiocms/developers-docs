@@ -7,6 +7,8 @@ Version 1.2.0
 
 **Release Date:** Not yet released
 
+- **New feaure:** New responsive admin theme
+- **Update:** Applied new page styles to password reset page
 - **Bugfix:** Fixed `Issue #14 <https://github.com/cosmointeractive/pagestudiocms/issues/14>`_ "Unknown column 'published_date' in field list". 
 - **New feature:** Added new variables/fields to the galleries module | `Issue #13 <https://github.com/cosmointeractive/pagestudiocms/issues/13>`_
 - **New feature:** Auto generating URL slugs for entries | `Issue #10 <https://github.com/cosmointeractive/pagestudiocms/issues/10>`_ 
