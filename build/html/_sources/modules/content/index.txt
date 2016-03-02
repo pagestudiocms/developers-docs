@@ -17,3 +17,4 @@ Plugin Tags
     entry-url-tag
     fieldtypes/index
     snippets-tag
+    categories-tag

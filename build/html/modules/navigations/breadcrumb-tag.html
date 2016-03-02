@@ -169,11 +169,11 @@
   <div class="section" id="breadcrumb-tag">
 <h1>Breadcrumb Tag<a class="headerlink" href="#breadcrumb-tag" title="Permalink to this headline">¶</a></h1>
 <p>Generates and outputs a breadcrumb list of links.</p>
-<div class="highlight-php"><div class="highlight"><pre><span class="x">{{ navigations:breadcrumb nav_id=&quot;12&quot; }}</span>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">{{ navigations:breadcrumb nav_id=&quot;12&quot; }}</span>
 </pre></div>
 </div>
 <p>By default the single <code class="docutils literal"><span class="pre">{{</span> <span class="pre">navigations:breadcrumb</span> <span class="pre">}}</span></code> tag will return your links as an unordered list with the following html formatting:</p>
-<div class="highlight-php"><div class="highlight"><pre><span class="x">&lt;ul&gt;</span>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">&lt;ul&gt;</span>
 <span class="x">    &lt;li class=&quot;first&quot;&gt;&lt;a href=&quot;http://somedomain.com/link1&quot;&gt;Link 1&lt;/a&gt;&lt;/li&gt;</span>
 <span class="x">    &lt;li&gt;&lt;a target=&quot;_blank&quot; href=&quot;http://somedomain.com/link2&quot;&gt;Link 2&lt;/a&gt;&lt;/li&gt;</span>
 <span class="x">    &lt;li class=&quot;current last&quot;&gt;&lt;a href=&quot;http://somedomain.com/link3&quot;&gt;Link 3&lt;/a&gt;&lt;/li&gt;</span>
@@ -187,13 +187,13 @@
 <div class="section" id="tag-block">
 <h2>Tag Block<a class="headerlink" href="#tag-block" title="Permalink to this headline">¶</a></h2>
 <p>To be much more flexible you can use the breadcrumb tag as a tag block and define your own custom formatting inside the &lt;li&gt; tags.</p>
-<div class="highlight-php"><div class="highlight"><pre><span class="x">{{ navigations:breadcrumb nav_id=&quot;12&quot; }}</span>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">{{ navigations:breadcrumb nav_id=&quot;12&quot; }}</span>
 <span class="x">  &lt;span&gt;&lt;a href=&quot;{{ url }}&quot; target=&quot;{{ target}}&quot;&gt;{{ title }}&lt;/a&gt;&lt;/span&gt; &lt;span class=&quot;delimiter&quot;&gt;|&lt;/span&gt;</span>
 <span class="x">{{ /navigations:breadcrumb }}</span>
 </pre></div>
 </div>
 <p>When using the tag block the following tags are available for use in the content:</p>
-<div class="highlight-php"><div class="highlight"><pre><span class="x">{{ class }}  = Outputs the defined class for the current link</span>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">{{ class }}  = Outputs the defined class for the current link</span>
 <span class="x">{{ id }}       = Outputs the defined id for the current link</span>
 <span class="x">{{ path }}   = Outputs the full URL for the current link</span>
 <span class="x">{{ target }} = Outputs the target for the current link (ex: _blank)</span>

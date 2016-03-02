@@ -170,7 +170,7 @@
   <div class="section" id="gallery-tag">
 <h1>Gallery Tag<a class="headerlink" href="#gallery-tag" title="Permalink to this headline">¶</a></h1>
 <p>This tag block allows you to output and format a gallery&#8217;s images.</p>
-<div class="highlight-html"><div class="highlight"><pre>{{ galleries:gallery gallery_id=&quot;1&quot; }}
+<div class="highlight-html"><div class="highlight"><pre><span></span>{{ galleries:gallery gallery_id=&quot;1&quot; }}
     &lt;div&gt;
         &lt;img src=&quot;{{ helper:image_thumb image=image width=&quot;150&quot; height=&quot;150&quot; crop=&quot;true&quot; }}&quot; alt=&quot;{{ alt }}&quot; /&gt;
         &lt;h3&gt;{{ title }}&lt;/h3&gt;
@@ -230,7 +230,7 @@ the image to another page.</td>
 <p class="first admonition-title">Note</p>
 <p class="last">You can use the <code class="docutils literal"><span class="pre">gallery_exists</span></code> function to check if a given gallery exists before displaying any HTML to the screen.</p>
 </div>
-<div class="highlight-html"><div class="highlight"><pre>{{ if {galleries:gallery_exists gallery_id=&quot;1&quot;} }}
+<div class="highlight-html"><div class="highlight"><pre><span></span>{{ if {galleries:gallery_exists gallery_id=&quot;1&quot;} }}
     &lt;!-- flexSlider --&gt;
     &lt;div class=&quot;flexslider&quot;&gt;
         &lt;ul class=&quot;slides&quot;&gt;
@@ -245,7 +245,7 @@ the image to another page.</td>
 </pre></div>
 </div>
 <p>Alternative option to validate if a slideshow exists.</p>
-<div class="highlight-html"><div class="highlight"><pre>{{ if slideshow }}
+<div class="highlight-html"><div class="highlight"><pre><span></span>{{ if slideshow }}
     &lt;!-- flexSlider --&gt;
     &lt;div class=&quot;flexslider&quot;&gt;
         &lt;ul class=&quot;slides&quot;&gt;
@@ -263,7 +263,7 @@ the image to another page.</td>
 <p class="first admonition-title">Note</p>
 <p class="last"><strong>slideshow</strong> is the name of your gallery content_type field name.</p>
 </div>
-<div class="highlight-php"><div class="highlight"><pre><span class="x">gallery_id=&quot;2&quot;</span>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">gallery_id=&quot;2&quot;</span>
 </pre></div>
 </div>
 </div>

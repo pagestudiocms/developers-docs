@@ -169,7 +169,7 @@
   <div class="section" id="snippets-tag">
 <h1>Snippets Tag<a class="headerlink" href="#snippets-tag" title="Permalink to this headline">¶</a></h1>
 <p>Provides reusable code and/or content bits that can be used in content types, entries, and themes. Snippets are very powerful in that they inherit content tags from its parent and offers the ability to rename the inherited tags.</p>
-<div class="highlight-php"><div class="highlight"><pre><span class="x">{{ content:snippets snippet=&quot;short_name&quot; my_snippet_title=&quot;title&quot; }}</span>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">{{ content:snippets snippet=&quot;short_name&quot; my_snippet_title=&quot;title&quot; }}</span>
 </pre></div>
 </div>
 <div class="section" id="parameters">
@@ -184,16 +184,16 @@
 </div>
 <div class="section" id="example">
 <h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-php"><div class="highlight"><pre><span class="x">{{ content:snippets snippet=&quot;my_snippet&quot; my_snippet_title=&quot;title&quot; }}</span>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">{{ content:snippets snippet=&quot;my_snippet&quot; my_snippet_title=&quot;title&quot; }}</span>
 </pre></div>
 </div>
 <p>The above example returns the snippet &#8220;short_name&#8221; and renames the parent <code class="docutils literal"><span class="pre">{{</span> <span class="pre">title</span> <span class="pre">}}</span></code> tag to <code class="docutils literal"><span class="pre">{{</span> <span class="pre">my_snippet_title</span> <span class="pre">}}</span></code>. The <code class="docutils literal"><span class="pre">{{</span> <span class="pre">my_snippet_title</span> <span class="pre">}}</span></code> tag can then be used anywhere in the snippet code.</p>
 <p>You can also use dynamic parameters to assign strings to a tag:</p>
-<div class="highlight-php"><div class="highlight"><pre><span class="x">{{ content:snippets snippet=&quot;my_snippet&quot; my_snippet_title=&quot;title&quot; sub_heading=&quot;My Subheading&quot; }}</span>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">{{ content:snippets snippet=&quot;my_snippet&quot; my_snippet_title=&quot;title&quot; sub_heading=&quot;My Subheading&quot; }}</span>
 </pre></div>
 </div>
 <p>Occasionally you might have a scenario where you want to assign a string but there is a parent tag with the same name. You can specify that it is a literal by wrapping it in single quotes:</p>
-<div class="highlight-php"><div class="highlight"><pre><span class="x">{{ content:snippets snippet=&quot;my_snippet&quot; my_snippet_title=&quot;&#39;title&#39;&quot; }}</span>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">{{ content:snippets snippet=&quot;my_snippet&quot; my_snippet_title=&quot;&#39;title&#39;&quot; }}</span>
 </pre></div>
 </div>
 </div>

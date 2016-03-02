@@ -186,7 +186,7 @@
 <div class="section" id="basic-tags">
 <h2><a class="toc-backref" href="#id1">Basic Tags</a><a class="headerlink" href="#basic-tags" title="Permalink to this headline">¶</a></h2>
 <p>At their very basic form, tags are simply a variable:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="p">{{</span> <span class="n">my_var</span> <span class="p">}}</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="p">{{</span> <span class="n">my_var</span> <span class="p">}}</span>
 </pre></div>
 </div>
 <p>When you put that in your markup, it will be replaced by some value. Pretty simple!</p>
@@ -195,12 +195,12 @@
 <p class="last">The white-space inside the curly braces is optional, but does help with aesthetics and readability.</p>
 </div>
 <p>Now let&#8217;s take the example of a common concept in PageStudioCMS: a tag with two words separated by a colon:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="p">{{</span> <span class="n">settings</span><span class="p">:</span><span class="n">site_name</span> <span class="p">}}</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="p">{{</span> <span class="n">settings</span><span class="p">:</span><span class="n">site_name</span> <span class="p">}}</span>
 </pre></div>
 </div>
 <p>This tag has some basic parts: two curly braces on either site, and two text strings separated by a colon. This format tells PageStudioCMS that we want to access a plugin&#8217;s function or plugin&#8217;s variable. The first string, <strong>settings</strong> in this case, tells the tag what plugin to reference, and then the second string, <strong>site_name</strong> in this case, tells the tag what function or variable to call.</p>
 <p>So if we put the above tag in our layout, and our site_name variable was set to &#8220;Bill&#8217;s Bagels&#8221;, then it would return:</p>
-<div class="highlight-python"><div class="highlight"><pre>Bill&#39;s Bagels
+<div class="highlight-python"><div class="highlight"><pre><span></span>Bill&#39;s Bagels
 </pre></div>
 </div>
 </div>
@@ -211,15 +211,15 @@
 <div class="section" id="tag-attributes">
 <h2><a class="toc-backref" href="#id3">Tag Attributes</a><a class="headerlink" href="#tag-attributes" title="Permalink to this headline">¶</a></h2>
 <p>What makes tags really powerful is they can take attributes that give you the freedom to modify the tag output based on input data. Here is an example:</p>
-<div class="highlight-python"><div class="highlight"><pre>{{ url:segments segment=&quot;1&quot; }}
+<div class="highlight-python"><div class="highlight"><pre><span></span>{{ url:segments segment=&quot;1&quot; }}
 </pre></div>
 </div>
 <p>In the above example, we are calling the url plugin which has a <strong>segments</strong> function. This is all well and good, but we can also pass the tag parameters in order to modify the output. In this case, we are telling the tag to get the first segment. So if your URL was <em>http://www.example.com/bills/bagels</em>, this tag would return:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">bills</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">bills</span>
 </pre></div>
 </div>
 <p>You can have multiple parameters as well. So, for example, the <code class="docutils literal"><span class="pre">segments</span></code> function allows you to specify a default value via a second parameter:</p>
-<div class="highlight-python"><div class="highlight"><pre>{{ url:segments segment=&quot;1&quot; default=&quot;home&quot; }}
+<div class="highlight-python"><div class="highlight"><pre><span></span>{{ url:segments segment=&quot;1&quot; default=&quot;home&quot; }}
 </pre></div>
 </div>
 <p>If the first segment is empty, the tag will return &#8220;home&#8221;.</p>
@@ -230,23 +230,23 @@
 <div class="section" id="using-tags-and-variables-in-tag-parameters">
 <h3>Using Tags and Variables In Tag Parameters<a class="headerlink" href="#using-tags-and-variables-in-tag-parameters" title="Permalink to this headline">¶</a></h3>
 <p>Inside quotes, PageStudioCMS cannot parse curly braces. So, for instance, if you wanted to pass the value of the slug from the page plugin, this <strong>will not work</strong>:</p>
-<div class="highlight-python"><div class="highlight"><pre>{{ url:segments segment=&quot;1&quot; default=&quot;{{ page:slug }}&quot; }}
+<div class="highlight-python"><div class="highlight"><pre><span></span>{{ url:segments segment=&quot;1&quot; default=&quot;{{ page:slug }}&quot; }}
 </pre></div>
 </div>
 <p>However, you can pass a plugin function&#8217;s output value or variable by eliminating the curly braces. So, <strong>this will work</strong>:</p>
-<div class="highlight-python"><div class="highlight"><pre>{{ url:segments segment=&quot;1&quot; default=page:slug }}
+<div class="highlight-python"><div class="highlight"><pre><span></span>{{ url:segments segment=&quot;1&quot; default=page:slug }}
 </pre></div>
 </div>
 <p>You can also use tag parameters in functions that are being used as a tag parameter by using a single curly brace with no spaces, and no quotes:</p>
-<div class="highlight-python"><div class="highlight"><pre>{{ url:segments segment=&quot;1&quot; default={foo:bar value=&quot;baz&quot;} }}
+<div class="highlight-python"><div class="highlight"><pre><span></span>{{ url:segments segment=&quot;1&quot; default={foo:bar value=&quot;baz&quot;} }}
 </pre></div>
 </div>
 <p>Although this is an easy solution for single functions and variables, for more complex logic within tag paramters, you can use square braces instead of curly braces, like this:</p>
-<div class="highlight-python"><div class="highlight"><pre>{{ url:segments segment=&quot;1&quot; default=&quot;[[ page:slug ]]&quot; }}
+<div class="highlight-python"><div class="highlight"><pre><span></span>{{ url:segments segment=&quot;1&quot; default=&quot;[[ page:slug ]]&quot; }}
 </pre></div>
 </div>
 <p>PageStudioCMS parses each parameter separately for square brackets, so you can even do logic within your paramters:</p>
-<div class="highlight-python"><div class="highlight"><pre>{{ url:segments segment=&quot;1&quot; default=&quot;[[ if global:environment == &#39;development&#39; ]]dev_home[[ else ]]home[[ endif ]]&quot; }}
+<div class="highlight-python"><div class="highlight"><pre><span></span>{{ url:segments segment=&quot;1&quot; default=&quot;[[ if global:environment == &#39;development&#39; ]]dev_home[[ else ]]home[[ endif ]]&quot; }}
 </pre></div>
 </div>
 </div>
@@ -254,25 +254,25 @@
 <div class="section" id="tag-pairs">
 <h2><a class="toc-backref" href="#id4">Tag Pairs</a><a class="headerlink" href="#tag-pairs" title="Permalink to this headline">¶</a></h2>
 <p>Another powerful feature of PageStudioCMS tags is the ability to use data between tags. Take this example of a blog posts tag:</p>
-<div class="highlight-html"><div class="highlight"><pre>{{ blog:posts limit=&quot;2&quot; order-by=&quot;title&quot; order-dir=&quot;desc&quot; }}
-    <span class="nt">&lt;h2&gt;</span>{{ title }}<span class="nt">&lt;/h2&gt;</span>
+<div class="highlight-html"><div class="highlight"><pre><span></span>{{ blog:posts limit=&quot;2&quot; order-by=&quot;title&quot; order-dir=&quot;desc&quot; }}
+    <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>{{ title }}<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
 {{ /blog:posts }}
 </pre></div>
 </div>
 <p>As you&#8217;ll notice, we have an opening and closing tag here. In this case, the blog <strong>posts</strong> function will repeat and parse the content between our tag pair for each blog post that matches the criteria we set up with our tag parameters. So for this tag, we might get this output:</p>
-<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;h2&gt;</span>Blog Post One<span class="nt">&lt;/h2&gt;</span>
-<span class="nt">&lt;h2&gt;</span>Blog Post Two<span class="nt">&lt;/h2&gt;</span>
+<div class="highlight-html"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Blog Post One<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Blog Post Two<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
 </pre></div>
 </div>
 <p>Tag pairs don&#8217;t necessarily loop through content, however. For example, we can simply use the content between the tags like we would a parameter, like in the format plugin:</p>
-<div class="highlight-php"><div class="highlight"><pre><span class="x">{{ format:markdown }}Let&#39;s _convert_ this to **HTML**.{{ /format:markdown }}</span>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">{{ format:markdown }}Let&#39;s _convert_ this to **HTML**.{{ /format:markdown }}</span>
 </pre></div>
 </div>
 <div class="section" id="single-variable-loops">
 <h3>Single Variable Loops<a class="headerlink" href="#single-variable-loops" title="Permalink to this headline">¶</a></h3>
 <p>Occasionally, single tags can act as arrays of data that you can loop through. You can do so using a similar tag pair syntax:</p>
-<div class="highlight-html"><div class="highlight"><pre>{{ images }}
-    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;{{ url }}&quot;</span> <span class="nt">/&gt;</span>
+<div class="highlight-html"><div class="highlight"><pre><span></span>{{ images }}
+    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;{{ url }}&quot;</span> <span class="p">/&gt;</span>
 {{ /images }}
 </pre></div>
 </div>
@@ -288,8 +288,8 @@
 <div class="section" id="basic-conditionals">
 <h3>Basic Conditionals<a class="headerlink" href="#basic-conditionals" title="Permalink to this headline">¶</a></h3>
 <p>Here is a simple example of a conditional tag statement:</p>
-<div class="highlight-html"><div class="highlight"><pre>{{ if user:logged_in }}
-     <span class="nt">&lt;p&gt;</span>You are logged in.<span class="nt">&lt;/p&gt;</span>
+<div class="highlight-html"><div class="highlight"><pre><span></span>{{ if user:logged_in }}
+     <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>You are logged in.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 {{ endif }}
 </pre></div>
 </div>
@@ -298,8 +298,8 @@
 <div class="section" id="conditional-operators">
 <h3>Conditional Operators<a class="headerlink" href="#conditional-operators" title="Permalink to this headline">¶</a></h3>
 <p>You can use operators to compare values in an if statement. These used to compare two values. Here&#8217;s an example:</p>
-<div class="highlight-html"><div class="highlight"><pre>{{ if {url:segments segment=&quot;2&quot;} == &#39;categories&#39; }}
-    <span class="nt">&lt;p&gt;</span>Looks like you are in the categories section.<span class="nt">&lt;/p&gt;</span>
+<div class="highlight-html"><div class="highlight"><pre><span></span>{{ if {url:segments segment=&quot;2&quot;} == &#39;categories&#39; }}
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Looks like you are in the categories section.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 {{ endif }}
 </pre></div>
 </div>
@@ -351,12 +351,12 @@ or desc, default is asc.</td>
 </tbody>
 </table>
 <p>You can also use the <strong>!</strong> or the <strong>not</strong> logical operator:</p>
-<div class="highlight-html"><div class="highlight"><pre>{{ if !user:logged_in }}
-    <span class="nt">&lt;p&gt;</span>You are not logged in.<span class="nt">&lt;/p&gt;</span>
+<div class="highlight-html"><div class="highlight"><pre><span></span>{{ if !user:logged_in }}
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>You are not logged in.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 {{ endif }}
 
 {{ if not user:logged_in }}
-    <span class="nt">&lt;p&gt;</span>You are not logged in.<span class="nt">&lt;/p&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>You are not logged in.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 {{ endif }}
 </pre></div>
 </div>
@@ -371,7 +371,7 @@ or desc, default is asc.</td>
 </div>
 <div class="section" id="examples">
 <h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-html"><div class="highlight"><pre>{{ if exists foo }}
+<div class="highlight-html"><div class="highlight"><pre><span></span>{{ if exists foo }}
     Foo Exists
 {{ elseif not exists foo }}
     Foo Does Not Exist
@@ -379,13 +379,13 @@ or desc, default is asc.</td>
 </pre></div>
 </div>
 <p>You can also combine it with other conditions:</p>
-<div class="highlight-html"><div class="highlight"><pre>{{ if exists foo and foo !== &#39;bar&#39; }}
+<div class="highlight-html"><div class="highlight"><pre><span></span>{{ if exists foo and foo !== &#39;bar&#39; }}
     Something here
 {{ endif }}
 </pre></div>
 </div>
 <p>The expression <code class="docutils literal"><span class="pre">exists</span> <span class="pre">foo</span></code> evaluates to either <code class="docutils literal"><span class="pre">true</span></code> or <code class="docutils literal"><span class="pre">false</span></code>. Therefore something like this works as well:</p>
-<div class="highlight-html"><div class="highlight"><pre>{{ if exists foo == false }}
+<div class="highlight-html"><div class="highlight"><pre><span></span>{{ if exists foo == false }}
 {{ endif }}
 </pre></div>
 </div>
@@ -393,12 +393,12 @@ or desc, default is asc.</td>
 <div class="section" id="multiple-conditionals">
 <h3>Multiple Conditionals<a class="headerlink" href="#multiple-conditionals" title="Permalink to this headline">¶</a></h3>
 <p>You can have multiple conditionals for some more advanced conditional statements:</p>
-<div class="highlight-html"><div class="highlight"><pre>{{ if variables:custom_var == &#39;foo&#39; }}
-    <span class="nt">&lt;p&gt;</span>Looks like a foo.<span class="nt">&lt;/p&gt;</span>
+<div class="highlight-html"><div class="highlight"><pre><span></span>{{ if variables:custom_var == &#39;foo&#39; }}
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Looks like a foo.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 {{ elseif variables:custom_var == &#39;bar&#39; }}
-    <span class="nt">&lt;p&gt;</span>Looks like a bar.<span class="nt">&lt;/p&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Looks like a bar.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 {{ else }}
-    <span class="nt">&lt;p&gt;</span>Neither foo nor bar.<span class="nt">&lt;/p&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Neither foo nor bar.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 {{ endif }}
 </pre></div>
 </div>
@@ -406,8 +406,8 @@ or desc, default is asc.</td>
 <div class="section" id="logical-operators">
 <h3>Logical Operators<a class="headerlink" href="#logical-operators" title="Permalink to this headline">¶</a></h3>
 <p>You can also use logical operators like so:</p>
-<div class="highlight-html"><div class="highlight"><pre>{{ if variables:custom_var != &#39;foo&#39; and variables:custom_var != &#39;bar&#39; }}
-     <span class="nt">&lt;p&gt;</span>No foos and no bars!<span class="nt">&lt;/p&gt;</span>
+<div class="highlight-html"><div class="highlight"><pre><span></span>{{ if variables:custom_var != &#39;foo&#39; and variables:custom_var != &#39;bar&#39; }}
+     <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>No foos and no bars!<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 {{ endif }}
 </pre></div>
 </div>

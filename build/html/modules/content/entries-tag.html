@@ -170,13 +170,13 @@
 <h1>Entries Tag<a class="headerlink" href="#entries-tag" title="Permalink to this headline">¶</a></h1>
 <p>Queries and returns entries based on the provided parameters.</p>
 <p>Using the single tag operator, entries will be outputted using the layout specified in the entry&#8217;s content type.</p>
-<div class="highlight-php"><div class="highlight"><pre><span class="x">{{ content:entries content_type=&quot;pages&quot; }}</span>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">{{ content:entries content_type=&quot;pages&quot; }}</span>
 </pre></div>
 </div>
 <div class="section" id="tag-block">
 <h2>Tag Block<a class="headerlink" href="#tag-block" title="Permalink to this headline">¶</a></h2>
 <p>Using the tag block operator you can control what fields are outputted and how it is formatted.</p>
-<div class="highlight-php"><div class="highlight"><pre><span class="x">{{ content:entries content_type=&quot;pages&quot; }}</span>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">{{ content:entries content_type=&quot;pages&quot; }}</span>
 <span class="x">    &lt;h1&gt;{{ title }}&lt;/h1&gt;</span>
 <span class="x">    {{ content }}</span>
 <span class="x">{{ /content:entries }}</span>
@@ -186,7 +186,7 @@
 <div class="section" id="pre-defined-tags">
 <h2>Pre-defined Tags<a class="headerlink" href="#pre-defined-tags" title="Permalink to this headline">¶</a></h2>
 <p>All entries have the following pre-defined tags that can be used anywhere in the content:</p>
-<div class="highlight-php"><div class="highlight"><pre><span class="x">{{ title }} - Outputs the title of the page</span>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">{{ title }} - Outputs the title of the page</span>
 <span class="x">{{ title_editable }} - An inline editable title field</span>
 <span class="x">{{ created_date }} - Has an optional parameter to the date/time (ex: format=&quot;m/d/Y h:i:s&quot;)</span>
 <span class="x">{{ modified_date }} - Has an optional parameter to the date/time (ex: format=&quot;m/d/Y h:i:s&quot;)</span>
@@ -265,7 +265,7 @@ Home, Page Not Found, About Us</p>
 <h4>paginate=<a class="headerlink" href="#paginate" title="Permalink to this headline">¶</a></h4>
 <p><code class="docutils literal"><span class="pre">paginate=&quot;top|bottom|both&quot;</span></code></p>
 <p>The opening and closing tags for pagination. This can to be used in conjunction with the paginate= parameter to determine where the contents of this tag will appear. See below for the available variables for use inside this tag. This tag is wrapped around either the single variables (see below) or the next/previous variable pairs.</p>
-<div class="highlight-php"><div class="highlight"><pre><span class="x">{{paginate}} {{/paginate}}</span>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">{{paginate}} {{/paginate}}</span>
 </pre></div>
 </div>
 </div>
@@ -273,15 +273,15 @@ Home, Page Not Found, About Us</p>
 <h4>pagination_links=<a class="headerlink" href="#pagination-links" title="Permalink to this headline">¶</a></h4>
 <p>This variable shows the current page you are on as well as “surrounding” pages in addition to links for next/previous pages and first/last pages.</p>
 <p>You can use <code class="docutils literal"><span class="pre">{{pagination_links}}</span></code> in two ways. It can be used as a single variable:</p>
-<div class="highlight-php"><div class="highlight"><pre><span class="x">{{paginate}} {{ pagination_links }} {{/paginate}}</span>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">{{paginate}} {{ pagination_links }} {{/paginate}}</span>
 </pre></div>
 </div>
 <p>And the output looks like this:</p>
-<div class="highlight-php"><div class="highlight"><pre><span class="x">« First  &lt;  11 12 13 14 15 &gt;  Last »</span>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">« First  &lt;  11 12 13 14 15 &gt;  Last »</span>
 </pre></div>
 </div>
 <p>When used as a pair, you have a lot more flexibility with the markup:</p>
-<div class="highlight-php"><div class="highlight"><pre><span class="x">{{paginate}}</span>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">{{paginate}}</span>
 <span class="x">    {{ if previous_page }}</span>
 <span class="x">        &lt;li&gt;&lt;a href=&quot;{{pagination_url}}&quot; class=&quot;page-next&quot;&gt;Previous Page&lt;/a&gt;&lt;/li&gt;</span>
 <span class="x">    {{ endif }}</span>

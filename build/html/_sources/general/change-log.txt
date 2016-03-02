@@ -7,6 +7,9 @@ Version 1.2.0
 
 **Release Date:** Not yet released
 
+- **Update:** Fixed a few issues with the installer.
+- **Bugfix:** Fixed `Issue #16 <https://github.com/cosmointeractive/pagestudiocms/issues/16>`_ "Issue unable to locate default theme". 
+- **Bugfix:** Fixed `Issue #15 <https://github.com/cosmointeractive/pagestudiocms/issues/15>`_ "Invalid Query: Invalid default value for 'end'". 
 - **New feaure:** New responsive admin theme
 - **Update:** Applied new page styles to password reset page
 - **Bugfix:** Fixed `Issue #14 <https://github.com/cosmointeractive/pagestudiocms/issues/14>`_ "Unknown column 'published_date' in field list". 
