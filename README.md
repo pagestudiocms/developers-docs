@@ -2,7 +2,7 @@
 
 This repo is home to the PageStudioCMS documentation source. 
 
-* [PageStudioCMS Documentation](http://docs.pagestudiocms.com/)
+* [PageStudioCMS Documentation](http://pagestudiocms.com/docs/)
 
 ## Doc Versions
 
