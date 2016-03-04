@@ -179,6 +179,7 @@
 <p><code class="docutils literal"><span class="pre">id=</span></code></p>
 <p><code class="docutils literal"><span class="pre">class=</span></code></p>
 <p><code class="docutils literal"><span class="pre">entry_id</span></code></p>
+<p><code class="docutils literal"><span class="pre">path</span></code></p>
 </div></blockquote>
 <div class="section" id="category-group-id">
 <h3>category_group_id=*<a class="headerlink" href="#category-group-id" title="Permalink to this headline">¶</a></h3>
@@ -235,10 +236,22 @@
 </div>
 <p><strong>Example:</strong></p>
 <div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">{{ content:categories category_group_id=&quot;1&quot; entry_id=&quot;6&quot; }}</span>
+
+<span class="x">/**</span>
+<span class="x"> * Example with entry_id variable found within a content loop</span>
+<span class="x"> */</span>
+<span class="x">{{ content:categories category_group_id=&quot;1&quot; entry_id=entry_id }}</span>
 </pre></div>
 </div>
 <p><strong>Output</strong></p>
 <div class="highlight-html"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+    Only categories relating to entry ID [6] ...
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+
+/**
+ * Output of example with entry_id variable found within a content loop
+ */
+<span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
     Only categories relating to entry ID [6] ...
 <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
 </pre></div>

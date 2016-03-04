@@ -157,6 +157,20 @@ Here is a simple example of a conditional tag statement:
 
 This general structure will look very familiar if you are acquainted with conditionals in languages like PHP. The first tag checks if the value of ``user:logged_in`` is true, and returns what is between that tag and the ``endif`` tag.
 
+As of version 1.2.0 you can now perform conditional statements on ``image_field`` types. 
+
+**Example**
+
+.. code-block:: php 
+    
+    {{ if thumbnail }} {{ thumbnail }} {{ endif }}
+    
+**Output:**
+
+.. code-block:: html
+
+    <img src="path/to/your/image/image_name.jpg" />
+
 Conditional Operators
 ******
 

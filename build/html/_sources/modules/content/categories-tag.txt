@@ -18,6 +18,8 @@ Parameters
     ``class=``
     
     ``entry_id``
+    
+    ``path`` 
 
 category_group_id=*
 ----------
@@ -96,11 +98,23 @@ entry_id="6"
 .. code-block:: php 
 
     {{ content:categories category_group_id="1" entry_id="6" }}
+    
+    /**
+     * Example with entry_id variable found within a content loop
+     */
+    {{ content:categories category_group_id="1" entry_id=entry_id }}
 
 **Output**
 
 .. code-block:: html
 
+    <ul>
+        Only categories relating to entry ID [6] ...
+    </ul>
+    
+    /**
+     * Output of example with entry_id variable found within a content loop
+     */
     <ul>
         Only categories relating to entry ID [6] ...
     </ul>

@@ -294,6 +294,15 @@
 </pre></div>
 </div>
 <p>This general structure will look very familiar if you are acquainted with conditionals in languages like PHP. The first tag checks if the value of <code class="docutils literal"><span class="pre">user:logged_in</span></code> is true, and returns what is between that tag and the <code class="docutils literal"><span class="pre">endif</span></code> tag.</p>
+<p>As of version 1.2.0 you can now perform conditional statements on <code class="docutils literal"><span class="pre">image_field</span></code> types.</p>
+<p><strong>Example</strong></p>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">{{ if thumbnail }} {{ thumbnail }} {{ endif }}</span>
+</pre></div>
+</div>
+<p><strong>Output:</strong></p>
+<div class="highlight-html"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;path/to/your/image/image_name.jpg&quot;</span> <span class="p">/&gt;</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="conditional-operators">
 <h3>Conditional Operators<a class="headerlink" href="#conditional-operators" title="Permalink to this headline">¶</a></h3>
