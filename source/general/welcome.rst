@@ -2,7 +2,7 @@
 Welcome
 =======
 
-Welcome to `PageStudio <http://pagestudiocms.com/>`_ an open source lightweight Content Management System (CMS) built on `CodeIgniter <http://codeigniter.com>`_.
+Welcome to `Page Studio CMS <http://pagestudiocms.com/>`_ an open source lightweight Content Management System (CMS) built on `CodeIgniter <http://codeigniter.com>`_.
 
 Features
 ########
@@ -14,7 +14,7 @@ Features
 -  Google Analytics
 -  Multilingual sites
 -  Content caching
--  Content revisons
+-  Content revisions
 
 Acknowledgments
 ##############
