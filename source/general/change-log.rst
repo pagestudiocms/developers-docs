@@ -7,7 +7,9 @@ Version 1.2.0
 
 **Release Date:** Not yet released
 
-- **New feature:** `Issue #16 <https://github.com/cosmointeractive/pagestudiocms/issues/18>`_ "Add ability to display categories relating to an entry"
+- **Update:** Password reset method now uses PHPMailer for sending smtp email. Random password is now humanly readable. 
+- **New feature:** `Issue #21 <https://github.com/cosmointeractive/pagestudiocms/issues/21>`_ "Added ability to auto generate sitemap"
+- **New feature:** `Issue #16 <https://github.com/cosmointeractive/pagestudiocms/issues/18>`_ "Added ability to display categories relating to an entry"
 - **Update:** Fixed a few issues with the installer.
 - **Bugfix:** Fixed `Issue #16 <https://github.com/cosmointeractive/pagestudiocms/issues/16>`_ "Issue unable to locate default theme". 
 - **Bugfix:** Fixed `Issue #15 <https://github.com/cosmointeractive/pagestudiocms/issues/15>`_ "Invalid Query: Invalid default value for 'end'". 

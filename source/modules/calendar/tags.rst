@@ -8,6 +8,10 @@ Calendar Plugin Tag
 
 Generates a 30 day calendar or a list of upcoming events on pages where embeded.
 
+.. contents::
+   :local:
+   :depth: 1
+
 30 Day Calendar
 ###############
 

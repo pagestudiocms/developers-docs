@@ -9,6 +9,10 @@ Using the single tag operator, entries will be outputted using the layout specif
 .. code-block:: php 
     
     {{ content:entries content_type="pages" }}
+    
+.. contents::
+   :local:
+   :depth: 2
 
 Tag Block
 #########

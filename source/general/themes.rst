@@ -2,6 +2,10 @@
 Themes
 =======
 
+.. contents::
+   :local:
+   :depth: 1
+
 Folder Structure
 ################
 

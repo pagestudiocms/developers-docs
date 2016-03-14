@@ -2,6 +2,10 @@
 Installation
 ======================================
 
+.. contents::
+   :local:
+   :depth: 1
+
 .. _server-requirements:
 
 Server Requirements

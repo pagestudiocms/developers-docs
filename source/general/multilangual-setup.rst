@@ -28,11 +28,11 @@ Folder Setup
             lincense.txt
             README.md
             
-To add a new language to your website, create a new directory in CMS Canvas's root directory and give it the name of the language code (ex: fr). Copy the index.php and the .htaccess from the CMS Canvas's root directory and paste it into this new directory.
+To add a new language to your website, create a new directory in Page Studio's root directory and give it the name of the language code (ex: fr). Copy the index.php and the .htaccess from the Page Studio's root directory and paste it into this new directory.
 
 .. note::: In this example we will be adding French (fr).
 
-Open the ``.htaccess`` in the ``"fr"`` directory and change:
+Open the ``.htaccess`` in the ``fr`` directory and change:
 
 From:
 
@@ -98,7 +98,7 @@ Then in your content type simply reference your field with the following tag syn
 
     {{ {{ lang }}_title }}
 
-Now when you visit your website with the following URL at "http://example.com/fr/" you will see your French translations and now all navigational page links will automatically now point to "http://example.com/fr/some-page".
+Now when you visit your website with the following URL at ``http://example.com/fr/`` you will see your French translations and now all navigational page links will automatically now point to ``http://example.com/fr/some-page``.
 
 Navigations
 ###########

@@ -25,5 +25,6 @@ Core Modules
     galleries/index
     navigations/index
     settings/index
+    sitemap/index
     social/index
     users/index

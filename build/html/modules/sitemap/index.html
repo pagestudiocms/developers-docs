@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Dashboard Module &mdash; PageStudio 1.2.0 documentation</title>
+  <title>Sitemap Module &mdash; PageStudio 1.2.0 documentation</title>
   
 
   
@@ -32,8 +32,8 @@
   
     <link rel="top" title="PageStudio 1.2.0 documentation" href="../../index.html"/>
         <link rel="up" title="Modules" href="../index.html"/>
-        <link rel="next" title="Galleries Module" href="../galleries/index.html"/>
-        <link rel="prev" title="Categories Tag" href="../content/categories-tag.html"/> 
+        <link rel="next" title="Social Module" href="../social/index.html"/>
+        <link rel="prev" title="Site URL Tag" href="../settings/site-url-tag.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -102,13 +102,14 @@
 <li class="toctree-l3"><a class="reference internal" href="../calendar/index.html">Calendar Module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../contact/index.html">Contact Module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../content/index.html">Content Module</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">Dashboard Module</a><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="../dashboard/index.html">Dashboard Module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../galleries/index.html">Galleries Module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../navigations/index.html">Navigations Module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../settings/index.html">Settings Module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../sitemap/index.html">Sitemap Module</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">Sitemap Module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#generating-a-sitemap">Generating a sitemap</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../social/index.html">Social Module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../users/index.html">Users Module</a></li>
 </ul>
@@ -150,11 +151,11 @@
       
           <li><a href="../index.html">Modules</a> &raquo;</li>
       
-    <li>Dashboard Module</li>
+    <li>Sitemap Module</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../../_sources/modules/dashboard/index.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/modules/sitemap/index.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -164,23 +165,44 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="dashboard-module">
-<h1>Dashboard Module<a class="headerlink" href="#dashboard-module" title="Permalink to this headline">¶</a></h1>
-<p>WHAT IS IT?</p>
-<p>The dashboard module is used to show Google Analytics on the dashboard of of your admin panel.
-Setup</p>
-<p>To get analytics showing on your dashboard you need to go to &#8220;System =&gt; General Settings&#8221; and click on the &#8220;Analytics&#8221; tab. On this page you will need to to enter your Google Analytics account information.</p>
-<p>GA Tracking Code:</p>
-<p>This number can almost be found anywhere on your analytics account and always starts with a UA. If you are having trouble finding it click on &#8220;Admin =&gt; Tracking Info&#8221; on your Google Analytics account and it should be listed under &#8220;Tracking ID&#8221;.
-GA EMAIL:</p>
-<p>This is the email address you use to login to your Google Analytics account.
-GA Password:</p>
-<p>This is the password you use to login to your Google Analytics account.
-GA Profile ID:</p>
-<p>This number is the most difficult to find and can be found on your Google Analytics account under &#8220;Admin =&gt; Profiles&#8221;. Once there click on the profile you will be using ex. &#8220;All Website Data&#8221;. Then click on the &#8220;Profile Settings&#8221; tab and your profile id should be listed.</p>
+  <div class="section" id="sitemap-module">
+<h1>Sitemap Module<a class="headerlink" href="#sitemap-module" title="Permalink to this headline">¶</a></h1>
+<p>The sitemap module automatically outputs an XML sitemap for use with Google&#8217;s Webmaster Tools and other similar services.
+It will map not only your site pages (via the Entries module)</p>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><a class="reference internal" href="#generating-a-sitemap" id="id1">Generating a sitemap</a></li>
+</ul>
+</div>
+<div class="section" id="generating-a-sitemap">
+<h2><a class="toc-backref" href="#id1">Generating a sitemap</a><a class="headerlink" href="#generating-a-sitemap" title="Permalink to this headline">¶</a></h2>
+<p>To generate a sitemap simply point your browser to <code class="docutils literal"><span class="pre">/sitemap</span></code> e.g. <code class="docutils literal"><span class="pre">http://yourwebsite.com/sitemap</span></code> though you will see a white page for the time being, your sitemap was successfully generated.</p>
+<p><strong>Sitemap location:</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>/sitemap.xml
+</pre></div>
+</div>
+<p><strong>Sample:</strong></p>
+<div class="highlight-xml"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;urlset</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.sitemaps.org/schemas/sitemap/0.9&quot;</span>
+  <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+  <span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://www.sitemaps.org/schemas/sitemap/0.9</span>
+<span class="s">          http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;url&gt;</span>
+    <span class="nt">&lt;loc&gt;</span>http://website.com/home<span class="nt">&lt;/loc&gt;</span>
+    <span class="nt">&lt;lastmod&gt;</span>2015-11-18T10:12:45-05:00<span class="nt">&lt;/lastmod&gt;</span>
+    <span class="nt">&lt;changefreq&gt;</span>hourly<span class="nt">&lt;/changefreq&gt;</span>
+    <span class="nt">&lt;priority&gt;</span>0.8<span class="nt">&lt;/priority&gt;</span>
+  <span class="nt">&lt;/url&gt;</span>
+
+  ...
+
+<span class="nt">&lt;/urlset&gt;</span>
+</pre></div>
+</div>
 <div class="toctree-wrapper compound">
 <ul class="simple">
 </ul>
+</div>
 </div>
 </div>
 
@@ -191,10 +213,10 @@ GA Profile ID:</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../galleries/index.html" class="btn btn-neutral float-right" title="Galleries Module" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../social/index.html" class="btn btn-neutral float-right" title="Social Module" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../content/categories-tag.html" class="btn btn-neutral" title="Categories Tag" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../settings/site-url-tag.html" class="btn btn-neutral" title="Site URL Tag" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

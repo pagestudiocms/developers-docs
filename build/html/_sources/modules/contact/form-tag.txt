@@ -2,6 +2,10 @@
 Contact Plugin Form Tag
 =======================
 
+.. contents::
+   :local:
+   :depth: 1
+   
 Usage
 #####
 
