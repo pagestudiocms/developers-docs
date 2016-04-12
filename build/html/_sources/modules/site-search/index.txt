@@ -2,7 +2,7 @@
 Site Search Module
 ===============
 
-The Search module allows you to search for anything, anything at all. The way this works is by building up an "index" of searchable items in a "Search index". This index contains fields that can linked back to specific "entries" with some information about what they are called, and what URL the entry can be found on. 
+The Search module allows you to search for entries. 
 
 .. contents::
    :local:
