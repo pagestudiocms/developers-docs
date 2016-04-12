@@ -26,5 +26,6 @@ Core Modules
     navigations/index
     settings/index
     sitemap/index
+    site-search/index
     social/index
     users/index
