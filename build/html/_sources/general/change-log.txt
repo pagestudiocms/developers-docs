@@ -7,6 +7,7 @@ Version 1.2.0
 
 **Release Date:** Not yet released
 
+- **New feature:** `Issue #23 <https://github.com/cosmointeractive/pagestudiocms/issues/23>`_ "Individual entries can now have their own theme layout and rely on the ``content_type`` layout as fallback."
 - **Update:** Password reset method now uses PHPMailer for sending smtp email. Random password is now humanly readable. 
 - **New feature:** `Issue #21 <https://github.com/cosmointeractive/pagestudiocms/issues/21>`_ "Added ability to auto generate sitemap"
 - **New feature:** `Issue #16 <https://github.com/cosmointeractive/pagestudiocms/issues/18>`_ "Added ability to display categories relating to an entry"
