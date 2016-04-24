@@ -7,6 +7,10 @@ Version 1.2.0
 
 **Release Date:** Not yet released
 
+- **Bugfix:** Fixed an issue with the experimental Grid field where Grid Fields are appearing on all entry of the same content_type `issue #24 <https://github.com/cosmointeractive/pagestudiocms/issues/24>`_.
+- **New feature:** Introduced a new experimental feature `Issue #9 <https://github.com/cosmointeractive/pagestudiocms/issues/9>`_ Grid field type that allows various content types to be grouped together. This will allow for more entries customization. 
+- **Bugfix:** Fixed `issue #20 <https://github.com/cosmointeractive/pagestudiocms/issues/20>`_.
+- **Bugfix:** Fixed an issue where the sortable handle pointer icon was missing in the new admin theme `Issue #22 <https://github.com/cosmointeractive/pagestudiocms/issues/22>`_.
 - **New feature:** `Issue #23 <https://github.com/cosmointeractive/pagestudiocms/issues/23>`_ "Individual entries can now have their own theme layout and rely on the ``content_type`` layout as fallback."
 - **Update:** Password reset method now uses PHPMailer for sending smtp email. Random password is now humanly readable. 
 - **New feature:** `Issue #21 <https://github.com/cosmointeractive/pagestudiocms/issues/21>`_ "Added ability to auto generate sitemap"

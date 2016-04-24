@@ -11,7 +11,10 @@ Grid Fields Content Type
 
 **Estimated Completion Date: May 2016**
 
+As of 4/22/2016 This field type is in an experimental phase. Not yet ready for alpha release. 
+
 Provides the ability to dynamically add / delete and sort rows of data similar to a spreadsheet. Each data row can have one or more cells which are assigned to different custom fields.
+
 
 
 Installadble Module System
