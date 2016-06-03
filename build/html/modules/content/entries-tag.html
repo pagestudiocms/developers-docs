@@ -170,81 +170,200 @@
             
   <div class="section" id="entries-tag">
 <h1>Entries Tag<a class="headerlink" href="#entries-tag" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><a class="reference internal" href="#introduction" id="id4">Introduction</a></li>
+<li><a class="reference internal" href="#pre-defined-variables" id="id5">Pre-defined Variables</a></li>
+<li><a class="reference internal" href="#parameters" id="id6">Parameters</a></li>
+</ul>
+</div>
+<div class="section" id="introduction">
+<h2><a class="toc-backref" href="#id4">Introduction</a><a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>Queries and returns entries based on the provided parameters.</p>
 <p>Using the single tag operator, entries will be outputted using the layout specified in the entry&#8217;s content type.</p>
 <div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">{{ content:entries content_type=&quot;pages&quot; }}</span>
 </pre></div>
 </div>
-<div class="contents local topic" id="contents">
+<div class="section" id="tag-block">
+<h3>Tag Block<a class="headerlink" href="#tag-block" title="Permalink to this headline">¶</a></h3>
+<p>Using the tag block operator you can control what fields are outputted and how it is formatted.</p>
+<div class="highlight-html"><div class="highlight"><pre><span></span>{{ content:entries content_type=&quot;pages&quot; }}
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>{{ title }}<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    {{ content }}
+{{ /content:entries }}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="pre-defined-variables">
+<h2><a class="toc-backref" href="#id5">Pre-defined Variables</a><a class="headerlink" href="#pre-defined-variables" title="Permalink to this headline">¶</a></h2>
+<p>All entries have the following pre-defined tags that can be used anywhere in the content:</p>
+<div class="contents local topic" id="table-of-contents">
+<p class="topic-title first">Table of Contents</p>
 <ul class="simple">
-<li><a class="reference internal" href="#tag-block" id="id1">Tag Block</a></li>
-<li><a class="reference internal" href="#pre-defined-tags" id="id2">Pre-defined Tags</a><ul>
-<li><a class="reference internal" href="#parameters" id="id3">Parameters</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#title" id="id7">title=</a></li>
+<li><a class="reference internal" href="#title-editable" id="id8">title_editable=</a></li>
+<li><a class="reference internal" href="#created-date" id="id9">created_date=</a></li>
+<li><a class="reference internal" href="#modified-date" id="id10">modified_date=</a></li>
+<li><a class="reference internal" href="#url-title" id="id11">url_title=</a></li>
+<li><a class="reference internal" href="#slug" id="id12">slug=</a></li>
+<li><a class="reference internal" href="#dynamic-route" id="id13">dynamic_route=</a></li>
+<li><a class="reference internal" href="#content-type" id="id14">content_type=</a></li>
+<li><a class="reference internal" href="#status" id="id15">status=</a></li>
+<li><a class="reference internal" href="#count" id="id16">count=</a></li>
+<li><a class="reference internal" href="#total-results" id="id17">total_results=</a></li>
+<li><a class="reference internal" href="#author-id" id="id18">author_id=</a></li>
+<li><a class="reference internal" href="#author" id="id19">author=</a></li>
+<li><a class="reference internal" href="#meta-title" id="id20">meta_title=</a></li>
+<li><a class="reference internal" href="#meta-description" id="id21">meta_description=</a></li>
+<li><a class="reference internal" href="#meta-keywords" id="id22">meta_keywords=</a></li>
 </ul>
 </div>
-<div class="section" id="tag-block">
-<h2><a class="toc-backref" href="#id1">Tag Block</a><a class="headerlink" href="#tag-block" title="Permalink to this headline">¶</a></h2>
-<p>Using the tag block operator you can control what fields are outputted and how it is formatted.</p>
-<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">{{ content:entries content_type=&quot;pages&quot; }}</span>
-<span class="x">    &lt;h1&gt;{{ title }}&lt;/h1&gt;</span>
-<span class="x">    {{ content }}</span>
+<div class="section" id="title">
+<h3><a class="toc-backref" href="#id7">title=</a><a class="headerlink" href="#title" title="Permalink to this headline">¶</a></h3>
+<p>Outputs the title of the page</p>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">{{ title }}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="title-editable">
+<h3><a class="toc-backref" href="#id8">title_editable=</a><a class="headerlink" href="#title-editable" title="Permalink to this headline">¶</a></h3>
+<p>An inline editable title field</p>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">{{ title_editable }}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="created-date">
+<h3><a class="toc-backref" href="#id9">created_date=</a><a class="headerlink" href="#created-date" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">{{ created_date }} - Has an optional parameter to the date/time (ex: format=&quot;m/d/Y h:i:s&quot;)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="modified-date">
+<h3><a class="toc-backref" href="#id10">modified_date=</a><a class="headerlink" href="#modified-date" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">{{ modified_date }} - Has an optional parameter to the date/time (ex: format=&quot;m/d/Y h:i:s&quot;)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="url-title">
+<h3><a class="toc-backref" href="#id11">url_title=</a><a class="headerlink" href="#url-title" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">{{ url_title }} - The URL title of an dynamic route entry</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="slug">
+<h3><a class="toc-backref" href="#id12">slug=</a><a class="headerlink" href="#slug" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">{{ slug }} - The page URI of the current entry</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="dynamic-route">
+<h3><a class="toc-backref" href="#id13">dynamic_route=</a><a class="headerlink" href="#dynamic-route" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">{{ dynamic_route }} - The dynamic route URI</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="content-type">
+<h3><a class="toc-backref" href="#id14">content_type=</a><a class="headerlink" href="#content-type" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">{{ content_type }} - The content type short name of the current entries content type</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="status">
+<h3><a class="toc-backref" href="#id15">status=</a><a class="headerlink" href="#status" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">{{ status }} - The content type satus (draft|published|closed|disabled)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="count">
+<h3><a class="toc-backref" href="#id16">count=</a><a class="headerlink" href="#count" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">{{ count }} - The current iteration count of the current entry in the loop</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="total-results">
+<h3><a class="toc-backref" href="#id17">total_results=</a><a class="headerlink" href="#total-results" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">{{ total_results }} - The total number of entries returned</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="author-id">
+<h3><a class="toc-backref" href="#id18">author_id=</a><a class="headerlink" href="#author-id" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">{{ author_id }} - The ID of the author of the entry</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="author">
+<h3><a class="toc-backref" href="#id19">author=</a><a class="headerlink" href="#author" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">{{ author }} - Outputs the first and last name of the author of the entry</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="meta-title">
+<h3><a class="toc-backref" href="#id20">meta_title=</a><a class="headerlink" href="#meta-title" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">{{ meta_title }} - Outputs the pages meta title</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="meta-description">
+<h3><a class="toc-backref" href="#id21">meta_description=</a><a class="headerlink" href="#meta-description" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">{{ meta_description }} - Outputs the pages meta description</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="meta-keywords">
+<h3><a class="toc-backref" href="#id22">meta_keywords=</a><a class="headerlink" href="#meta-keywords" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">{{ meta_keywords }} - Outputs the pages meta keywords</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="parameters">
+<h2><a class="toc-backref" href="#id6">Parameters</a><a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
+<div class="contents local topic" id="id1">
+<ul class="simple">
+<li><a class="reference internal" href="#backspace" id="id23">backspace=</a></li>
+<li><a class="reference internal" href="#category" id="id24">category=</a></li>
+<li><a class="reference internal" href="#id2" id="id25">content_type=</a></li>
+<li><a class="reference internal" href="#entry-id" id="id26">entry_id=</a></li>
+<li><a class="reference internal" href="#limit" id="id27">limit=</a></li>
+<li><a class="reference internal" href="#order-by" id="id28">order_by=</a></li>
+<li><a class="reference internal" href="#paginate" id="id29">paginate=</a></li>
+<li><a class="reference internal" href="#pagination-links" id="id30">pagination_links=</a></li>
+<li><a class="reference internal" href="#segment" id="id31">segment=</a></li>
+<li><a class="reference internal" href="#sort" id="id32">sort=</a></li>
+<li><a class="reference internal" href="#id3" id="id33">status=</a></li>
+</ul>
+</div>
+<div class="section" id="backspace">
+<h3><a class="toc-backref" href="#id23">backspace=</a><a class="headerlink" href="#backspace" title="Permalink to this headline">¶</a></h3>
+<p>The number of characters to remove from the end of the content on the last iteration. This is used to trim unwanted formatting such as a comma or a line break on the last entry.</p>
+<p><code class="docutils literal"><span class="pre">backspace=&quot;2&quot;</span></code></p>
+<p><strong>Example:</strong></p>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">{{ content:entries content_type=&quot;pages&quot; backspace=&quot;2&quot; }}</span>
+<span class="x">    ...</span>
 <span class="x">{{ /content:entries }}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="pre-defined-tags">
-<h2><a class="toc-backref" href="#id2">Pre-defined Tags</a><a class="headerlink" href="#pre-defined-tags" title="Permalink to this headline">¶</a></h2>
-<p>All entries have the following pre-defined tags that can be used anywhere in the content:</p>
-<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">{{ title }} - Outputs the title of the page</span>
-<span class="x">{{ title_editable }} - An inline editable title field</span>
-<span class="x">{{ created_date }} - Has an optional parameter to the date/time (ex: format=&quot;m/d/Y h:i:s&quot;)</span>
-<span class="x">{{ modified_date }} - Has an optional parameter to the date/time (ex: format=&quot;m/d/Y h:i:s&quot;)</span>
-<span class="x">{{ url_title }} - The URL title of an dynamic route entry</span>
-<span class="x">{{ slug }} - The page URI of the current entry</span>
-<span class="x">{{ dynamic_route }} - The dynamic route URI</span>
-<span class="x">{{ content_type }} - The content type short name of the current entries content type</span>
-<span class="x">{{ count }} - The current iteration count of the current entry in the loop</span>
-<span class="x">{{ total_results }} - The total number of entries returned</span>
-<span class="x">{{ author_id }} - The ID of the author of the entry</span>
-<span class="x">{{ author }} - Outputs the first and last name of the author of the entry</span>
-<span class="x">{{ meta_title }} - Outputs the pages meta title</span>
-<span class="x">{{ meta_description }} - Outputs the pages meta description</span>
-<span class="x">{{ meta_keywords }} - Outputs the pages meta keywords</span>
-</pre></div>
-</div>
-<div class="section" id="parameters">
-<h3><a class="toc-backref" href="#id3">Parameters</a><a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h3>
-<blockquote>
-<div><p><code class="docutils literal"><span class="pre">backspace=</span></code></p>
-<p><code class="docutils literal"><span class="pre">category=</span></code></p>
-<p><code class="docutils literal"><span class="pre">content_type=</span></code></p>
-<p><code class="docutils literal"><span class="pre">entry_id=</span></code></p>
-<p><code class="docutils literal"><span class="pre">limit=</span></code></p>
-<p><code class="docutils literal"><span class="pre">order_by=</span></code></p>
-<p><code class="docutils literal"><span class="pre">paginate=</span></code></p>
-<p><code class="docutils literal"><span class="pre">segment=</span></code></p>
-<p><code class="docutils literal"><span class="pre">sort=</span></code></p>
-</div></blockquote>
-<div class="section" id="backspace">
-<h4>backspace=<a class="headerlink" href="#backspace" title="Permalink to this headline">¶</a></h4>
-<p>The number of characters to remove from the end of the content on the last iteration. This is used to trim unwanted formatting such as a comma or a line break on the last entry.</p>
-<p>backspace=&#8221;2&#8221;</p>
-<p><strong>Example:</strong></p>
 <p><strong>Output:</strong>
 Home, Page Not Found, About Us</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">In this example the backspace is 2 because we trimmed a space and a comma. In order for there to be no space after the comma and be able to use a backspace of 1 there would have to be no whitespace between the comma and the closing {{ /content:entries }} tag.</p>
+<p class="last">In this example the backspace is 2 because we trimmed a space and a comma. In order for there to be no space after the comma and be able to use a backspace of 1 there would have to be no whitespace between the comma and the closing <code class="docutils literal"><span class="pre">{{</span> <span class="pre">/content:entries</span> <span class="pre">}}</span></code> tag.</p>
 </div>
 </div>
 <div class="section" id="category">
-<h4>category=<a class="headerlink" href="#category" title="Permalink to this headline">¶</a></h4>
-<p>Documentation coming soon.</p>
+<h3><a class="toc-backref" href="#id24">category=</a><a class="headerlink" href="#category" title="Permalink to this headline">¶</a></h3>
+<p>Allows you to get entries relating to a cagegory by passing the category <code class="docutils literal"><span class="pre">id</span></code> as a parameter. Accepts an integer as a parameter.</p>
+<p><strong>Example:</strong></p>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">{{ content:entries content_type=&quot;pages&quot; category=&quot;2&quot; }}</span>
+<span class="x">    ...</span>
+<span class="x">{{ /content:entries }}</span>
+</pre></div>
 </div>
-<div class="section" id="content-type">
-<h4>content_type=<a class="headerlink" href="#content-type" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id2">
+<h3><a class="toc-backref" href="#id25">content_type=</a><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <p>Used to return entries of a specified content type. To reference a content type supply the content type&#8217;s short name.</p>
 <p><code class="docutils literal"><span class="pre">content_type=&quot;pages&quot;</span></code></p>
 <p>To return entries of multiple content types, provide the list of short names separated by a pipe.</p>
@@ -253,17 +372,17 @@ Home, Page Not Found, About Us</p>
 <p><code class="docutils literal"><span class="pre">content_type=&quot;not</span> <span class="pre">pages|events&quot;</span></code></p>
 </div>
 <div class="section" id="entry-id">
-<h4>entry_id=<a class="headerlink" href="#entry-id" title="Permalink to this headline">¶</a></h4>
+<h3><a class="toc-backref" href="#id26">entry_id=</a><a class="headerlink" href="#entry-id" title="Permalink to this headline">¶</a></h3>
 <p>Queries and returns a single entry by its ID. Great for embedding entries inside themes, content types, and other entries to prevent duplicating content.</p>
 <p><code class="docutils literal"><span class="pre">entry_id=&quot;18&quot;</span></code></p>
 </div>
 <div class="section" id="limit">
-<h4>limit=<a class="headerlink" href="#limit" title="Permalink to this headline">¶</a></h4>
+<h3><a class="toc-backref" href="#id27">limit=</a><a class="headerlink" href="#limit" title="Permalink to this headline">¶</a></h3>
 <p>Limit the number of entries returned.</p>
 <p><code class="docutils literal"><span class="pre">limit=&quot;10&quot;</span></code></p>
 </div>
 <div class="section" id="order-by">
-<h4>order_by=<a class="headerlink" href="#order-by" title="Permalink to this headline">¶</a></h4>
+<h3><a class="toc-backref" href="#id28">order_by=</a><a class="headerlink" href="#order-by" title="Permalink to this headline">¶</a></h3>
 <p>Order the returned entries by a content type&#8217;s content field. To set the order by, provide the fields short tag name without brackets.</p>
 <p><code class="docutils literal"><span class="pre">order_by=&quot;title&quot;</span></code></p>
 <p>You can also order by multiple fields by providing a pipe delimited list of field short tags.</p>
@@ -273,15 +392,15 @@ Home, Page Not Found, About Us</p>
 <p>See the sort paramater on how to set the sorting for the order bys.</p>
 </div>
 <div class="section" id="paginate">
-<h4>paginate=<a class="headerlink" href="#paginate" title="Permalink to this headline">¶</a></h4>
+<h3><a class="toc-backref" href="#id29">paginate=</a><a class="headerlink" href="#paginate" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal"><span class="pre">paginate=&quot;top|bottom|both&quot;</span></code></p>
-<p>The opening and closing tags for pagination. This can to be used in conjunction with the paginate= parameter to determine where the contents of this tag will appear. See below for the available variables for use inside this tag. This tag is wrapped around either the single variables (see below) or the next/previous variable pairs.</p>
+<p>The opening and closing tags for pagination. This can be used in conjunction with the <code class="docutils literal"><span class="pre">paginate=</span></code> parameter to determine where the contents of this tag will appear. See below for the available variables for use inside this tag. This tag is wrapped around either the single variables (see below) or the next/previous variable pairs.</p>
 <div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">{{paginate}} {{/paginate}}</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="pagination-links">
-<h4>pagination_links=<a class="headerlink" href="#pagination-links" title="Permalink to this headline">¶</a></h4>
+<h3><a class="toc-backref" href="#id30">pagination_links=</a><a class="headerlink" href="#pagination-links" title="Permalink to this headline">¶</a></h3>
 <p>This variable shows the current page you are on as well as “surrounding” pages in addition to links for next/previous pages and first/last pages.</p>
 <p>You can use <code class="docutils literal"><span class="pre">{{pagination_links}}</span></code> in two ways. It can be used as a single variable:</p>
 <div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">{{paginate}} {{ pagination_links }} {{/paginate}}</span>
@@ -292,26 +411,34 @@ Home, Page Not Found, About Us</p>
 </pre></div>
 </div>
 <p>When used as a pair, you have a lot more flexibility with the markup:</p>
-<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">{{paginate}}</span>
-<span class="x">    {{ if previous_page }}</span>
-<span class="x">        &lt;li&gt;&lt;a href=&quot;{{pagination_url}}&quot; class=&quot;page-next&quot;&gt;Previous Page&lt;/a&gt;&lt;/li&gt;</span>
-<span class="x">    {{ endif }}</span>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">{{ paginate }}</span>
+<span class="x">                    {{ if previous_page }}</span>
+<span class="x">                            &lt;li&gt;&lt;a href=&quot;{{ site_url }}/pages/{{ pagination_url }}&quot; class=&quot;page-next&quot;&gt; &lt; Previous&lt;/a&gt;&lt;/li&gt;</span>
+<span class="x">                    {{ endif }}</span>
 
-<span class="x">    ...</span>
+<span class="x">                    ...</span>
 
-<span class="x">    {{ if next_page }}</span>
-<span class="x">        &lt;li&gt;&lt;a href=&quot;{{pagination_url}}&quot; class=&quot;page-next&quot;&gt;Next Page&lt;/a&gt;&lt;/li&gt;</span>
-<span class="x">    {{ endif }}</span>
-<span class="x">{{/paginate}}</span>
+<span class="x">                    {{ if next_page }}</span>
+<span class="x">                            &lt;li&gt;&lt;a href=&quot;{{ site_url }}/pages/{{ pagination_url }}&quot; class=&quot;page-next&quot;&gt;Next &gt; &lt;/a&gt;&lt;/li&gt;</span>
+<span class="x">                    {{ endif }}</span>
+<span class="x">            {{ /paginate }}</span>
+</pre></div>
+</div>
+<p>And the output looks like this:</p>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">&lt; Previous ... Next &gt;</span>
 </pre></div>
 </div>
 <div class="admonition important">
 <p class="first admonition-title">Important</p>
 <p class="last">In order for the pagination to work the <code class="docutils literal"><span class="pre">limit=</span></code> paramater must also be set in the content opening tag block.</p>
 </div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">In order for the page to route properly the <code class="docutils literal"><span class="pre">Dynamic</span> <span class="pre">Route</span></code> option must set to true for the <code class="docutils literal"><span class="pre">content</span> <span class="pre">type</span></code> that you want to display paginated results. Otherwise you will end up with a 404 error when you click on the pagination links.</p>
+</div>
 </div>
 <div class="section" id="segment">
-<h4>segment=<a class="headerlink" href="#segment" title="Permalink to this headline">¶</a></h4>
+<h3><a class="toc-backref" href="#id31">segment=</a><a class="headerlink" href="#segment" title="Permalink to this headline">¶</a></h3>
 <p>This allows you to query and return a single entry by its entry id or URL title defined in a segment in the current page&#8217;s URL.</p>
 <p><code class="docutils literal"><span class="pre">segment=&quot;3&quot;</span></code></p>
 <p>For example, if the current page&#8217;s URL is:</p>
@@ -320,11 +447,26 @@ Home, Page Not Found, About Us</p>
 <p>If no entry is found by the identifier in the specified segment, the page not found will be returned.</p>
 </div>
 <div class="section" id="sort">
-<h4>sort=<a class="headerlink" href="#sort" title="Permalink to this headline">¶</a></h4>
+<h3><a class="toc-backref" href="#id32">sort=</a><a class="headerlink" href="#sort" title="Permalink to this headline">¶</a></h3>
 <p>By default entries are sorted ascending. You can modify this by setting sort to &#8220;desc&#8221;</p>
 <p><code class="docutils literal"><span class="pre">sort=&quot;desc&quot;</span></code></p>
 <p>If you have multiple order bys you can specify the sort for each order by with a pipe delimited list in the same order as the order bys.</p>
 <p><code class="docutils literal"><span class="pre">sort=&quot;asc|desc&quot;</span></code></p>
+</div>
+<div class="section" id="id3">
+<h3><a class="toc-backref" href="#id33">status=</a><a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal"><span class="pre">status=&quot;published&quot;</span></code></p>
+<p>Restricts the entries result set to a particular status. The three default and always available statuses that can be specified if needed are <code class="docutils literal"><span class="pre">published</span></code> <code class="docutils literal"><span class="pre">draft</span></code> and <code class="docutils literal"><span class="pre">disabled</span></code>. If no status parameter is specified, only published status entries will be returned. You can choose multiple statuses using a pipe:</p>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">status=&quot;draft|reviewed|published|closed&quot;</span>
+</pre></div>
+</div>
+<p>Or exclude statuses using “not”</p>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">status=&quot;not submitted|processing&quot;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Disabled status entries WILL be included in the results when using “not” regardless of whether it is in the piped list.</p>
 </div>
 </div>
 </div>

@@ -7,6 +7,17 @@ Version 1.2.0
 
 **Release Date:** Not yet released
 
+- **Bugfix:** Fixed an issue where adding new Grid fields peformed an update rather than an insert, and thus deleted existing fields in the database.
+- **Enhancement:** Models can be loaded from anywhere. See `issue #32 <https://github.com/cosmointeractive/pagestudiocms/issues/32>`_.
+- **Bugfix:** Fixed an issue where users were being logged in automatically even when activation required was set to true.
+- **Enhancement:** Upgraded PHPMailer from version 5.1 to 5.2.15 (a version that better intergrades into CI and is available to all controllers and models).
+- **Bugfix:** Fixed an issue with the contact module `issue #31 <https://github.com/cosmointeractive/pagestudiocms/issues/31>`_.
+- **Enhancement:** Added loading spinner to ajax submitted forms `Issue #27 <https://github.com/cosmointeractive/pagestudiocms/issues/27>`_.
+- **New feature:** Introduced a new file manager `Issue #30 <https://github.com/cosmointeractive/pagestudiocms/issues/30>`_.
+- **Enhancement:** Added support for Composer `Issue #29 <https://github.com/cosmointeractive/pagestudiocms/issues/29>`_.
+- **Enhancement:** Pagination next and previous links can be used in the pagination tag pairs. See here `Issue #28 <https://github.com/cosmointeractive/pagestudiocms/issues/28>`_.
+- **Enhancement:** Added an ability to the ``content`` module that allows it to filter entries by ``status``.
+- **Enhancement:** Added the ability to add static routing to content types. See more here `Issue #25 <https://github.com/cosmointeractive/pagestudiocms/issues/25>`_.
 - **Bugfix:** Fixed an issue with the experimental Grid field where Grid Fields are appearing on all entry of the same content_type `issue #24 <https://github.com/cosmointeractive/pagestudiocms/issues/24>`_.
 - **New feature:** Introduced a new experimental feature `Issue #9 <https://github.com/cosmointeractive/pagestudiocms/issues/9>`_ Grid field type that allows various content types to be grouped together. This will allow for more entries customization. 
 - **Bugfix:** Fixed `issue #20 <https://github.com/cosmointeractive/pagestudiocms/issues/20>`_.

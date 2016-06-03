@@ -36,18 +36,20 @@ Bullet list
 		}
 	}
     
-.. code-block:: http
+.. code-block:: html
 
-	<html></html>
+	<html>
+		...
+	</html>
 
-    {
-      "status": "ok", 
-      "extended": true,
-      "results": [
-        {"value": 0, "type": "int64"},
-        {"value": 1.0e+3, "type": "decimal"}
-      ]
-    }
+	{
+		"status": "ok", 
+		"extended": true,
+		"results": [
+			{"value": 0, "type": "int64"},
+			{"value": 1.0e+3, "type": "decimal"}
+		]
+	}
     
 .. code-block:: php
     

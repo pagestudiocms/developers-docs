@@ -52,4 +52,6 @@ The best way to get started building a custom theme is to copy the default theme
 
 The next step is to login to the admin panel of your site and go to ``System => General Settings`` and select your newly created theme from the dropdown (Shown below). Also select the default layout for the theme and then click save.
 
+.. figure:: img/settings-select-theme.jpg
+
 The site is now using the newly created theme. From here use ``/theme/default/views/layouts/default.php`` and ``/theme/default/views/partials/header.php`` as a guide on how to build your theme. For a full list of available tags and their usage take a look at the Template Plugin and Theme Plugin.
