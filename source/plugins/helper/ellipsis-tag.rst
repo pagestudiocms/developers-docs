@@ -23,9 +23,8 @@ The ellipsis tag can be used to shorten the content found within template tags.
 Parameters
 ##########
 
-``length= *Require``
-
-``words=``
+.. contents::
+		:local:
 
 length= 
 *******

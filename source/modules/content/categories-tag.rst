@@ -2,6 +2,13 @@
 Categories Tag
 ===========
 
+.. contents::
+   :local:
+   :depth: 1
+
+Introduction
+#####
+
 Displays an unordered list of your blog categories based on the provided parameters. Each category links to its blog category archive page.
 
 .. code-block:: php 
@@ -9,17 +16,10 @@ Displays an unordered list of your blog categories based on the provided paramet
     {{ content:categories category_group_id="1" class="categories" }}
 
 Parameters
-**********
+#######
 
-    ``category_group_id=``
-    
-    ``id=``
-    
-    ``class=``
-    
-    ``entry_id``
-    
-    ``path`` 
+.. contents::
+		:local: 
 
 category_group_id=*
 ----------

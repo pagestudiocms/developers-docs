@@ -7,7 +7,7 @@ Version 1.2.0
 
 **Release Date:** Not yet released
 
-- **Bugfix:** Fixed an issue where adding new Grid fields peformed an update rather than an insert, and thus deleted existing fields in the database.
+- **Bugfix:** Fixed an issue where adding new Grid fields performed an update rather than an insert, and thus deleted existing fields in the database.
 - **Enhancement:** Models can be loaded from anywhere. See `issue #32 <https://github.com/cosmointeractive/pagestudiocms/issues/32>`_.
 - **Bugfix:** Fixed an issue where users were being logged in automatically even when activation required was set to true.
 - **Enhancement:** Upgraded PHPMailer from version 5.1 to 5.2.15 (a version that better intergrades into CI and is available to all controllers and models).

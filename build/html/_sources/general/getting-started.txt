@@ -7,7 +7,7 @@ The first steps with PageStudio is to run the installer. Instructions can be fou
 What You'll Need
 ######
 
-To run PyroCMS, you'll need a development environment (like Apache) with PHP and MySQL installed. Specifically, you'll need:
+To run PageStudioCMS, you'll need a development environment (like Apache) with PHP and MySQL installed. Specifically, you'll need:
 
 -  A web server. Apache 2.x, Abyss Web Server, Uniform Server, Zend Community Server, etc
 -  PHP 5.4 or above

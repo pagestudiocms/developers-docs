@@ -21,31 +21,17 @@ You can also pass a template tag variable to the ``image_thumb`` template tag.
 Parameters
 ##########
 
-``image= *Required``
+.. contents::
+		:local:
 
-``width=``
+crop=
+*****
 
-``height=``
-
-``crop=``
-
-image=
-******
-
-Specifies the path of the source image in which the thumbnail will be generated from.
+If set to "true" the image will be cropped from the center of the image to the provided width and height.
 
 .. code-block:: php 
     
-    image="path/to/image.jpg"
-
-width=
-******
-
-The max width the generated thumbnail can be.
-
-.. code-block:: php 
-    
-    width="250"
+    crop="true"
 
 height=
 *******
@@ -56,11 +42,45 @@ The max height the generated thumbnail can be.
     
     height="250"
 
-crop=
-*****
+image=
+******
 
-If set to "true" the image will be cropped from the center of the image to the provided width and height.
+Specifies the path of the source image in which the thumbnail will be generated from.
 
 .. code-block:: php 
     
-    crop="true"
+    image="path/to/image.jpg"
+    
+source=
+*******
+
+Returns the image file path as oppose to an image tag. Set to false by default.
+
+``source=true|false``
+
+**Example**
+
+.. code-block:: php 
+
+    {{ helper:image_thumb image=image_short_tag source="true" }}
+
+**Output**
+
+.. code-block:: html
+
+    http://website.com/uploads/truck.jpg
+    
+**Output when set to false or not set at all.**
+
+.. code-block:: html
+
+    <img src="http://website.com/uploads/truck.jpg" />
+
+width=
+******
+
+The max width the generated thumbnail can be.
+
+.. code-block:: php 
+    
+    width="250"

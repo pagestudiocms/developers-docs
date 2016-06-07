@@ -11,9 +11,8 @@ Formats and outputs a local time/date based on the format given. If no date para
 Parameters
 ########## 
 
-``format= *Required``
-
-``date=``
+.. contents::
+		:local:
 
 format= 
 *******

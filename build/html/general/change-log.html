@@ -152,6 +152,9 @@
 <h2>Version 1.2.0<a class="headerlink" href="#version-1-2-0" title="Permalink to this headline">¶</a></h2>
 <p><strong>Release Date:</strong> Not yet released</p>
 <ul class="simple">
+<li><strong>Bugfix:</strong> Fixed an issue where adding new Grid fields performed an update rather than an insert, and thus deleted existing fields in the database.</li>
+<li><strong>Enhancement:</strong> Models can be loaded from anywhere. See <a class="reference external" href="https://github.com/cosmointeractive/pagestudiocms/issues/32">issue #32</a>.</li>
+<li><strong>Bugfix:</strong> Fixed an issue where users were being logged in automatically even when activation required was set to true.</li>
 <li><strong>Enhancement:</strong> Upgraded PHPMailer from version 5.1 to 5.2.15 (a version that better intergrades into CI and is available to all controllers and models).</li>
 <li><strong>Bugfix:</strong> Fixed an issue with the contact module <a class="reference external" href="https://github.com/cosmointeractive/pagestudiocms/issues/31">issue #31</a>.</li>
 <li><strong>Enhancement:</strong> Added loading spinner to ajax submitted forms <a class="reference external" href="https://github.com/cosmointeractive/pagestudiocms/issues/27">Issue #27</a>.</li>

@@ -2,6 +2,13 @@
 Entry URL Tag
 =============
 
+.. contents::
+   :local:
+   :depth: 1
+
+Introduction
+#####
+
 Returns the full URL of the entry ID specified.
 
 .. code-block:: php 
@@ -11,10 +18,12 @@ Returns the full URL of the entry ID specified.
 Parameters
 ##########
 
-``entry_id=``
+.. contents::
+		:local:
 
 entry_id=
+---------
 
 The #ID of the entry to return the full URL of.
 
-entry_id="15"
+``entry_id="15"``
