@@ -45,5 +45,6 @@ Core Plugins
     secure/index
     template/index
     theme-tag
+    mobile-detect
 
 .. toctree::
