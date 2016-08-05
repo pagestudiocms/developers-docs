@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Plugins &mdash; PageStudio 1.2.0 documentation</title>
+  <title>Mobile Detect Plugin &mdash; PageStudio 1.2.0 documentation</title>
   
 
   
@@ -31,8 +31,8 @@
 
   
     <link rel="top" title="PageStudio 1.2.0 documentation" href="../index.html"/>
-        <link rel="next" title="Helper Plugin" href="helper/index.html"/>
-        <link rel="prev" title="Users Module" href="../modules/users/index.html"/> 
+        <link rel="up" title="Plugins" href="index.html"/>
+        <link rel="prev" title="&lt;no title&gt;" href="theme-tag.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -98,11 +98,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../modules/index.html">Modules</a></li>
 </ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="">Plugins</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Plugins</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="helper/index.html">Helper Plugin</a></li>
 <li class="toctree-l2"><a class="reference internal" href="secure/index.html">Secure Plugin</a></li>
 <li class="toctree-l2"><a class="reference internal" href="template/index.html">Template Plugin</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mobile-detect.html">Mobile Detect Plugin</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Mobile Detect Plugin</a><ul class="simple">
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -135,11 +137,13 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
-    <li>Plugins</li>
+          <li><a href="index.html">Plugins</a> &raquo;</li>
+      
+    <li>Mobile Detect Plugin</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/plugins/index.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/plugins/mobile-detect.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -149,44 +153,65 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="plugins">
-<h1>Plugins<a class="headerlink" href="#plugins" title="Permalink to this headline">¶</a></h1>
-<p>Plugins are the simplest type of add-on in PageStudio, but they are at the core of how you access functionality via <strong>tags</strong>.</p>
-<p>For an example, let&#8217;s take the user plugin, which is a part of the user module.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Modules can have a plugin as a part of the module, see the module overview for more info on that.</p>
+  <div class="section" id="mobile-detect-plugin">
+<h1>Mobile Detect Plugin<a class="headerlink" href="#mobile-detect-plugin" title="Permalink to this headline">¶</a></h1>
+<p>Mobile Detect is a small plugin that detects if a template was requested by a Mobile Device.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The documentation for this page is incomplete.</p>
 </div>
-<p>Each plugin has a name (or slug) by which we reference it in the tags. For example, if we wanted to get the username of the current user, we would use:</p>
-<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">{{ user:username }}</span>
-</pre></div>
-</div>
-<p>We can also specify a user id and get the username of a specific user:</p>
-<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">{{ user:username user_id=&quot;5&quot; }}</span>
-</pre></div>
-</div>
-<p>Whenever you are using tags in PageStudio, you are interfacing with a plugin.</p>
-<div class="section" id="template-tag-logic">
-<h2>Template Tag Logic<a class="headerlink" href="#template-tag-logic" title="Permalink to this headline">¶</a></h2>
-<p>To get a full idea of what tags can do, make sure you read over the PageStudio tag system documentation.</p>
-</div>
-<div class="section" id="installing-plugins">
-<h2>Installing Plugins<a class="headerlink" href="#installing-plugins" title="Permalink to this headline">¶</a></h2>
-<p>Plugins have no installation procedure. Just upload them to application/plugins/ and use the tag in your template layouts/partials!</p>
-</div>
-<div class="section" id="core-plugins">
-<h2>Core Plugins<a class="headerlink" href="#core-plugins" title="Permalink to this headline">¶</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="helper/index.html">Helper Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="secure/index.html">Secure Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="template/index.html">Template Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mobile-detect.html">Mobile Detect Plugin</a></li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
+<p>The following guide will teach you the basics of tags and how to use them in your layouts.</p>
+<div class="contents local topic" id="contents">
 <ul class="simple">
+<li><a class="reference internal" href="#detect-mobile-device" id="id1">Detect Mobile Device</a></li>
+<li><a class="reference internal" href="#detect-screen-size" id="id2">Detect Screen Size</a></li>
 </ul>
+</div>
+<div class="section" id="detect-mobile-device">
+<h2><a class="toc-backref" href="#id1">Detect Mobile Device</a><a class="headerlink" href="#detect-mobile-device" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-html"><div class="highlight"><pre><span></span>{{ mobile_detect:device }}
+
+{{ if &quot;{{ mobile_detect:device}&quot; == &quot;mobile&quot; }}
+    Greetings mobile visitor!
+{{ endif }}
+{{ if &quot;{{ mobile_detect:device}&quot; == &quot;not_mobile&quot; }}
+    Greetings desktop/laptop visitor!
+{{ endif }}
+
+{{ mobile_detect:redirect }}
+
+{{ mobile_detect:redirect location=&quot;http://m.site.com/&quot; }}
+
+{{ mobile_detect:redirect location=&quot;http://site.com/&quot; redirect=&quot;not_mobile&quot; }}
+
+{{ mobile_detect:redirect ipad=&quot;http://ipad.site.com/&quot; kindlefire=&quot;amazon.com&quot; }}
+
+{{ mobile_detect }}
+    {{ if device == &quot;ipad&quot; }}
+        Hello Steve
+    {{ endif }}
+    {{ if device == &quot;android&quot; }}
+        Hello Bender
+    {{ endif }}
+    {{ if not_mobile}
+        Hello ... Bill ???
+    {{ endif }}
+{{ /mobile_detect }}
+</pre></div>
+</div>
+</div>
+<div class="section" id="detect-screen-size">
+<h2><a class="toc-backref" href="#id2">Detect Screen Size</a><a class="headerlink" href="#detect-screen-size" title="Permalink to this headline">¶</a></h2>
+<div class="admonition danger">
+<p class="first admonition-title">Danger</p>
+<p class="last">The Screen Resolution detection has a bug that causes the page to refresh infinitely.</p>
+</div>
+<div class="highlight-html"><div class="highlight"><pre><span></span>{{ mobile_detect:screen_detect }}
+
+{{ mobile_detect:screen_detect }}
+{{ if {screen_width} &gt; 1024}You have desktop{{ endif }}
+{{ news_image }}<span class="p">&lt;</span><span class="nt">img</span> <span class="na">scr</span><span class="o">=</span><span class="s">&quot;/image/{screen_size}/{file_name}&quot;</span> <span class="p">/&gt;</span>{{ /news_image }}
+</pre></div>
 </div>
 </div>
 </div>
@@ -198,10 +223,8 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="helper/index.html" class="btn btn-neutral float-right" title="Helper Plugin" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-      
-        <a href="../modules/users/index.html" class="btn btn-neutral" title="Users Module" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="theme-tag.html" class="btn btn-neutral" title="&lt;no title&gt;" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

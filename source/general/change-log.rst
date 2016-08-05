@@ -7,6 +7,10 @@ Version 1.2.0
 
 **Release Date:** Not yet released
 
+- **New Feature:** Added ability to detect mobile devices in templates and to redirect to specific urls.
+- **Enhancement:** Added ability to delete Grid fields. Grid fiels have now been pushed to an alpha status.
+- **Enhancement:** Upgraded filemanager and integrated it with CKEditor. Set default session vars that allows for different upload folder when set.
+- **Bugfix:** Fixed an issue with the Filemanager image preview.
 - **Bugfix:** Fixed an issue where adding new Grid fields performed an update rather than an insert, and thus deleted existing fields in the database.
 - **Enhancement:** Models can be loaded from anywhere. See `issue #32 <https://github.com/cosmointeractive/pagestudiocms/issues/32>`_.
 - **Bugfix:** Fixed an issue where users were being logged in automatically even when activation required was set to true.
