@@ -2,12 +2,20 @@
 Change Log
 ==========
 
+Version 1.3.0
+#############
+
+**Release Date:** August 5th, 2016
+
+- **Enhancement:** Added ability to modify admin theme menu from any module.
+- **New Feature:** Added ability to detect mobile devices in templates and to redirect to specific urls.
+- **Enhancement:** Sitemap module now prints a sitemap as oppose to generating an actual file.
+
 Version 1.2.0
 #############
 
-**Release Date:** Not yet released
+**Release Date:** June 7th, 2015
 
-- **New Feature:** Added ability to detect mobile devices in templates and to redirect to specific urls.
 - **Enhancement:** Added ability to delete Grid fields. Grid fiels have now been pushed to an alpha status.
 - **Enhancement:** Upgraded filemanager and integrated it with CKEditor. Set default session vars that allows for different upload folder when set.
 - **Bugfix:** Fixed an issue with the Filemanager image preview.
