@@ -7,6 +7,10 @@ Version 1.3.0
 
 **Release Date:** August 5th, 2016
 
+- **New feature:** All modules must now be installed prior to be used. `Issue #36 <https://github.com/cosmointeractive/pagestudiocms/issues/36>`_.
+- **Enhancement:** Incorporated a new profiler. 
+- **Bugfix:** Fix content encoding error when creating thums via ajax when GZip is turned on. See `issue #39 <https://github.com/cosmointeractive/pagestudiocms/issues/39>`_.
+- **Enhancement:** Deprecated KCFinder, use FileManager for images instead. File Manager has better support for mobile (touch) devices. 
 - **Enhancement:** Added ability to modify admin theme menu from any module.
 - **New Feature:** Added ability to detect mobile devices in templates and to redirect to specific urls.
 - **Enhancement:** Sitemap module now prints a sitemap as oppose to generating an actual file.
