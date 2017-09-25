@@ -30,6 +30,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="PageStudio 1.3.0 documentation" href="../index.html"/>
         <link rel="next" title="Modules" href="../modules/index.html"/>
         <link rel="prev" title="Installation" href="../installation/index.html"/> 
@@ -92,7 +95,7 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Installation</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Tags</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Tags</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#basic-tags">Basic Tags</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#comments">Comments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tag-attributes">Tag Attributes</a><ul>
@@ -144,7 +147,7 @@
         <div class="rst-content">
           
 
-
+ 
 
 
 
@@ -186,7 +189,7 @@
 <div class="section" id="basic-tags">
 <h2><a class="toc-backref" href="#id1">Basic Tags</a><a class="headerlink" href="#basic-tags" title="Permalink to this headline">¶</a></h2>
 <p>At their very basic form, tags are simply a variable:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="p">{{</span> <span class="n">my_var</span> <span class="p">}}</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{{</span> <span class="n">my_var</span> <span class="p">}}</span>
 </pre></div>
 </div>
 <p>When you put that in your markup, it will be replaced by some value. Pretty simple!</p>
@@ -195,12 +198,12 @@
 <p class="last">The white-space inside the curly braces is optional, but does help with aesthetics and readability.</p>
 </div>
 <p>Now let&#8217;s take the example of a common concept in PageStudioCMS: a tag with two words separated by a colon:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="p">{{</span> <span class="n">settings</span><span class="p">:</span><span class="n">site_name</span> <span class="p">}}</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{{</span> <span class="n">settings</span><span class="p">:</span><span class="n">site_name</span> <span class="p">}}</span>
 </pre></div>
 </div>
 <p>This tag has some basic parts: two curly braces on either site, and two text strings separated by a colon. This format tells PageStudioCMS that we want to access a plugin&#8217;s function or plugin&#8217;s variable. The first string, <strong>settings</strong> in this case, tells the tag what plugin to reference, and then the second string, <strong>site_name</strong> in this case, tells the tag what function or variable to call.</p>
 <p>So if we put the above tag in our layout, and our site_name variable was set to &#8220;Bill&#8217;s Bagels&#8221;, then it would return:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>Bill&#39;s Bagels
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Bill</span><span class="s1">&#39;s Bagels</span>
 </pre></div>
 </div>
 </div>
@@ -211,15 +214,15 @@
 <div class="section" id="tag-attributes">
 <h2><a class="toc-backref" href="#id3">Tag Attributes</a><a class="headerlink" href="#tag-attributes" title="Permalink to this headline">¶</a></h2>
 <p>What makes tags really powerful is they can take attributes that give you the freedom to modify the tag output based on input data. Here is an example:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>{{ url:segments segment=&quot;1&quot; }}
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{{</span> <span class="n">url</span><span class="p">:</span><span class="n">segments</span> <span class="n">segment</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="p">}}</span>
 </pre></div>
 </div>
 <p>In the above example, we are calling the url plugin which has a <strong>segments</strong> function. This is all well and good, but we can also pass the tag parameters in order to modify the output. In this case, we are telling the tag to get the first segment. So if your URL was <em>http://www.example.com/bills/bagels</em>, this tag would return:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">bills</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">bills</span>
 </pre></div>
 </div>
 <p>You can have multiple parameters as well. So, for example, the <code class="docutils literal"><span class="pre">segments</span></code> function allows you to specify a default value via a second parameter:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>{{ url:segments segment=&quot;1&quot; default=&quot;home&quot; }}
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{{</span> <span class="n">url</span><span class="p">:</span><span class="n">segments</span> <span class="n">segment</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">default</span><span class="o">=</span><span class="s2">&quot;home&quot;</span> <span class="p">}}</span>
 </pre></div>
 </div>
 <p>If the first segment is empty, the tag will return &#8220;home&#8221;.</p>
@@ -230,23 +233,23 @@
 <div class="section" id="using-tags-and-variables-in-tag-parameters">
 <h3>Using Tags and Variables In Tag Parameters<a class="headerlink" href="#using-tags-and-variables-in-tag-parameters" title="Permalink to this headline">¶</a></h3>
 <p>Inside quotes, PageStudioCMS cannot parse curly braces. So, for instance, if you wanted to pass the value of the slug from the page plugin, this <strong>will not work</strong>:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>{{ url:segments segment=&quot;1&quot; default=&quot;{{ page:slug }}&quot; }}
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{{</span> <span class="n">url</span><span class="p">:</span><span class="n">segments</span> <span class="n">segment</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">default</span><span class="o">=</span><span class="s2">&quot;{{ page:slug }}&quot;</span> <span class="p">}}</span>
 </pre></div>
 </div>
 <p>However, you can pass a plugin function&#8217;s output value or variable by eliminating the curly braces. So, <strong>this will work</strong>:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>{{ url:segments segment=&quot;1&quot; default=page:slug }}
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{{</span> <span class="n">url</span><span class="p">:</span><span class="n">segments</span> <span class="n">segment</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">default</span><span class="o">=</span><span class="n">page</span><span class="p">:</span><span class="n">slug</span> <span class="p">}}</span>
 </pre></div>
 </div>
 <p>You can also use tag parameters in functions that are being used as a tag parameter by using a single curly brace with no spaces, and no quotes:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>{{ url:segments segment=&quot;1&quot; default={foo:bar value=&quot;baz&quot;} }}
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{{</span> <span class="n">url</span><span class="p">:</span><span class="n">segments</span> <span class="n">segment</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">default</span><span class="o">=</span><span class="p">{</span><span class="n">foo</span><span class="p">:</span><span class="n">bar</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;baz&quot;</span><span class="p">}</span> <span class="p">}}</span>
 </pre></div>
 </div>
 <p>Although this is an easy solution for single functions and variables, for more complex logic within tag paramters, you can use square braces instead of curly braces, like this:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>{{ url:segments segment=&quot;1&quot; default=&quot;[[ page:slug ]]&quot; }}
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{{</span> <span class="n">url</span><span class="p">:</span><span class="n">segments</span> <span class="n">segment</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">default</span><span class="o">=</span><span class="s2">&quot;[[ page:slug ]]&quot;</span> <span class="p">}}</span>
 </pre></div>
 </div>
 <p>PageStudioCMS parses each parameter separately for square brackets, so you can even do logic within your paramters:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>{{ url:segments segment=&quot;1&quot; default=&quot;[[ if global:environment == &#39;development&#39; ]]dev_home[[ else ]]home[[ endif ]]&quot; }}
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{{</span> <span class="n">url</span><span class="p">:</span><span class="n">segments</span> <span class="n">segment</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">default</span><span class="o">=</span><span class="s2">&quot;[[ if global:environment == &#39;development&#39; ]]dev_home[[ else ]]home[[ endif ]]&quot;</span> <span class="p">}}</span>
 </pre></div>
 </div>
 </div>
@@ -426,8 +429,6 @@ or desc, default is asc.</td>
 <li>or / ||</li>
 </ul>
 <div class="toctree-wrapper compound">
-<ul class="simple">
-</ul>
 </div>
 </div>
 </div>
