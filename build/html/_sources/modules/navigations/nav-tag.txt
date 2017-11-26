@@ -114,9 +114,9 @@ max_depth="2"
 nav_id= *Required
 -------
 
-The #ID of the navigation of which to output.
+The #ID of the navigation of which to output. Can be the name (slug), or the navigation of the database `entity id`.
 
-nav_id="15"
+``nav_id="15"`` or ``nav_id="primary-nav"``
 
 nested=
 --------

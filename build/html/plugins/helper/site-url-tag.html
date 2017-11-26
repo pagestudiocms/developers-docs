@@ -8,8 +8,10 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Site URL Tag &mdash; PageStudio 1.3.0 documentation</title>
+  <title>Site URL Tag &mdash; PageStudio 1.4.0 documentation</title>
   
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i" rel="stylesheet"> 
 
   
   
@@ -30,10 +32,9 @@
   
 
   
-        <link rel="index" title="Index"
-              href="../../genindex.html"/>
+        <link rel="index" title="Index" href="../../genindex.html"/>
         <link rel="search" title="Search" href="../../search.html"/>
-    <link rel="top" title="PageStudio 1.3.0 documentation" href="../../index.html"/>
+    <link rel="top" title="PageStudio 1.4.0 documentation" href="../../index.html"/>
         <link rel="up" title="Helper Plugin" href="index.html"/>
         <link rel="next" title="URI-Segment Tag" href="uri-segment-tag.html"/>
         <link rel="prev" title="Image Thumbnail Tag" href="image-thumbnail-tag.html"/> 
@@ -45,47 +46,43 @@
 
 <body class="wy-body-for-nav" role="document">
 
-  <div class="wy-grid-for-nav">
+    <div class="wy-grid-for-nav">
 
-    
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
-          
-
-          
-            <a href="../../index.html" class="fa fa-home"> PageStudio
-          
-
-          
-          </a>
-
-          
+        
+        <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+            <div class="wy-side-scroll">
             
-            
-              <div class="version">
-                1.3.0
-              </div>
-            
-          
+                <div class="wy-side-nav-search">
+                  
 
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
+                  
+                    
+                    <a href="../../index.html"> PageStudio
+                  
 
-          
-        </div>
+                  
+                  </a>
 
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-                <ul>
+                  
+                    
+                    
+                      <div class="version">
+                        1.4.0
+                      </div>
+                    
+                  
+                  
+                  
+                  
+
+                  
+                </div>
+
+                <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                  
+                    
+                    
+                        <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../general/welcome.html">Welcome</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../general/getting-started.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../general/change-log.html">Change Log</a></li>
@@ -119,25 +116,37 @@
 </li>
 </ul>
 
+                    
+                  
+                </div>
+            </div>
+        </nav>
+
+        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
             
-          
-        </div>
-      </div>
-    </nav>
+            <header class="wy-nav-content-header">
+            
+                <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+                    <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+                    <a href="../../index.html">PageStudio</a>
+                </nav>
+                
+            </header>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../index.html">PageStudio</a>
-      </nav>
-
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          
+            
+            <div class="wy-nav-content">
+            
+                
+<div role="search">
+  <form id="rtd-search-form" class="wy-form search-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search documentation..." />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+                
+                
 
  
 
@@ -146,25 +155,26 @@
 <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../../index.html">Docs</a> &raquo;</li>
-      
+        
           <li><a href="../index.html">Plugins</a> &raquo;</li>
-      
+        
           <li><a href="index.html">Helper Plugin</a> &raquo;</li>
-      
+        
     <li>Site URL Tag</li>
-      <li class="wy-breadcrumbs-aside">
+    <li class="wy-breadcrumbs-aside">
         
           
             <a href="../../_sources/plugins/helper/site-url-tag.txt" rel="nofollow"> View page source</a>
           
         
-      </li>
+    </li>
   </ul>
-  <hr/>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-            
+                
+                <div class="rst-content">
+                    <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                        <div itemprop="articleBody">
+                            
   <div class="section" id="site-url-tag">
 <h1>Site URL Tag<a class="headerlink" href="#site-url-tag" title="Permalink to this headline">¶</a></h1>
 <p>Returns your site&#8217;s full URL with additional path segments appended to the end if provided.</p>
@@ -185,9 +195,9 @@
 </div>
 
 
-           </div>
-          </div>
-          <footer>
+                        </div>
+                    </div>
+                    <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
@@ -203,7 +213,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Cosmo Mathieu.
+        &copy; Copyright 2017, Cosmo Mathieu.
 
     </p>
   </div>
@@ -211,13 +221,13 @@
 
 </footer>
 
-        </div>
-      </div>
+                </div>
+            </div>
 
-    </section>
+        </section>
 
-  </div>
-  
+    </div>
+    
 
 
   
@@ -225,7 +235,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
-            VERSION:'1.3.0',
+            VERSION:'1.4.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

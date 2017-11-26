@@ -1,8 +1,6 @@
 
-PageStudioCMS Developer Guide
+Developer Guide
 ==========================
-
-.. important:: This is the documentation to the 1.3.x version. For the 1.2.x version see http://pagestudiocms.com/docs/1.2/
 
 .. contents::
    :local:
