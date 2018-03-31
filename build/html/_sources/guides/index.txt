@@ -8,7 +8,9 @@ The guides directory contains articles too general to be categorized.
 	:titlesonly:
     :maxdepth: 1
     
-    index
+    events-and-observers
+    tags
 
 .. toctree::
    :maxdepth: 2
+   

@@ -29,7 +29,7 @@ Guides
     :maxdepth: 2
     
     installation/index
-    guides/tags
+    guides/index
 
 Modules
 #######

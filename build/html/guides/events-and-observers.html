@@ -1,0 +1,359 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Events and Observers &mdash; PageStudio 1.4.0 documentation</title>
+  
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i" rel="stylesheet"> 
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PageStudio 1.4.0 documentation" href="../index.html"/>
+        <link rel="up" title="Guides" href="index.html"/>
+        <link rel="next" title="Tags" href="tags.html"/>
+        <link rel="prev" title="Guides" href="index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+    <div class="wy-grid-for-nav">
+
+        
+        <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+            <div class="wy-side-scroll">
+            
+                <div class="wy-side-nav-search">
+                  
+
+                  
+                    
+                    <a href="../index.html"> PageStudio
+                  
+
+                  
+                  </a>
+
+                  
+                    
+                    
+                      <div class="version">
+                        1.4.0
+                      </div>
+                    
+                  
+                  
+                  
+                  
+
+                  
+                </div>
+
+                <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                  
+                    
+                    
+                        <ul>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/getting-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/change-log.html">Change Log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/roadmap.html">Development Road Map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/license.html">License Agreement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/multilangual-setup.html">Multilangual Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/themes.html">Themes</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Guides</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="">Events and Observers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#events">Events</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#dispatching-events">Dispatching events</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#creating-new-events">Creating new events</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#event-config">Event Config</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#observers">Observers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#creating-an-observer">Creating an observer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#subscribing-to-events">Subscribing to events</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tags.html">Tags</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../modules/index.html">Modules</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../plugins/index.html">Plugins</a></li>
+</ul>
+
+                    
+                  
+                </div>
+            </div>
+        </nav>
+
+        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+            
+            <header class="wy-nav-content-header">
+            
+                <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+                    <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+                    <a href="../index.html">PageStudio</a>
+                </nav>
+                
+            </header>
+
+            
+            <div class="wy-nav-content">
+            
+                
+<div role="search">
+  <form id="rtd-search-form" class="wy-form search-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search documentation..." />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+                
+                
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Guides</a> &raquo;</li>
+        
+    <li>Events and Observers</li>
+    <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/guides/events-and-observers.txt" rel="nofollow"> View page source</a>
+          
+        
+    </li>
+  </ul>
+</div>
+                
+                <div class="rst-content">
+                    <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                        <div itemprop="articleBody">
+                            
+  <div class="section" id="events-and-observers">
+<h1>Events and Observers<a class="headerlink" href="#events-and-observers" title="Permalink to this headline">¶</a></h1>
+<p>Working with events and observers is one of the main ways to extend PageStudio functionality.
+The events and observers implementation in PageStudio is based on the publish-subscribe pattern.
+Use them run your custom code in response to a system event or a custom event.</p>
+<p>Use <a class="reference external" href="http://devdocs.magento.com/guides/v2.0/extension-dev-guide/events-and-observers.html">http://devdocs.magento.com/guides/v2.0/extension-dev-guide/events-and-observers.html</a> as inspiration.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">...</p>
+</div>
+<p>The following guide will teach you the basics of tags and how to use them in your layouts.</p>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><a class="reference internal" href="#events" id="id1">Events</a><ul>
+<li><a class="reference internal" href="#dispatching-events" id="id2">Dispatching events</a></li>
+<li><a class="reference internal" href="#creating-new-events" id="id3">Creating new events</a></li>
+<li><a class="reference internal" href="#event-config" id="id4">Event Config</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#observers" id="id5">Observers</a><ul>
+<li><a class="reference internal" href="#creating-an-observer" id="id6">Creating an observer</a></li>
+<li><a class="reference internal" href="#subscribing-to-events" id="id7">Subscribing to events</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="events">
+<h2><a class="toc-backref" href="#id1">Events</a><a class="headerlink" href="#events" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="dispatching-events">
+<h3><a class="toc-backref" href="#id2">Dispatching events</a><a class="headerlink" href="#dispatching-events" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="creating-new-events">
+<h3><a class="toc-backref" href="#id3">Creating new events</a><a class="headerlink" href="#creating-new-events" title="Permalink to this headline">¶</a></h3>
+<p>Full example of an event</p>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">namespace App\Modules\&lt;module-name&gt;\Event;</span>
+
+<span class="x">class EmailLogger</span>
+<span class="x">{</span>
+<span class="x">    public function LogSentEmail($data) {</span>
+<span class="x">        log_message(&#39;debug&#39;, print_r($data, TRUE));</span>
+<span class="x">    }</span>
+
+<span class="x">    public function LogEmail($data)</span>
+<span class="x">    {</span>
+<span class="x">        log_message(&#39;debug&#39;, print_r($data, TRUE));</span>
+<span class="x">    }</span>
+<span class="x">}</span>
+</pre></div>
+</div>
+<p>Registering the event within a class. Prefered methos is to do it within the <code class="docutils literal"><span class="pre">&lt;module-name&gt;/config/events.php</span></code> file.</p>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">$this-&gt;eventManager = new \App\Modules\Core\Event\Manager();</span>
+<span class="x">$this-&gt;eventManager-&gt;register(&#39;entries.edit.beforesave&#39;,  array(</span>
+<span class="x">    &#39;class&#39;    =&gt; &#39;App\Modules\Core\Observer\EmailLogger&#39;,</span>
+<span class="x">    &#39;function&#39; =&gt; &#39;LogEmail&#39;,</span>
+<span class="x">    &#39;filename&#39; =&gt; &#39;EmailLogger.php&#39;,</span>
+<span class="x">    &#39;filepath&#39; =&gt; &#39;modules/Core/Observer&#39;,</span>
+<span class="x">    &#39;params&#39;   =&gt; &#39;Some Email Activity Occured&#39;</span>
+<span class="x">));</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="event-config">
+<h3><a class="toc-backref" href="#id4">Event Config</a><a class="headerlink" href="#event-config" title="Permalink to this headline">¶</a></h3>
+<p>Sample &#8216;&#8217;events.php&#8217;&#8217; file</p>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">$events[&#39;entries.edit.beforesave&#39;][] = array(</span>
+<span class="x">    &#39;class&#39;    =&gt; &#39;App\Modules\Core\Observer\EmailLogger&#39;,</span>
+<span class="x">    &#39;function&#39; =&gt; &#39;LogEmail&#39;,</span>
+<span class="x">    &#39;filename&#39; =&gt; &#39;EmailLogger.php&#39;,</span>
+<span class="x">    &#39;filepath&#39; =&gt; &#39;modules/Core/Observer&#39;,</span>
+<span class="x">    &#39;params&#39;   =&gt; &#39;This is the first hook to be fired&#39;,</span>
+<span class="x">);</span>
+
+<span class="x">$observers[&#39;entries.edit.beforesave&#39;][] = array(</span>
+<span class="x">    &#39;class&#39;    =&gt; &#39;App\Modules\Core\Observer\EmailLoggerObserver&#39;,</span>
+<span class="x">    &#39;function&#39; =&gt; &#39;execute&#39;,</span>
+<span class="x">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="observers">
+<h2><a class="toc-backref" href="#id5">Observers</a><a class="headerlink" href="#observers" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="creating-an-observer">
+<h3><a class="toc-backref" href="#id6">Creating an observer</a><a class="headerlink" href="#creating-an-observer" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python"><div class="highlight"><pre><span></span>&lt;?php
+namespace App\Modules\Core\Observer;
+
+class EmailLoggerObserver
+{
+    public function execute()
+    {
+        var_dump(&#39;Hello&#39;);
+    }
+}
+</pre></div>
+</div>
+</div>
+<div class="section" id="subscribing-to-events">
+<h3><a class="toc-backref" href="#id7">Subscribing to events</a><a class="headerlink" href="#subscribing-to-events" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">$observers[&#39;entries.edit.beforesave&#39;][] = array(</span>
+<span class="x">    &#39;class&#39;    =&gt; &#39;App\Modules\Core\Observer\EmailLoggerObserver&#39;,</span>
+<span class="x">    &#39;function&#39; =&gt; &#39;execute&#39;,</span>
+<span class="x">);</span>
+</pre></div>
+</div>
+<div class="toctree-wrapper compound">
+<ul class="simple">
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+                        </div>
+                    </div>
+                    <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tags.html" class="btn btn-neutral float-right" title="Tags" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Guides" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Cosmo Mathieu.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+    
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.4.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

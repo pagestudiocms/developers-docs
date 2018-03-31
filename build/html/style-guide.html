@@ -32,8 +32,6 @@
   
 
   
-        <link rel="index" title="Index" href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="PageStudio 1.4.0 documentation" href="index.html"/> 
 
   
@@ -90,7 +88,7 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="installation/index.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="guides/tags.html">Tags</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guides/index.html">Guides</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="modules/index.html">Modules</a></li>
@@ -131,7 +129,7 @@
                 
                 
 
- 
+
 
 
 
@@ -186,7 +184,7 @@ source files for one Sphinx project.</dd>
 <h3><a class="toc-backref" href="#id9">Inline markup</a><a class="headerlink" href="#inline-markup" title="Permalink to this headline">¶</a></h3>
 <p>The standard reST inline markup is quite simple: use</p>
 <p>This line contains a few markup that may be useful; such as <strong>bold-text</strong> inline code <code class="docutils literal"><span class="pre">I'm</span> <span class="pre">important</span></code>, <em>italicized text</em></p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>one asterisk: *text* for emphasis (italics),
+<div class="highlight-python"><div class="highlight"><pre><span></span>one asterisk: *text* for emphasis (italics),
 two asterisks: **text** for strong emphasis (boldface), and
 backquotes: ``text`` for code samples.
 </pre></div>
@@ -205,8 +203,8 @@ backquotes: ``text`` for code samples.
 </dl>
 </li>
 </ul>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">*</span>  <span class="n">Item</span> <span class="mi">1</span>
-    <span class="o">*</span>  <span class="n">Item</span> <span class="mi">2</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span>*  Item 1
+    *  Item 2
 </pre></div>
 </div>
 </div>
@@ -216,8 +214,8 @@ backquotes: ``text`` for code samples.
 <li>Item 1</li>
 <li>Item 2</li>
 </ol>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mf">1.</span> <span class="n">Item</span> <span class="mi">1</span>
-<span class="c1">#. Item 2</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span>1. Item 1
+#. Item 2
 </pre></div>
 </div>
 </div>
@@ -226,13 +224,13 @@ backquotes: ``text`` for code samples.
 <h2><a class="toc-backref" href="#id12">Using Images</a><a class="headerlink" href="#using-images" title="Permalink to this headline">¶</a></h2>
 <p>To insert images use the directive below:</p>
 <img alt="img/settings-select-theme.jpg" src="img/settings-select-theme.jpg" />
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">image</span><span class="p">::</span> <span class="o">/</span><span class="n">img</span><span class="o">/</span><span class="n">settings</span><span class="o">-</span><span class="n">select</span><span class="o">-</span><span class="n">theme</span><span class="o">.</span><span class="n">jpg</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span>.. image:: /img/settings-select-theme.jpg
 </pre></div>
 </div>
 </div>
 <div class="section" id="code-block">
 <h2><a class="toc-backref" href="#id13">Code Block</a><a class="headerlink" href="#code-block" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-default"><div class="highlight"><pre><span></span>&lt;?php
+<div class="highlight-python"><div class="highlight"><pre><span></span>&lt;?php
 class News_model extends CI_Model {
 
         public function __construct()
@@ -329,17 +327,17 @@ below.</p>
 <div class="section" id="section-structure">
 <h1>Section Structure<a class="headerlink" href="#section-structure" title="Permalink to this headline">¶</a></h1>
 <p>Section titles are underlined or overlined &amp; underlined.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Heading</span> <span class="n">h1</span>
-<span class="o">==========</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span>Heading h1
+==========
 
-<span class="n">Heading</span> <span class="n">h2</span>
-<span class="c1">##########</span>
+Heading h2
+##########
 
-<span class="n">Heading</span> <span class="n">h3</span>
-<span class="o">**********</span>
+Heading h3
+**********
 
-<span class="n">Heading</span> <span class="n">h4</span>
-<span class="o">----------</span>
+Heading h4
+----------
 </pre></div>
 </div>
 </div>
@@ -358,16 +356,16 @@ separated by blank lines.</p>
 <div>Block quotes are indented.</div></blockquote>
 </td>
 <td rowspan="2"><p class="first">Literal block, preceded by &#8221;::&#8221;:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Indented</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">Indented</span>
 </pre></div>
 </div>
 <p>or:</p>
-<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">Quoted</span>
+<div class="last highlight-python"><div class="highlight"><pre><span></span>&gt; Quoted
 </pre></div>
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="s1">&#39;Doctest block&#39;</span>
+<tr class="row-even"><td><div class="first last highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="s1">&#39;Doctest block&#39;</span>
 <span class="go">Doctest block</span>
 </pre></div>
 </div>
@@ -411,8 +409,8 @@ lines can be wrapped with continuation lines.</div>
 </tr>
 <tr class="row-even"><td>Definition list</td>
 <td><dl class="first last docutils">
-<dt>Term is flush-left</dt>
- <span class="classifier-delimiter">:</span> <span class="classifier">optional classifier</span><dd>Definition is indented, no blank line between</dd>
+<dt>Term is flush-left <span class="classifier-delimiter">:</span> <span class="classifier">optional classifier</span></dt>
+<dd>Definition is indented, no blank line between</dd>
 </dl>
 </td>
 </tr>
@@ -669,6 +667,8 @@ with role</em>; <code class="docutils literal"><span class="pre">inline</span> <
 </div>
 </div>
 <div class="toctree-wrapper compound">
+<ul class="simple">
+</ul>
 </div>
 </div>
 </div>
