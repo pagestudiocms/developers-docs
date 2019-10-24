@@ -2,9 +2,11 @@
 Themes
 =======
 
-.. contents::
-   :local:
-   :depth: 1
+.. sidebar:: Table of Contents
+
+    .. contents::
+        :local:
+        :depth: 1
 
 Folder Structure
 ################

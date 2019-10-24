@@ -6,6 +6,8 @@
 Documentation Style Guide
 ======================================
 
+http://docutils.sourceforge.net/docs/ref/rst/directives.html
+
 .. contents::
    :local:
    :depth: 2
