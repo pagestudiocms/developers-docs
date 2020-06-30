@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 Documentation Style Guide
-======================================
+=========================
 
 http://docutils.sourceforge.net/docs/ref/rst/directives.html
 
@@ -28,7 +28,7 @@ Typography
 ##########
 
 Inline markup
-**********
+*************
 
 The standard reST inline markup is quite simple: use
 
@@ -39,7 +39,7 @@ This line contains a few markup that may be useful; such as **bold-text** inline
     backquotes: ``text`` for code samples.
 
 Bulleted List
-******
+*************
 
 Bullet list
 
@@ -52,7 +52,7 @@ Bullet list
       *  Item 2
     
 Enumerated List
-********
+***************
 
 1. Item 1
 #. Item 2
@@ -66,8 +66,6 @@ Using Images
 ############
 
 To insert images use the directive below: 
-
-.. image:: /img/settings-select-theme.jpg
 
 :: 
 
@@ -114,7 +112,7 @@ Code Block
 	}
 
 Notifications and Alerts
-########
+########################
 
 .. note:: Query string URLs can be optionally enabled, as described
 	below.
@@ -126,7 +124,7 @@ Notifications and Alerts
 .. danger:: Do not use leading/trailing slashes.
 
 Footnotes
-#######
+#########
 
 Lorem ipsum [#f1]_ dolor sit amet ... [#f2]_
 
@@ -152,7 +150,7 @@ Section Structure
 Section titles are underlined or overlined & underlined.
 
 Headings 
-******
+********
 
 :: 
 
@@ -287,7 +285,7 @@ title             Title reference (book, etc.); standard default role
 
 
 Where to go from here? 
-###########
+######################
 
 Visit the http://www.sphinx-doc.org/en/stable/rest.html site for more on restructured text. Or http://docutils.sourceforge.net/docs/user/rst/demo.html.
 
