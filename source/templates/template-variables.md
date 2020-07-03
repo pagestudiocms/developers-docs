@@ -8,9 +8,9 @@ The following variables contain data associated with the site as a whole. The in
 
 Name | Type | Description
 ---|---|---
-`{{ site.title }}` | | 
-`{{ site.description }}` | | 
-`{{ site.logo }}` | | 
+{{ site.title }} | | 
+{{ site.description }} | | 
+{{ site.logo }} | | 
 
 ## Page Variables
 
@@ -18,9 +18,9 @@ The following variables provide data relating to the page being accessed. The in
 
 Name | Type | Description
 ---|---|---
-`{{ page.id }}` | | 
-`{{ page.title }}` | | 
-`{{ page.css }}` | | 
+{{ page.id }} | | 
+{{ page.title }} | | 
+{{ page.css }} | | 
 
 <hr />
 
