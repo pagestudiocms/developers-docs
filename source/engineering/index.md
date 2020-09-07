@@ -7,7 +7,6 @@
     :titlesonly:
 
     overview
-    install
     platform/index
 ```
 

@@ -19,7 +19,7 @@ PageStudio is a content management system (CMS) featuring an easy to use drag an
 
     self
     api/v1/index
+    cms/index
     engineering/index
     templates/index
-    visual-editor/index
 ```

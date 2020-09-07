@@ -12,6 +12,9 @@ Apart from the main `.htaccess` file located in the base directory of the main a
 
 **vhost**
 
-```
-
+```eval_rst
+    .. toctree::
+        :maxdepth: 2
+        :hidden:
+        :titlesonly:
 ```

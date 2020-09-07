@@ -26,9 +26,11 @@ When you put that in your markup, it will be replaced by some value. Pretty simp
 .. note:: The white-space inside the curly braces is optional, but does help with aesthetics and readability.
 ```
 
-### Tags vs Tag Pairs
+For a complete list of all available template tags see the [Template Variables](../template-variables) page.
 
-Tag groups (tag pairs) differ from tags in that they allow additional markup within the opening and closing tags. They grant developers the ability to insert business logic into templates for finer control over the display of rendered template layout. 
+## Tags vs Tag Pairs
+
+Tag groups (also referred to as "tag pairs") differ from variable tags in that they allow additional markup within the opening and closing tags. They grant developers the ability to insert business logic into templates for finer control over the display of rendered template layout. 
 
 **Example**
 
@@ -38,36 +40,18 @@ Tag groups (tag pairs) differ from tags in that they allow additional markup wit
 {{ \module-namespace.tag }}
 ```
 
-### Comments
+## Comments
 
 If you'd like to comment out a section of code or content, you can wrap them inside `{{# and #}}`. Ex: `{{# This is a comment #}}`. This has the advantage over conventional HTML comment tags that it won't be visible to users viewing your website's source code.
 
-## System Tags 
+<hr />
 
-## Layout Tags
+```eval_rst
+.. toctree::
+    :maxdepth: 2
+    :hidden:
+    :titlesonly:
 
-```
-{{ template:headers }}
-```
-
-```
-{{ template:footers }}
-```
-
-```
-{{ template:stylesheets }}
-```
-
-```
-{{ template:javascripts }}
-```
-
-Adding scripts not defined in template.conf 
-
-```
-{{ template:javascripts name="jquery|boostrap|main" footer="true" }}
-```
-
-```
-{{ template:partial name="${filename}" }}
+    layout-tags/index
+    tags-by-module/index
 ```

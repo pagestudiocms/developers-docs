@@ -17,5 +17,6 @@
         :titlesonly:
 
         apache
+        local-development
         plugins/index
 ```

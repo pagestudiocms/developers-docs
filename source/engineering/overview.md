@@ -5,7 +5,7 @@
 A LAMP stack has been selected as the platform of choice. 
 
 * Linux 
-* Apache - See the [apache](./configuration/apache.html) page for additional information
+* Apache - See the [apache](./platform/apache) page for additional information
 * MySQL
 * PHP
 

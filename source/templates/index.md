@@ -19,10 +19,13 @@ To create [pagestudio] templates you will need to create a [developer account](h
 
 ```eval_rst
 .. toctree::
-    :maxdepth: 2
-    :glob:
+    :maxdepth: 4
     :hidden:
     :titlesonly:
 
-    *
+    template-overview
+    template-tags/index
+    template-variables
+    template-tags-reference/index
+    template-files/index
 ```
