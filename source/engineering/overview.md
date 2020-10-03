@@ -11,7 +11,7 @@ A LAMP stack has been selected as the platform of choice.
 
 ### Security (SSL)
 
-Let's Encrypt is used for securing traffic to the server.
+Let's Encrypt is used for securing traffic to the server. See the [Let's Encrypt](./platform/lets-encrypt) page for more info. 
 
 ### Architechture 
 
