@@ -32,7 +32,7 @@ Folder contents
 
 **Example** 
 
-```
+```json
 {
   "type": "layout",
   "group": "layout",
@@ -57,7 +57,7 @@ Folder contents
 
 **Example**
 
-```
+```json
 {
   "5482c288-f01c-1bc8-68fc-77a26db950b1": {
     "portlet_id": "5482c288-f01c-1bc8-68fc-77a26db950b1",

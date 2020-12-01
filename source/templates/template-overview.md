@@ -1,6 +1,6 @@
 # Template Overview
 
-PageStudio website templates have different [insertion points](#) where content can be attached while using the [Visual Editor](#) that display specific content. To support all available functionality each PageStudio template must contain a specific set of predefined directives, folders and files. This page is aimed at developers looking to better understand the template file and folder hierarchy. 
+PageStudio website templates have different [insertion points](#) where content can be attached while using the [Visual Editor](/cms/visual-editor/index) that display specific content. To support all available functionality each PageStudio template must contain a specific set of predefined directives, folders and files. This page is aimed at developers looking to better understand the template file and folder hierarchy. 
 
 ## Languages & Filetypes
 
@@ -37,7 +37,7 @@ This folder contains images, svg, icons, css, and javascript files. These files 
 
 **/layouts/**
 
-This folder contains static HTML pages which may include embeded partial HTML files or not. Typically, though not required, these files will include [insertion points](#) where content from the [visual editor](#) can be added during content editing. 
+This folder contains static HTML pages which may include embeded partial HTML files or not. Typically, though not required, these files will include [insertion points](#) where content from the [Visual Editor](/cms/visual-editor/index) can be added during content editing. 
 
 **/partials/**
 
