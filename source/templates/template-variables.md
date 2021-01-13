@@ -85,7 +85,7 @@ These variables provide data relating with the site as a whole. The associated v
 
 ```eval_rst
 
-.. note:: WW highly recomend that the pre-defined variables defined under `Entries Template Tag <template-tags-reference/entries-tag.html#pre-defined-variables>`_ be used instead. They provide additional features.
+.. note:: We highly recomend that the pre-defined variables defined under `Entries Template Tag <template-tags-reference/entries-tag.html#pre-defined-variables>`_ be used instead. They provide additional features.
 ```
 
 These variables provide data relating to the page being accessed. The associated values WILL change from page to page.
