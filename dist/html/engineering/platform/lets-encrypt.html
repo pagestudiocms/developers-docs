@@ -1,0 +1,274 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Lets Encrypt &mdash; PageStudio 2.0.0 documentation</title>
+  
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i" rel="stylesheet"> 
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index" href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="PageStudio 2.0.0 documentation" href="../../index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+    <div class="wy-grid-for-nav">
+
+        
+        <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+            <div class="wy-side-scroll">
+            
+                <div class="wy-side-nav-search">
+                  
+
+                  
+                    <a href="../../index.html">
+                  
+
+                  
+                    
+                    <img src="../../_static/logo.png" class="logo" />
+                  
+                  </a>
+
+                  
+                    
+                    
+                      <div class="version">
+                        2.0.0
+                      </div>
+                    
+                  
+                  
+                  
+                  
+
+                  
+                </div>
+
+                <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                  
+                    
+                    
+                        <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/v1/index.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cms/index.html">CMS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Engineering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../templates/index.html">Template Development</a></li>
+</ul>
+
+                    
+                  
+                </div>
+            </div>
+        </nav>
+
+        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+            
+            <header class="wy-nav-content-header">
+            
+                <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+                    <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+                    <a href="../../index.html">PageStudio</a>
+                </nav>
+                
+            </header>
+
+            
+            <div class="wy-nav-content">
+            
+                
+<div role="search">
+  <form id="rtd-search-form" class="wy-form search-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search documentation..." />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+                
+                
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+    <li>Lets Encrypt</li>
+    <li class="wy-breadcrumbs-aside">
+        
+          
+        
+    </li>
+  </ul>
+</div>
+                
+                <div class="rst-content">
+                    <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                        <div itemprop="articleBody">
+                            
+  <div class="section" id="lets-encrypt">
+<h1>Lets Encrypt<a class="headerlink" href="#lets-encrypt" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="certbot">
+<h1>Certbot<a class="headerlink" href="#certbot" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="installing-certbot-on-apache">
+<h2>Installing Certbot on Apache<a class="headerlink" href="#installing-certbot-on-apache" title="Permalink to this headline">¶</a></h2>
+<p>See https://www.digitalocean.com/community/tutorials/how-to-set-up-let-s-encrypt-certificates-for-multiple-apache-virtual-hosts-on-ubuntu-14-04
+See https://certbot.eff.org/lets-encrypt/ubuntuxenial-apache</p>
+<p>Certificates for multiple domains</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">certbot</span><span class="o">-</span><span class="n">auto</span> <span class="o">-</span><span class="n">d</span> <span class="n">one</span><span class="o">.</span><span class="n">example</span><span class="o">.</span><span class="n">com</span> <span class="o">-</span><span class="n">d</span> <span class="n">two</span><span class="o">.</span><span class="n">example</span><span class="o">.</span><span class="n">com</span> <span class="o">-</span><span class="n">d</span> <span class="n">three</span><span class="o">.</span><span class="n">example</span><span class="o">.</span><span class="n">com</span> <span class="o">-</span><span class="n">d</span> <span class="n">example</span><span class="o">.</span><span class="n">org</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="wildcard">
+<h2>Wildcard<a class="headerlink" href="#wildcard" title="Permalink to this headline">¶</a></h2>
+<p>https://github.com/veeti/manuale#usage</p>
+<p>Wildcard certs are known as SAN’s. To generate a SAN cert you’ll need to specify the <code class="docutils literal notranslate"><span class="pre">--manual</span></code> directive.</p>
+<p>With Certbot you should add an additional <code class="docutils literal notranslate"><span class="pre">-d</span></code> item for each domain that needs to be covered by the cert.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">manuale</span> <span class="n">authorize</span> <span class="n">example</span><span class="o">.</span><span class="n">com</span>
+<span class="n">manuale</span> <span class="n">authorize</span> <span class="n">www</span><span class="o">.</span><span class="n">example</span><span class="o">.</span><span class="n">com</span>
+<span class="n">manuale</span> <span class="n">issue</span> <span class="n">example</span><span class="o">.</span><span class="n">com</span> <span class="n">www</span><span class="o">.</span><span class="n">example</span><span class="o">.</span><span class="n">com</span> <span class="o">--</span><span class="n">output</span> <span class="n">certs</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*.</span><span class="n">example</span><span class="o">.</span><span class="n">org</span>
+<span class="o">*.</span><span class="n">live</span><span class="o">.</span><span class="n">example</span><span class="o">.</span><span class="n">org</span>
+<span class="o">*.</span><span class="n">staging</span><span class="o">.</span><span class="n">example</span><span class="o">.</span><span class="n">org</span>
+</pre></div>
+</div>
+<p>certbot –authenticator webroot –webroot-path /var/www/html/public –installer apache -d *.pagestudiocms.com -d pagestudiocms.com</p>
+<p>See: https://medium.com/&#64;saurabh6790/generate-wildcard-ssl-certificate-using-lets-encrypt-certbot-273e432794d7
+certbot –manual –installer apache -d *.pagestudiocms.com -d pagestudiocms.com –preferred-challenges=dns</p>
+<p>See: https://www.digitalocean.com/community/tutorials/how-to-set-up-let-s-encrypt-certificates-for-multiple-apache-virtual-hosts-on-ubuntu-14-04
+https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-ubuntu-18-04</p>
+</div>
+<div class="section" id="single-domain-renewal">
+<h2>Single Domain Renewal<a class="headerlink" href="#single-domain-renewal" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Renew single domain </span>
+<span class="c1"># </span>
+<span class="c1"># certbot --apache certonly -n -d *.pagestudiocms.com~</span>
+<span class="c1"># certbot --apache certonly -n -d domain1.com~</span>
+
+<span class="n">certbot</span> <span class="o">--</span><span class="n">manual</span> <span class="o">--</span><span class="n">installer</span> <span class="n">apache</span> <span class="o">-</span><span class="n">d</span> <span class="o">*.</span><span class="n">pagestudiocms</span><span class="o">.</span><span class="n">com</span> <span class="o">-</span><span class="n">d</span> <span class="n">pagestudiocms</span><span class="o">.</span><span class="n">com</span> <span class="o">--</span><span class="n">preferred</span><span class="o">-</span><span class="n">challenges</span><span class="o">=</span><span class="n">dns</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">/etc/letsencrypt/live/</span></code></p>
+</div>
+<div class="section" id="new-renewal-method-2019-12-17">
+<h2>New Renewal Method - 2019-12-17<a class="headerlink" href="#new-renewal-method-2019-12-17" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">certbot</span> <span class="n">certonly</span> <span class="o">--</span><span class="n">manual</span> <span class="o">--</span><span class="n">manual</span><span class="o">-</span><span class="n">public</span><span class="o">-</span><span class="n">ip</span><span class="o">-</span><span class="n">logging</span><span class="o">-</span><span class="n">ok</span> <span class="o">--</span><span class="n">preferred</span><span class="o">-</span><span class="n">challenges</span> <span class="n">dns</span><span class="o">-</span><span class="mi">01</span> <span class="o">--</span><span class="n">server</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">acme</span><span class="o">-</span><span class="n">v02</span><span class="o">.</span><span class="n">api</span><span class="o">.</span><span class="n">letsencrypt</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">directory</span> <span class="o">-</span><span class="n">d</span> <span class="s2">&quot;*.pagestudiocms.com&quot;</span> <span class="o">-</span><span class="n">d</span> <span class="n">pagestudiocms</span><span class="o">.</span><span class="n">com</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p><strong>New Process - <em><strong>Doesn’t work yet! Use command above.</strong></em></strong></p>
+<ul class="simple">
+<li>https://certbot-dns-digitalocean.readthedocs.io/en/stable/#</li>
+<li>https://www.digitalocean.com/community/questions/tutorial-for-let-s-encrypt-wildcard?answer=44450</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">certbot</span> <span class="n">certonly</span> \
+ <span class="o">--</span><span class="n">server</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">acme</span><span class="o">-</span><span class="n">v02</span><span class="o">.</span><span class="n">api</span><span class="o">.</span><span class="n">letsencrypt</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">directory</span> \
+ <span class="o">--</span><span class="n">dns</span><span class="o">-</span><span class="n">digitalocean</span> \
+ <span class="o">--</span><span class="n">dns</span><span class="o">-</span><span class="n">digitalocean</span><span class="o">-</span><span class="n">credentials</span> <span class="o">~/.</span><span class="n">secrets</span><span class="o">/</span><span class="n">certbot</span><span class="o">/</span><span class="n">digitalocean</span><span class="o">.</span><span class="n">ini</span> \
+ <span class="o">-</span><span class="n">d</span> \<span class="o">*.</span><span class="n">pagestudiocms</span><span class="o">.</span><span class="n">com</span> \
+ <span class="o">-</span><span class="n">d</span> <span class="n">pagestudiocms</span><span class="o">.</span><span class="n">com</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+                        </div>
+                    </div>
+                    <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, PageStudio.
+      Last updated on Feb 18, 2021.
+
+    </p>
+  </div> 
+
+</footer>
+
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+    
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

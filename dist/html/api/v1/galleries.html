@@ -1,0 +1,329 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Galleries &mdash; PageStudio 2.0.0 documentation</title>
+  
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i" rel="stylesheet"> 
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index" href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="PageStudio 2.0.0 documentation" href="../../index.html"/>
+        <link rel="up" title="API" href="index.html"/>
+        <link rel="next" title="Navigations" href="navigations/index.html"/>
+        <link rel="prev" title="Entries" href="content-entries.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+    <div class="wy-grid-for-nav">
+
+        
+        <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+            <div class="wy-side-scroll">
+            
+                <div class="wy-side-nav-search">
+                  
+
+                  
+                    <a href="../../index.html">
+                  
+
+                  
+                    
+                    <img src="../../_static/logo.png" class="logo" />
+                  
+                  </a>
+
+                  
+                    
+                    
+                      <div class="version">
+                        2.0.0
+                      </div>
+                    
+                  
+                  
+                  
+                  
+
+                  
+                </div>
+
+                <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                  
+                    
+                    
+                        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="builder.html">Builder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contact.html">Contact</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content-categories.html">Categories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content-entries.html">Entries</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Galleries</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#albums">Albums</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#get-albums">GET Albums</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#create-album">Create Album</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#get-album-images">GET Album Images</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#get-album-categories">GET Album Categories</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="navigations/index.html">Navigations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settings.html">Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="users.html">Users</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../cms/index.html">CMS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../engineering/index.html">Engineering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../templates/index.html">Template Development</a></li>
+</ul>
+
+                    
+                  
+                </div>
+            </div>
+        </nav>
+
+        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+            
+            <header class="wy-nav-content-header">
+            
+                <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+                    <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+                    <a href="../../index.html">PageStudio</a>
+                </nav>
+                
+            </header>
+
+            
+            <div class="wy-nav-content">
+            
+                
+<div role="search">
+  <form id="rtd-search-form" class="wy-form search-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search documentation..." />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+                
+                
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">API</a> &raquo;</li>
+        
+    <li>Galleries</li>
+    <li class="wy-breadcrumbs-aside">
+        
+          
+        
+    </li>
+  </ul>
+</div>
+                
+                <div class="rst-content">
+                    <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                        <div itemprop="articleBody">
+                            
+  <div class="section" id="galleries">
+<h1>Galleries<a class="headerlink" href="#galleries" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="albums">
+<h2>Albums<a class="headerlink" href="#albums" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="get-albums">
+<h3>GET Albums<a class="headerlink" href="#get-albums" title="Permalink to this headline">¶</a></h3>
+<p>Retrives a list of all albums.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">GET</span> <span class="n">rest</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">galleries</span><span class="o">/</span><span class="n">albums</span>
+</pre></div>
+</div>
+<p>Maps to <code class="docutils literal notranslate"><span class="pre">galleries/api/albums/index</span></code>.</p>
+</div>
+<div class="section" id="create-album">
+<h3>Create Album<a class="headerlink" href="#create-album" title="Permalink to this headline">¶</a></h3>
+<p>Creates a single album</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">POST</span> <span class="n">rest</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">galleries</span><span class="o">/</span><span class="n">albums</span>
+</pre></div>
+</div>
+<p>Maps to <code class="docutils literal notranslate"><span class="pre">galleries/api/albums/index</span></code>.</p>
+<div class="section" id="body">
+<h4>Body<a class="headerlink" href="#body" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="get-album-images">
+<h3>GET Album Images<a class="headerlink" href="#get-album-images" title="Permalink to this headline">¶</a></h3>
+<p>Retrieves a list of images associtated with a given album (gallery).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">GET</span> <span class="n">rest</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">galleries</span><span class="o">/</span><span class="n">albums</span><span class="o">/</span><span class="n">images</span><span class="o">/</span><span class="p">:</span><span class="n">galleryId</span>
+</pre></div>
+</div>
+<p>Maps to <code class="docutils literal notranslate"><span class="pre">galleries/api/albums/images</span></code>.</p>
+<div class="section" id="params">
+<h4>Params<a class="headerlink" href="#params" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>Key</th>
+<th>Required</th>
+<th>Type</th>
+<th>Example</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>galleryId</td>
+<td>Yes</td>
+<td>int</td>
+<td>1</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="section" id="get-album-categories">
+<h3>GET Album Categories<a class="headerlink" href="#get-album-categories" title="Permalink to this headline">¶</a></h3>
+<p>Retrieves a list of categories by <code class="docutils literal notranslate"><span class="pre">group-name</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">GET</span> <span class="n">rest</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">galleries</span><span class="o">/</span><span class="n">albums</span><span class="o">/</span><span class="n">categories</span><span class="o">/</span><span class="p">:</span><span class="n">group</span><span class="o">-</span><span class="n">name</span>
+</pre></div>
+</div>
+<p>Maps to <code class="docutils literal notranslate"><span class="pre">galleries/api/albums/categories</span></code>.</p>
+<div class="section" id="id1">
+<h4>Params<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>Key</th>
+<th>Required</th>
+<th>Type</th>
+<th>Example</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>group-name</td>
+<td>Yes</td>
+<td>string</td>
+<td><code>summer-event</code></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+
+
+                        </div>
+                    </div>
+                    <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="navigations/index.html" class="btn btn-neutral float-right" title="Navigations" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="content-entries.html" class="btn btn-neutral" title="Entries" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, PageStudio.
+      Last updated on Feb 18, 2021.
+
+    </p>
+  </div> 
+
+</footer>
+
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+    
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

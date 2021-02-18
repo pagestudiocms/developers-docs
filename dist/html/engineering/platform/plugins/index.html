@@ -1,0 +1,269 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Plugins &mdash; PageStudio 2.0.0 documentation</title>
+  
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i" rel="stylesheet"> 
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index" href="../../../genindex.html"/>
+        <link rel="search" title="Search" href="../../../search.html"/>
+    <link rel="top" title="PageStudio 2.0.0 documentation" href="../../../index.html"/>
+        <link rel="up" title="Platform" href="../index.html"/>
+        <link rel="next" title="Template Development" href="../../../templates/index.html"/>
+        <link rel="prev" title="Local Development" href="../local-development.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+    <div class="wy-grid-for-nav">
+
+        
+        <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+            <div class="wy-side-scroll">
+            
+                <div class="wy-side-nav-search">
+                  
+
+                  
+                    <a href="../../../index.html">
+                  
+
+                  
+                    
+                    <img src="../../../_static/logo.png" class="logo" />
+                  
+                  </a>
+
+                  
+                    
+                    
+                      <div class="version">
+                        2.0.0
+                      </div>
+                    
+                  
+                  
+                  
+                  
+
+                  
+                </div>
+
+                <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                  
+                    
+                    
+                        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api/v1/index.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cms/index.html">CMS</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Engineering</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../overview.html">Overview</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Platform</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../apache.html">Apache</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../local-development.html">Local Development</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Plugins</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#template-tag-logic">Template Tag Logic</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#installing-plugins">Installing Plugins</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#core-plugins">Core Plugins</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../templates/index.html">Template Development</a></li>
+</ul>
+
+                    
+                  
+                </div>
+            </div>
+        </nav>
+
+        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+            
+            <header class="wy-nav-content-header">
+            
+                <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+                    <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+                    <a href="../../../index.html">PageStudio</a>
+                </nav>
+                
+            </header>
+
+            
+            <div class="wy-nav-content">
+            
+                
+<div role="search">
+  <form id="rtd-search-form" class="wy-form search-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search documentation..." />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+                
+                
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Engineering</a> &raquo;</li>
+        
+          <li><a href="../index.html">Platform</a> &raquo;</li>
+        
+    <li>Plugins</li>
+    <li class="wy-breadcrumbs-aside">
+        
+          
+        
+    </li>
+  </ul>
+</div>
+                
+                <div class="rst-content">
+                    <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                        <div itemprop="articleBody">
+                            
+  <div class="section" id="plugins">
+<h1>Plugins<a class="headerlink" href="#plugins" title="Permalink to this headline">¶</a></h1>
+<p>Plugins are the simplest type of add-on in PageStudio, but they are at the core of how you access functionality via <strong>tags</strong>.</p>
+<p>For an example, let’s take the user plugin, which is a part of the user module.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Modules can have a plugin as a part of the module, see the module overview for more info on that.</p>
+</div>
+<p>Each plugin has a name (or slug) by which we reference it in the tags. For example, if we wanted to get the username of the current user, we would use:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span> <span class="n">user</span><span class="p">:</span><span class="n">username</span> <span class="p">}}</span>
+</pre></div>
+</div>
+<p>We can also specify a user id and get the username of a specific user:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span> <span class="n">user</span><span class="p">:</span><span class="n">username</span> <span class="n">user_id</span><span class="o">=</span><span class="s2">&quot;5&quot;</span> <span class="p">}}</span>
+</pre></div>
+</div>
+<p>Whenever you are using tags in PageStudio, you are interfacing with a plugin.</p>
+<div class="section" id="template-tag-logic">
+<h2>Template Tag Logic<a class="headerlink" href="#template-tag-logic" title="Permalink to this headline">¶</a></h2>
+<p>To get a full idea of what tags can do, make sure you read over the PageStudio tag system documentation.</p>
+</div>
+<div class="section" id="installing-plugins">
+<h2>Installing Plugins<a class="headerlink" href="#installing-plugins" title="Permalink to this headline">¶</a></h2>
+<p>Plugins have no installation procedure. Just upload them to application/plugins/ and use the tag in your template layouts/partials!</p>
+</div>
+<div class="section" id="core-plugins">
+<h2>Core Plugins<a class="headerlink" href="#core-plugins" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><div class="toctree-wrapper compound">
+</div>
+</div></blockquote>
+</div>
+</div>
+
+
+                        </div>
+                    </div>
+                    <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../../templates/index.html" class="btn btn-neutral float-right" title="Template Development" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../local-development.html" class="btn btn-neutral" title="Local Development" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, PageStudio.
+      Last updated on Feb 18, 2021.
+
+    </p>
+  </div> 
+
+</footer>
+
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+    
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
