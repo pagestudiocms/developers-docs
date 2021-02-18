@@ -1,0 +1,346 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Galleries Tag &mdash; PageStudio 2.0.0 documentation</title>
+  
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i" rel="stylesheet"> 
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index" href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="PageStudio 2.0.0 documentation" href="../../index.html"/>
+        <link rel="up" title="Template Tags Reference" href="index.html"/>
+        <link rel="next" title="Categories Tags" href="categories-tag.html"/>
+        <link rel="prev" title="Collections Tag" href="collections-tag.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+    <div class="wy-grid-for-nav">
+
+        
+        <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+            <div class="wy-side-scroll">
+            
+                <div class="wy-side-nav-search">
+                  
+
+                  
+                    <a href="../../index.html">
+                  
+
+                  
+                    
+                    <img src="../../_static/logo.png" class="logo" />
+                  
+                  </a>
+
+                  
+                    
+                    
+                      <div class="version">
+                        2.0.0
+                      </div>
+                    
+                  
+                  
+                  
+                  
+
+                  
+                </div>
+
+                <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                  
+                    
+                    
+                        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/v1/index.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cms/index.html">CMS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../engineering/index.html">Engineering</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Template Development</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../template-overview.html">Template Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../template-tags/index.html">Template Tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../template-variables.html">Template Variables</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Template Tags Reference</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="entries-tag.html">Entries Tag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="collections-tag.html">Collections Tag</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Galleries Tag</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#variables">Variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#parameters">Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="categories-tag.html">Categories Tags</a></li>
+<li class="toctree-l3"><a class="reference internal" href="snippets-tag.html">Snippets Tag</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../template-files/index.html">Template Files</a></li>
+</ul>
+</li>
+</ul>
+
+                    
+                  
+                </div>
+            </div>
+        </nav>
+
+        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+            
+            <header class="wy-nav-content-header">
+            
+                <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+                    <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+                    <a href="../../index.html">PageStudio</a>
+                </nav>
+                
+            </header>
+
+            
+            <div class="wy-nav-content">
+            
+                
+<div role="search">
+  <form id="rtd-search-form" class="wy-form search-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search documentation..." />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+                
+                
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Template Development</a> &raquo;</li>
+        
+          <li><a href="index.html">Template Tags Reference</a> &raquo;</li>
+        
+    <li>Galleries Tag</li>
+    <li class="wy-breadcrumbs-aside">
+        
+          
+        
+    </li>
+  </ul>
+</div>
+                
+                <div class="rst-content">
+                    <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                        <div itemprop="articleBody">
+                            
+  <div class="section" id="galleries-tag">
+<h1>Galleries Tag<a class="headerlink" href="#galleries-tag" title="Permalink to this headline">¶</a></h1>
+<p>This <strong>tag block</strong> allows you to display and format content of gallery.</p>
+<p><strong>Example</strong></p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>{{ galleries:gallery gallery_id=&quot;1&quot; }}    
+    &lt;div&gt;
+        &lt;img src=&quot;{{ helper:image_thumb image=image width=&quot;150&quot; height=&quot;150&quot; crop=&quot;true&quot; }}&quot; alt=&quot;{{ alt }}&quot; /&gt;
+        &lt;h3&gt;{{ title }}&lt;/h3&gt;
+        {{ description }}
+    &lt;/div&gt;
+{{ /galleries:gallery }}
+</pre></div>
+</div>
+<div class="section" id="variables">
+<h2>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h2>
+<p>The following pre-defined variable tags are available for use within the galleries tag block.</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>Tag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{{ alt }}</td>
+<td>Outputs alternative text defined for the image. Intended for use in the <code>&lt;img&gt;</code> alt attribute.</td>
+</tr>
+<tr>
+<td>{{ count }}</td>
+<td>Outputs the current image pointer in the array.</td>
+</tr>
+<tr>
+<td>{{ description }}</td>
+<td>Outputs the description that was defined for the image.</td>
+</tr>
+<tr>
+<td>{{ image }}</td>
+<td>Outputs the full url for the current image. (Note: Optional parameters are available for thie tag.)</td>
+</tr>
+<tr>
+<td>{{ link }}</td>
+<td>Outputs an optional link. Provides the ability to link the image to another page.</td>
+</tr>
+<tr>
+<td>{{ link_text }}</td>
+<td>Outputs (optional) link text.</td>
+</tr>
+<tr>
+<td>{{ title }}</td>
+<td>Outputs the title that was defined for the current image.</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section" id="parameters">
+<h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><a class="reference internal" href="#gallery-id-required" id="id1">gallery_id *Required</a></li>
+</ul>
+</div>
+<div class="section" id="gallery-id-required">
+<h3><a class="toc-backref" href="#id1">gallery_id *Required</a><a class="headerlink" href="#gallery-id-required" title="Permalink to this headline">¶</a></h3>
+<p>The id or the variable name of the gallery you would like to render and output.</p>
+<p><strong>Example</strong></p>
+<p>Using the glallery module to render a slideshow.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You can use the <code class="docutils literal notranslate"><span class="pre">gallery_exists</span></code> function to check if a given gallery exists before displaying any HTML to the screen.</p>
+</div>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>{{ if {galleries:gallery_exists gallery_id=&quot;1&quot;} }}
+    &lt;!-- flexSlider --&gt;
+    &lt;div class=&quot;flexslider&quot;&gt;
+        &lt;ul class=&quot;slides&quot;&gt;
+            {{ galleries:gallery gallery_id=&quot;1&quot; }}
+            &lt;li&gt;
+                &lt;img src=&quot;{{ helper:image_thumb image=image crop=&quot;false&quot;}}&quot; alt=&quot;{{ alt }}&quot; /&gt;
+            &lt;/li&gt;
+            {{ /galleries:gallery }}
+        &lt;/ul&gt;
+    &lt;/div&gt;
+{{ endif }}
+</pre></div>
+</div>
+<p>Alternative option to validate if a slideshow exists.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><strong>slideshow</strong> is the name of your gallery content_type field name.</p>
+</div>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>{{ if slideshow }}
+    &lt;!-- flexSlider --&gt;
+    &lt;div class=&quot;flexslider&quot;&gt;
+        &lt;ul class=&quot;slides&quot;&gt;
+            {{ galleries:gallery gallery_id=slideshow }}
+            &lt;li&gt;
+                &lt;img src=&quot;{{ helper:image_thumb image=image crop=&quot;false&quot;}}&quot; alt=&quot;{{ alt }}&quot; /&gt;
+            &lt;/li&gt;
+            {{ /galleries:gallery }}
+        &lt;/ul&gt;
+    &lt;/div&gt;
+{{ endif }}
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+                        </div>
+                    </div>
+                    <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="categories-tag.html" class="btn btn-neutral float-right" title="Categories Tags" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="collections-tag.html" class="btn btn-neutral" title="Collections Tag" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, PageStudio.
+      Last updated on Feb 18, 2021.
+
+    </p>
+  </div> 
+
+</footer>
+
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+    
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

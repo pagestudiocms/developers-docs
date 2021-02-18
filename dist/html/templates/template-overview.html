@@ -1,0 +1,270 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Template Overview &mdash; PageStudio 2.0.0 documentation</title>
+  
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i" rel="stylesheet"> 
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index" href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="PageStudio 2.0.0 documentation" href="../index.html"/>
+        <link rel="up" title="Template Development" href="index.html"/>
+        <link rel="next" title="Template Tags" href="template-tags/index.html"/>
+        <link rel="prev" title="Template Development" href="index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+    <div class="wy-grid-for-nav">
+
+        
+        <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+            <div class="wy-side-scroll">
+            
+                <div class="wy-side-nav-search">
+                  
+
+                  
+                    <a href="../index.html">
+                  
+
+                  
+                    
+                    <img src="../_static/logo.png" class="logo" />
+                  
+                  </a>
+
+                  
+                    
+                    
+                      <div class="version">
+                        2.0.0
+                      </div>
+                    
+                  
+                  
+                  
+                  
+
+                  
+                </div>
+
+                <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                  
+                    
+                    
+                        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/v1/index.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cms/index.html">CMS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../engineering/index.html">Engineering</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Template Development</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Template Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#languages-filetypes">Languages &amp; Filetypes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#folder-hierarchy">Folder Hierarchy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#folders-explained">Folders Explained</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="template-tags/index.html">Template Tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="template-variables.html">Template Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="template-tags-reference/index.html">Template Tags Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="template-files/index.html">Template Files</a></li>
+</ul>
+</li>
+</ul>
+
+                    
+                  
+                </div>
+            </div>
+        </nav>
+
+        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+            
+            <header class="wy-nav-content-header">
+            
+                <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+                    <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+                    <a href="../index.html">PageStudio</a>
+                </nav>
+                
+            </header>
+
+            
+            <div class="wy-nav-content">
+            
+                
+<div role="search">
+  <form id="rtd-search-form" class="wy-form search-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search documentation..." />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+                
+                
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Template Development</a> &raquo;</li>
+        
+    <li>Template Overview</li>
+    <li class="wy-breadcrumbs-aside">
+        
+          
+        
+    </li>
+  </ul>
+</div>
+                
+                <div class="rst-content">
+                    <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                        <div itemprop="articleBody">
+                            
+  <div class="section" id="template-overview">
+<h1>Template Overview<a class="headerlink" href="#template-overview" title="Permalink to this headline">¶</a></h1>
+<p>PageStudio website templates have different <a class="reference external" href="#">insertion points</a> where content can be attached while using the <a class="reference internal" href="../cms/visual-editor/index.html"><span class="doc">Visual Editor</span></a> that display specific content. To support all available functionality each PageStudio template must contain a specific set of predefined directives, folders and files. This page is aimed at developers looking to better understand the template file and folder hierarchy.</p>
+<div class="section" id="languages-filetypes">
+<h2>Languages &amp; Filetypes<a class="headerlink" href="#languages-filetypes" title="Permalink to this headline">¶</a></h2>
+<p>Templates are created using traditional front-end code languages like HTML, CSS, and JavaScript. HTML pages are typically embeded with our own custom variable syntax known as the “Lex Parsing” language to identify <a class="reference external" href="#">insertion points</a> and to perform basic conditional logic.</p>
+</div>
+<div class="section" id="folder-hierarchy">
+<h2>Folder Hierarchy<a class="headerlink" href="#folder-hierarchy" title="Permalink to this headline">¶</a></h2>
+<p>The following predefined folder structure is required for a properly functioning PageStudio website.</p>
+<ul class="simple">
+<li><strong>assets</strong> design assets — Stylesheets, JavaScripts, images, fonts and icons</li>
+<li><strong>layouts</strong> static files making up an entire page layout — default.html, blog_list.html, blog_item.html, category_list.html</li>
+<li><strong>partials</strong> partial files to be embeded into layout files — header.html, footer.html, sidebar.html</li>
+<li>[root] config files — template.conf, template-preview.png</li>
+</ul>
+</div>
+<div class="section" id="folders-explained">
+<h2>Folders Explained<a class="headerlink" href="#folders-explained" title="Permalink to this headline">¶</a></h2>
+<p>Further explaination of the pre-defined template folder hierarchy.</p>
+<p><strong>/assets/</strong></p>
+<p>This folder contains images, svg, icons, css, and javascript files. These files can be further organized into folders of their own and may use separate hierarchies.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">CSS, JavaScript, and font files will only be added into the HTML <cite>&lt;head&gt;</cite> tag if they are defined in the <cite>template.conf</cite> file.</p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Avoid uploading large binary files such as PDFs to the <strong>assets</strong> folder. Rather, use the <strong>Filemanager</strong> instead.</p>
+</div>
+<p><strong>/layouts/</strong></p>
+<p>This folder contains static HTML pages which may include embeded partial HTML files or not. Typically, though not required, these files will include <a class="reference external" href="#">insertion points</a> where content from the <a class="reference internal" href="../cms/visual-editor/index.html"><span class="doc">Visual Editor</span></a> can be added during content editing.</p>
+<p><strong>/partials/</strong></p>
+<p>This folder contains reusable static HTML files meant to be embeded into layout files. Making up a complete page. Typical use case is the futher break down of template files into resuable bits and pieces (header.html, footer.html, nav.html). A <strong>header.html</strong> as an example may contain HTML code from the opening <code class="docutils literal notranslate"><span class="pre">&lt;!DOCTYPE</span> <span class="pre">html&gt;</span></code> tag to the opening <code class="docutils literal notranslate"><span class="pre">&lt;body&gt;</span></code> tag, to even the opening <code class="docutils literal notranslate"><span class="pre">&lt;main&gt;</span></code> tag. <strong>footer.html</strong> may include anything from <code class="docutils literal notranslate"><span class="pre">&lt;/main&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;/body&gt;</span></code>, to the closing <code class="docutils literal notranslate"><span class="pre">&lt;/html&gt;</span></code> tag.</p>
+<p><strong>/[root]/</strong></p>
+<p>The root folder is the main folder containing all the aforementioned folders. It usually carries the name of your template. At its base are two <strong>required</strong> files — <a class="reference internal" href="template-files/template-configuration.html"><span class="doc">template.conf</span></a> and <a class="reference internal" href="template-files/template-preview-image.html"><span class="doc">template-preview.png</span></a>.</p>
+</div>
+</div>
+
+
+                        </div>
+                    </div>
+                    <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="template-tags/index.html" class="btn btn-neutral float-right" title="Template Tags" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Template Development" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, PageStudio.
+      Last updated on Feb 18, 2021.
+
+    </p>
+  </div> 
+
+</footer>
+
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+    
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'2.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+# Template Development
+
+```eval_rst
+.. sidebar:: Table of contents
+
+    .. contents::
+        :local:
+        :depth: 2
+
+```
+
+To create [pagestudio] templates you will need to create a [developer account](http://). If you do not have an account, or have not yet created one, follow the [create an account](http://) guide first. You will also need a development server configured to work with your account. We've provided a Vagrant development server for you to make the development process easiser. Instructions can be found on the [installation] page. 
+
+----
+
+## Files and Directories
+
+Each template is organized using the following folder structure:
+
+- assets/
+    - css/
+    - js/
+- blocks/
+    - block-templates/
+- layouts/
+    - data/
+- partials/
+
+Understanding Template Folder Structure
+
+```
+/<theme-name>/template.conf
+/<theme-name>/assets/
+/<theme-name>/blocks/
+/<theme-name>/layouts/
+/<theme-name>/layouts/data/blog-item-data.json
+/<theme-name>/layouts/data/blog-list-data.json
+/<theme-name>/partials/
+
+/<theme-name>/layouts/
+/<theme-name>/layouts/base-layout.php // replaces default.php
+/<theme-name>/layout-partials/
+
+/blog
+/blog/blog-item.php
+/blog/blog-page.php
+/blog/blog-categories.php
+```
+
+### Essential Files
+
+**template.conf**
+
+At the very minimum, your template needs a `template.conf` in the template root folder and a `default.html` in the layouts folder.
+
+Comming soon!
+```json
+// These regions would be installed automatically 
+{
+    "regions": [
+        "header": {
+            "title": "Main Header",
+            "editable": "true",
+            "block-data": "block-file.data"
+        },
+    ]
+}
+```
+
+----
+
+## SEO
+
+As part of SEO (Search Engine Optimization) best practice, various tags are automatically inserted into the template ``<head></head>`` tags by default and cannot be removed.
+
+### head 
+
+```html
+<html xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:website="http://ogp.me/ns/website" lang="{{ lang }}" itemscope itemtype="http://schema.org/WebPage" >
+    <head>  
+        <link rel="shortcut icon" type="image/x-icon" href=""/>
+        <link rel="canonical" href="{{ page.canonicalUrl }}"/> <!-- The primary linked domain -->
+
+        <meta property="og:site_name" content="{{ site.title }}"/>
+        <meta property="og:title" content="{{ page.title }}"/>
+        <meta property="og:url" content="{{ page.url }}"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:description" content="{{ page.description }}"/>
+        <meta property="og:image" content="{{ site.logoImageUrl }}"/>
+        <meta property="og:image:width" content="1200"/>
+        <meta property="og:image:height" content="300"/>
+
+        <meta itemprop="name" content="{{ page.title }}"/>
+        <meta itemprop="url" content="{{ page.url }}"/>
+        <meta itemprop="description" content="{{ page.description }}"/>
+        <meta itemprop="thumbnailUrl" content="{{ site.logoImageUrl }}"/>
+
+        <link rel="image_src" href="{{ site.logoImageUrl }}" />
+
+        <meta itemprop="image" content="{{ site.logoImageUrl }}"/>
+
+        <meta name="twitter:title" content="{{ page.title }}"/>
+        <meta name="twitter:image" content="{{ page.featuredImage }}"/>
+        <meta name="twitter:url" content="{{ page.url }}"/>
+        <meta name="twitter:card" content="summary"/>
+        <meta name="twitter:description" content="{{ page.description }}"/>
+        <meta name="description" content="{{ page.description }}" />
+
+        ...
+
+    </head>
+    ...
+</html>
+```
+
+[pagestudio]: http://pagestudiocms.com/
+
+```eval_rst
+.. toctree::
+    :maxdepth: 2
+    :glob:
+    :hidden:
+    :titlesonly:
+
+    *
+```

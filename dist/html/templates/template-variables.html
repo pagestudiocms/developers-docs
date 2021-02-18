@@ -1,0 +1,346 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Template Variables &mdash; PageStudio 2.0.0 documentation</title>
+  
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i" rel="stylesheet"> 
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index" href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="PageStudio 2.0.0 documentation" href="../index.html"/>
+        <link rel="up" title="Template Development" href="index.html"/>
+        <link rel="next" title="Template Tags Reference" href="template-tags-reference/index.html"/>
+        <link rel="prev" title="Tags By Module" href="template-tags/tags-by-module/index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+    <div class="wy-grid-for-nav">
+
+        
+        <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+            <div class="wy-side-scroll">
+            
+                <div class="wy-side-nav-search">
+                  
+
+                  
+                    <a href="../index.html">
+                  
+
+                  
+                    
+                    <img src="../_static/logo.png" class="logo" />
+                  
+                  </a>
+
+                  
+                    
+                    
+                      <div class="version">
+                        2.0.0
+                      </div>
+                    
+                  
+                  
+                  
+                  
+
+                  
+                </div>
+
+                <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                  
+                    
+                    
+                        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/v1/index.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cms/index.html">CMS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../engineering/index.html">Engineering</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Template Development</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="template-overview.html">Template Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="template-tags/index.html">Template Tags</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Template Variables</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#format-json-example">?format=json (Example)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#usage-in-template">Usage In Template</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#root-variables">Root Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#site-variables">Site Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#page-variables">Page Variables</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="template-tags-reference/index.html">Template Tags Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="template-files/index.html">Template Files</a></li>
+</ul>
+</li>
+</ul>
+
+                    
+                  
+                </div>
+            </div>
+        </nav>
+
+        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+            
+            <header class="wy-nav-content-header">
+            
+                <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+                    <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+                    <a href="../index.html">PageStudio</a>
+                </nav>
+                
+            </header>
+
+            
+            <div class="wy-nav-content">
+            
+                
+<div role="search">
+  <form id="rtd-search-form" class="wy-form search-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search documentation..." />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+                
+                
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Template Development</a> &raquo;</li>
+        
+    <li>Template Variables</li>
+    <li class="wy-breadcrumbs-aside">
+        
+          
+        
+    </li>
+  </ul>
+</div>
+                
+                <div class="rst-content">
+                    <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                        <div itemprop="articleBody">
+                            
+  <div class="section" id="template-variables">
+<h1>Template Variables<a class="headerlink" href="#template-variables" title="Permalink to this headline">¶</a></h1>
+<p>Variables available for use in any given template layout/partial file on every page. These variables are normally categorized under two namespaces (groups) — <strong>site</strong> or <strong>page</strong>. To view them all and the data associated with, simply append <code class="docutils literal notranslate"><span class="pre">?format=json</span></code> to the end of any website url (<code class="docutils literal notranslate"><span class="pre">http://example-website.com?format=json</span></code>). Doing so will display a JSON object similar to that below for that page.</p>
+<div class="section" id="format-json-example">
+<h2>?format=json (Example)<a class="headerlink" href="#format-json-example" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;_content&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;div&gt;&lt;/div&gt;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;body_tag_css&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;media_relative_path&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;theme_relative_path&quot;</span><span class="p">:</span> <span class="s2">&quot;static\/rocu56\/themes\/pagestudio\/\/&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;wrapper_style&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;page&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;slug&quot;</span><span class="p">:</span> <span class="s2">&quot;home&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https:\/\/cosmointeractive.co\/home&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Web Design Anderson, SC&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Providing digital technology solutions through web design, responsive design and web development to the Anderson, SC area.&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;keywords&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;excerpt&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;author_id&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;featured_image&quot;</span><span class="p">:</span> <span class="s2">&quot;static\/rocu56\/media\/uploads\/images\/sites-collage.jpg&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;created_date&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-11-30 23:32:30&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;published_date&quot;</span><span class="p">:</span> <span class="s2">&quot;1900-01-01 00:00:00&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;modified_date&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-10-15 18:40:57&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;authorId&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;uniqueUrl&quot;</span><span class="p">:</span> <span class="s2">&quot;home&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;featuredImageUrl&quot;</span><span class="p">:</span> <span class="s2">&quot;static\/rocu56\/media\/uploads\/images\/sites-collage.jpg&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;dateCreated&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-11-30 23:32:30&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;dateModified&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-10-15 18:40:57&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;site&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;cosmo-mathieu-rocu56&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https:\/\/cosmointeractive.co\/&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;primary_domain&quot;</span><span class="p">:</span> <span class="s2">&quot;http:\/\/cosmointeractive.co\/&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Cosmo Interactive&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Providing digital technology solutions through web design, responsive design and web development to the Anderson, SC area.&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;logo&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;slogan&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="nt">&quot;timeZone&quot;</span><span class="p">:</span> <span class="s2">&quot;America\/New_York&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;lang&quot;</span><span class="p">:</span> <span class="s2">&quot;en-US&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;locale&quot;</span><span class="p">:</span> <span class="s2">&quot;en-US&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;subscription&quot;</span><span class="p">:</span> <span class="kc">null</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="usage-in-template">
+<h2>Usage In Template<a class="headerlink" href="#usage-in-template" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">When it comes to accessing page data we highly recomend that the pre-defined variables defined under <a class="reference external" href="template-tags-reference/entries-tag.html#pre-defined-variables">Entries Template Tag</a> be used. For data withing the <strong>site</strong> object follow the example below.</p>
+</div>
+<p>To display the associated value of a given property you need to wrap it in curly braces <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">}}</span></code>. Nested properties can be displayed using the dot-notation i.e <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">site.title</span> <span class="pre">}}</span></code>, which would display the value “Cosmo Interactive”. In that example both <strong>site</strong> and <strong>title</strong> are nested properties of the main <code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">}</span></code> JSON object. <strong>title</strong> is thus a nested property of <strong>site</strong> and <strong>site</strong> is a nested property of the parent <code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">}</span></code> JSON object.</p>
+</div>
+<div class="section" id="root-variables">
+<h2>Root Variables<a class="headerlink" href="#root-variables" title="Permalink to this headline">¶</a></h2>
+<p>These variables are contained at the root of the object, in other words, they are not contained within the <strong>site</strong> or <strong>page</strong> object. <em>All except <strong>_content</strong> are deprecated and should not be used from version 2 and forward.</em></p>
+<ul class="simple">
+<li><strong>_content</strong> — More info coming soon…</li>
+<li><strong>body_tag_css</strong> — More info coming soon…</li>
+<li><strong>media_relative_path</strong> — More info coming soon…</li>
+<li><strong>theme_relative_path</strong> — More info coming soon…</li>
+<li><strong>wrapper_style</strong> — More info coming soon…</li>
+</ul>
+</div>
+<div class="section" id="site-variables">
+<h2>Site Variables<a class="headerlink" href="#site-variables" title="Permalink to this headline">¶</a></h2>
+<p>These variables provide data relating with the site as a whole. The associated values WILL NOT change from page to page.</p>
+<ul class="simple">
+<li><strong>site.id</strong> — Defiition coming soon..</li>
+<li><strong>site.url</strong> — Defiition coming soon..</li>
+<li><strong>site.primary_domain</strong> — Defiition coming soon..</li>
+<li><strong>site.title</strong> — Defiition coming soon..</li>
+<li><strong>site.description</strong> — Defiition coming soon..</li>
+<li><strong>site.logo</strong> — Defiition coming soon..</li>
+<li><strong>site.slogan</strong> — Defiition coming soon..</li>
+<li><strong>site.timeZone</strong> — Defiition coming soon..</li>
+<li><strong>site.lang</strong> — Defiition coming soon..</li>
+<li><strong>site.locale</strong> — Defiition coming soon..</li>
+<li><strong>site.subscription</strong> — Defiition coming soon..</li>
+</ul>
+</div>
+<div class="section" id="page-variables">
+<h2>Page Variables<a class="headerlink" href="#page-variables" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">We highly recomend that the pre-defined variables defined under <a class="reference external" href="template-tags-reference/entries-tag.html#pre-defined-variables">Entries Template Tag</a> be used instead. They provide additional features.</p>
+</div>
+<p>These variables provide data relating to the page being accessed. The associated values WILL change from page to page.</p>
+<ul class="simple">
+<li><strong>page.id</strong> The entity ID of the page. Used for retrieving data about the page. — 1, or 12, etc.</li>
+<li><strong>page.slug</strong></li>
+<li><strong>page.url</strong></li>
+<li><strong>page.title</strong></li>
+<li><strong>page.description</strong></li>
+<li><strong>page.keywords</strong></li>
+<li><strong>page.excerpt</strong></li>
+<li><strong>page.featured_image</strong></li>
+<li><strong>page.author_id</strong></li>
+<li><strong>page.created_date</strong> The date and time the page was created — 2020-01-01 00:00:00</li>
+<li><strong>page.modified_date</strong> The last date and time the page was last modified. — 2020-01-01 00:00:00</li>
+<li><strong>page.published_date</strong> The date and time representing when the page was published (made available for viewing). Commonly used in blog articles to — 2020-01-01 00:00:00</li>
+<li><strong>page.uniqueUrl</strong> Same as the <code class="docutils literal notranslate"><span class="pre">slug</span></code>.</li>
+<li><strong>page.authorId</strong> Same as <code class="docutils literal notranslate"><span class="pre">author_id</span></code>.</li>
+<li><strong>page.featuredImageUrl</strong> Same as <code class="docutils literal notranslate"><span class="pre">featured_image</span></code>.</li>
+<li><strong>page.dateCreated</strong> Same as <code class="docutils literal notranslate"><span class="pre">created_date</span></code>.</li>
+<li><strong>page.dateModified</strong> Same as <code class="docutils literal notranslate"><span class="pre">modified_date</span></code>.</li>
+</ul>
+<hr /><p>In addition to the aforementioned variables, additional variables and <a class="reference external" href="http://">tag-groups</a> (defined in modules), are also accessible within a template file through template tags. They typically follow a module namespace dot <code class="docutils literal notranslate"><span class="pre">.</span></code> tag-name convention, i.e. <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">module-namespace.variable</span> <span class="pre">}}</span></code>. See the complete list of system modules for more info.</p>
+</div>
+</div>
+
+
+                        </div>
+                    </div>
+                    <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="template-tags-reference/index.html" class="btn btn-neutral float-right" title="Template Tags Reference" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="template-tags/tags-by-module/index.html" class="btn btn-neutral" title="Tags By Module" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, PageStudio.
+      Last updated on Feb 18, 2021.
+
+    </p>
+  </div> 
+
+</footer>
+
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+    
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'2.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
