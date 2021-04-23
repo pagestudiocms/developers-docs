@@ -6,8 +6,8 @@
     :hidden:
     :titlesonly:
 
-    overview
-    platform/index
+    infrastructure/index
+    local-development
 ```
 
 The following application architechture has been designed to support multiple entry points into the app via separate domains, not including the user created sites. They are the account and site manager, and the content management system (CMS) which includes the drag-and-drop visual editor. 
