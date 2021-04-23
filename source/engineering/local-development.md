@@ -11,53 +11,7 @@ Installation of the platform for in house developers.
 
 ```
 
-## System Requirements
-
-A web host or server with:
-
-* PHP >= 7.2 or greater with the following extensions installed:
-    ```
-    php7.2-bcmath
-    php7.2-bz2
-    php7.2-cli
-    php7.2-curl
-    php7.2-gd
-    php7.2-imagick
-    php7.2-intl
-    php7.2-json
-    php7.2-mbstring
-    php7.2-mysql
-    php7.2-opcache
-    php7.2-soap
-    php7.2-sqlite3
-    php7.2-xml
-    php7.2-xsl
-    php7.2-zip
-    ```
-* MySQL >= 5.7 or greater
-
-A modern and updated web browser
-
-### PHP Settings 
-
-The platform allows file size uploads max of 30MB. To ensure this works the following settings must be applied in the php settings. 
-
-**php.ini**
-
-```
-...
-
-; Maximum file size of post data that PHP will accept.
-post_max_size = 30M
-
-...
-
-; Maximum allowed file size for uploaded files.
-upload_max_filesize = 30M
-
-```
-
-## Local Development Server
+## Development Server
 
 A local development server has been provided with the help of Vagrant. To install the web application all that is required is to install Virtual Box and Vagrant. 
 - (Windows only) Run VirtualBox as an Administrator to avoid symbolic link issues.
@@ -74,18 +28,7 @@ Rename the following files:
 
 ## Building JS App
 
-```
-cd <app-root>/<app-version>/themes/admin/assets/js/app-src/
-```
-
-Run 
-```
-.\node_modules\.bin\rollup .\src\main.js --file ..\app\bundle.js --format iife
-```
-
-**OR**
-
-From the project dir run: 
+From the project root run: 
 
 ```
 ./bin/build-js-app.sh

@@ -26,21 +26,21 @@
 
   
   
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   
 
   
 
   
-        <link rel="index" title="Index" href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="PageStudio 2.0.0 documentation" href="../index.html"/>
-        <link rel="up" title="Engineering" href="index.html"/>
-        <link rel="next" title="Platform" href="platform/index.html"/>
-        <link rel="prev" title="Engineering" href="index.html"/> 
+        <link rel="index" title="Index" href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="PageStudio 2.0.0 documentation" href="../../index.html"/>
+        <link rel="up" title="Infrastructure" href="index.html"/>
+        <link rel="next" title="Apache" href="apache.html"/>
+        <link rel="prev" title="Infrastructure" href="index.html"/> 
 
   
-  <script src="../_static/js/modernizr.min.js"></script>
+  <script src="../../_static/js/modernizr.min.js"></script>
 
 </head>
 
@@ -56,12 +56,12 @@
                   
 
                   
-                    <a href="../index.html">
+                    <a href="../../index.html">
                   
 
                   
                     
-                    <img src="../_static/logo.png" class="logo" />
+                    <img src="../../_static/logo.png" class="logo" />
                   
                   </a>
 
@@ -85,20 +85,26 @@
                     
                     
                         <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../index.html">Getting Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../api/v1/index.html">API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../cms/index.html">CMS</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Engineering</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Overview</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#technology-stack">Technology Stack</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#security-ssl">Security (SSL)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#architechture">Architechture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/v1/index.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cms/index.html">CMS</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Engineering</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Infrastructure</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#technology-stack">Technology Stack</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#security-ssl">Security (SSL)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#architechture">Architechture</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="platform/index.html">Platform</a></li>
+<li class="toctree-l3"><a class="reference internal" href="apache.html">Apache</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mysql.html">MySQL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugins/index.html">Plugins</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../templates/index.html">Template Development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../local-development.html">Local Development</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../templates/index.html">Template Development</a></li>
 </ul>
 
                     
@@ -114,7 +120,7 @@
             
                 <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
                     <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-                    <a href="../index.html">PageStudio</a>
+                    <a href="../../index.html">PageStudio</a>
                 </nav>
                 
             </header>
@@ -124,7 +130,7 @@
             
                 
 <div role="search">
-  <form id="rtd-search-form" class="wy-form search-form" action="../search.html" method="get">
+  <form id="rtd-search-form" class="wy-form search-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Search documentation..." />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -139,9 +145,11 @@
 
 <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="index.html">Engineering</a> &raquo;</li>
+          <li><a href="../index.html">Engineering</a> &raquo;</li>
+        
+          <li><a href="index.html">Infrastructure</a> &raquo;</li>
         
     <li>Overview</li>
     <li class="wy-breadcrumbs-aside">
@@ -163,14 +171,14 @@
 <p>A LAMP stack has been selected as the platform of choice.</p>
 <ul class="simple">
 <li>Linux</li>
-<li>Apache - See the <a class="reference internal" href="platform/apache.html"><span class="doc">apache</span></a> page for additional information</li>
+<li>Apache - See the <a class="reference external" href="./platform/apache">apache</a> page for additional information</li>
 <li>MySQL</li>
 <li>PHP</li>
 </ul>
 </div>
 <div class="section" id="security-ssl">
 <h2>Security (SSL)<a class="headerlink" href="#security-ssl" title="Permalink to this headline">¶</a></h2>
-<p>Let’s Encrypt is used for securing traffic to the server. See the <a class="reference internal" href="platform/lets-encrypt.html"><span class="doc">Let’s Encrypt</span></a> page for more info.</p>
+<p>Let’s Encrypt is used for securing traffic to the server. See the <a class="reference external" href="./platform/lets-encrypt">Let’s Encrypt</a> page for more info.</p>
 </div>
 <div class="section" id="architechture">
 <h2>Architechture<a class="headerlink" href="#architechture" title="Permalink to this headline">¶</a></h2>
@@ -193,10 +201,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="platform/index.html" class="btn btn-neutral float-right" title="Platform" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="apache.html" class="btn btn-neutral float-right" title="Apache" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="Engineering" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral" title="Infrastructure" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -206,7 +214,7 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2019, PageStudio.
-      Last updated on Mar 25, 2021.
+      Last updated on Apr 23, 2021.
 
     </p>
   </div> 
@@ -226,23 +234,23 @@
 
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
+            URL_ROOT:'../../',
             VERSION:'2.0.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true
         };
     </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
 
   
   
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
   
 
   
