@@ -38,6 +38,25 @@ A web host or server with:
 
 A modern and updated web browser
 
+### PHP Settings 
+
+The platform allows file size uploads max of 30MB. To ensure this works the following settings must be applied in the php settings. 
+
+**php.ini**
+
+```
+...
+
+; Maximum file size of post data that PHP will accept.
+post_max_size = 30M
+
+...
+
+; Maximum allowed file size for uploaded files.
+upload_max_filesize = 30M
+
+```
+
 ## Local Development Server
 
 A local development server has been provided with the help of Vagrant. To install the web application all that is required is to install Virtual Box and Vagrant. 
