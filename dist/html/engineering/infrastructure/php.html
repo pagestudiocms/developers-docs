@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Infrastructure &mdash; PageStudio 2.0.0 documentation</title>
+  <title>PHP &mdash; PageStudio 2.0.0 documentation</title>
   
   
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i" rel="stylesheet"> 
@@ -35,9 +35,9 @@
         <link rel="index" title="Index" href="../../genindex.html"/>
         <link rel="search" title="Search" href="../../search.html"/>
     <link rel="top" title="PageStudio 2.0.0 documentation" href="../../index.html"/>
-        <link rel="up" title="Engineering" href="../index.html"/>
-        <link rel="next" title="Overview" href="overview.html"/>
-        <link rel="prev" title="Engineering" href="../index.html"/> 
+        <link rel="up" title="Infrastructure" href="index.html"/>
+        <link rel="next" title="MySQL" href="mysql.html"/>
+        <link rel="prev" title="Apache" href="apache.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -89,10 +89,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../../api/v1/index.html">API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../cms/index.html">CMS</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Engineering</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Infrastructure</a><ul>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Infrastructure</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="overview.html">Overview</a></li>
 <li class="toctree-l3"><a class="reference internal" href="apache.html">Apache</a></li>
-<li class="toctree-l3"><a class="reference internal" href="php.html">PHP</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">PHP</a></li>
 <li class="toctree-l3"><a class="reference internal" href="mysql.html">MySQL</a></li>
 </ul>
 </li>
@@ -144,7 +144,9 @@
         
           <li><a href="../index.html">Engineering</a> &raquo;</li>
         
-    <li>Infrastructure</li>
+          <li><a href="index.html">Infrastructure</a> &raquo;</li>
+        
+    <li>PHP</li>
     <li class="wy-breadcrumbs-aside">
         
           
@@ -157,12 +159,56 @@
                     <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
                         <div itemprop="articleBody">
                             
-  <div class="section" id="infrastructure">
-<h1>Infrastructure<a class="headerlink" href="#infrastructure" title="Permalink to this headline">¶</a></h1>
-<blockquote>
-<div><div class="toctree-wrapper compound">
+  <div class="section" id="php">
+<h1>PHP<a class="headerlink" href="#php" title="Permalink to this headline">¶</a></h1>
+<div class="sidebar">
+<p class="first last sidebar-title">Table of contents</p>
 </div>
-</div></blockquote>
+<p><strong>System Requirements</strong></p>
+<p>A web host or server with:</p>
+<ul>
+<li><p class="first">PHP &gt;= 7.2 or greater with the following extensions installed:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">php7</span><span class="o">.</span><span class="mi">2</span><span class="o">-</span><span class="n">bcmath</span>
+<span class="n">php7</span><span class="o">.</span><span class="mi">2</span><span class="o">-</span><span class="n">bz2</span>
+<span class="n">php7</span><span class="o">.</span><span class="mi">2</span><span class="o">-</span><span class="n">cli</span>
+<span class="n">php7</span><span class="o">.</span><span class="mi">2</span><span class="o">-</span><span class="n">curl</span>
+<span class="n">php7</span><span class="o">.</span><span class="mi">2</span><span class="o">-</span><span class="n">gd</span>
+<span class="n">php7</span><span class="o">.</span><span class="mi">2</span><span class="o">-</span><span class="n">imagick</span>
+<span class="n">php7</span><span class="o">.</span><span class="mi">2</span><span class="o">-</span><span class="n">intl</span>
+<span class="n">php7</span><span class="o">.</span><span class="mi">2</span><span class="o">-</span><span class="n">json</span>
+<span class="n">php7</span><span class="o">.</span><span class="mi">2</span><span class="o">-</span><span class="n">mbstring</span>
+<span class="n">php7</span><span class="o">.</span><span class="mi">2</span><span class="o">-</span><span class="n">mysql</span>
+<span class="n">php7</span><span class="o">.</span><span class="mi">2</span><span class="o">-</span><span class="n">opcache</span>
+<span class="n">php7</span><span class="o">.</span><span class="mi">2</span><span class="o">-</span><span class="n">soap</span>
+<span class="n">php7</span><span class="o">.</span><span class="mi">2</span><span class="o">-</span><span class="n">sqlite3</span>
+<span class="n">php7</span><span class="o">.</span><span class="mi">2</span><span class="o">-</span><span class="n">xml</span>
+<span class="n">php7</span><span class="o">.</span><span class="mi">2</span><span class="o">-</span><span class="n">xsl</span>
+<span class="n">php7</span><span class="o">.</span><span class="mi">2</span><span class="o">-</span><span class="nb">zip</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">MySQL &gt;= 8 or greater</p>
+</li>
+</ul>
+<p>A modern and updated web browser.</p>
+<p><strong>PHP Settings</strong></p>
+<p>The platform allows file size uploads max of 30MB. To ensure this works the following settings must be applied in the php settings.</p>
+<p><strong>php.ini</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
+
+<span class="p">;</span> <span class="n">Maximum</span> <span class="n">file</span> <span class="n">size</span> <span class="n">of</span> <span class="n">post</span> <span class="n">data</span> <span class="n">that</span> <span class="n">PHP</span> <span class="n">will</span> <span class="n">accept</span><span class="o">.</span>
+<span class="n">post_max_size</span> <span class="o">=</span> <span class="mi">30</span><span class="n">M</span>
+
+<span class="o">...</span>
+
+<span class="p">;</span> <span class="n">Maximum</span> <span class="n">allowed</span> <span class="n">file</span> <span class="n">size</span> <span class="k">for</span> <span class="n">uploaded</span> <span class="n">files</span><span class="o">.</span>
+<span class="n">upload_max_filesize</span> <span class="o">=</span> <span class="mi">30</span><span class="n">M</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">More info coming soon!</p>
+</div>
 </div>
 
 
@@ -172,10 +218,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="overview.html" class="btn btn-neutral float-right" title="Overview" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="mysql.html" class="btn btn-neutral float-right" title="MySQL" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../index.html" class="btn btn-neutral" title="Engineering" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="apache.html" class="btn btn-neutral" title="Apache" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
