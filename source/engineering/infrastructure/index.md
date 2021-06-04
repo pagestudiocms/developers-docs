@@ -57,7 +57,7 @@ upload_max_filesize = 30M
 
 ```
 
-text
+
 
 ```eval_rst
     .. toctree::
@@ -69,5 +69,4 @@ text
         apache
         mysql
         local-development
-        plugins/index
 ```

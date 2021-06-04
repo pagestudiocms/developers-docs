@@ -1,16 +1,7 @@
 Getting Started 
 =================
 
-```eval_rst
-.. sidebar:: Table of contents
-
-    .. contents::
-        :local:
-        :depth: 1
-```
-PageStudio is a content management system (CMS) featuring an easy to use drag and drop website builder that makes it easy for anyone to visually design and build their own websites. 
-
-----
+The PageStudio Developer Guide contains information for developers seeking to learn more about developing for or extending PageStudio core components. With the knowledge gained here developers can extend or customize any of the existing components in the application.
 
 ```eval_rst
 .. toctree::
