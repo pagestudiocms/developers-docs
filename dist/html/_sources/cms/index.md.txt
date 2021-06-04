@@ -8,4 +8,5 @@
     :titlesonly:
 
     visual-editor/index
+    plugins/index
 ```
