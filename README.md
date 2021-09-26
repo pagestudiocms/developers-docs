@@ -1,4 +1,4 @@
-# PageStudioCMS Developers Documentation v2.0
+# PageStudioCMS Developers Documentation v2.0+
 
 This repo is home to the PageStudioCMS documentation source. 
 
