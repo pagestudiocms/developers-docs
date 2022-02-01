@@ -1,172 +1,433 @@
 
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Entries Tag &mdash; PageStudio 2.0.0 documentation</title>
-  
-  
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i" rel="stylesheet"> 
 
-  
-  
-
-  
-
-  
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Entries Tag &#8212; PageStudio 2.4.0 documentation</title>
+    
+    <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
   
     
+    <link rel="stylesheet"
+      href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+    
+      
+  
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/pydata-sphinx-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    
+    <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Collections Tag" href="collections-tag.html" />
+    <link rel="prev" title="Template Tags Reference" href="index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../../index.html">
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
   
-
-  
-  
-    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index" href="../../genindex.html"/>
-        <link rel="search" title="Search" href="../../search.html"/>
-    <link rel="top" title="PageStudio 2.0.0 documentation" href="../../index.html"/>
-        <link rel="up" title="Template Tags Reference" href="index.html"/>
-        <link rel="next" title="Collections Tag" href="collections-tag.html"/>
-        <link rel="prev" title="Template Tags Reference" href="index.html"/> 
-
-  
-  <script src="../../_static/js/modernizr.min.js"></script>
-
-</head>
-
-<body class="wy-body-for-nav" role="document">
-
-    <div class="wy-grid-for-nav">
-
-        
-        <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-            <div class="wy-side-scroll">
-            
-                <div class="wy-side-nav-search">
-                  
-
-                  
-                    <a href="../../index.html">
-                  
-
-                  
-                    
-                    <img src="../../_static/logo.png" class="logo" />
-                  
-                  </a>
-
-                  
-                    
-                    
-                      <div class="version">
-                        2.0.0
-                      </div>
-                    
-                  
-                  
-                  
-                  
-
-                  
-                </div>
-
-                <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-                  
-                    
-                    
-                        <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../index.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../api/v1/index.html">API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../cms/index.html">CMS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../engineering/index.html">Engineering</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Template Development</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../template-overview.html">Template Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../template-tags/index.html">Template Tags</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../template-variables.html">Template Variables</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">Template Tags Reference</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Entries Tag</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#pre-defined-variables">Pre-defined Variables</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#parameters">Parameters</a></li>
-</ul>
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../index.html">
+  Introduction
+ </a>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="collections-tag.html">Collections Tag</a></li>
-<li class="toctree-l3"><a class="reference internal" href="galleries-tag.html">Galleries Tag</a></li>
-<li class="toctree-l3"><a class="reference internal" href="categories-tag.html">Categories Tags</a></li>
-<li class="toctree-l3"><a class="reference internal" href="snippets-tag.html">Snippets Tag</a></li>
-</ul>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../api/v1/index.html">
+  API
+ </a>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../template-files/index.html">Template Files</a></li>
-</ul>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../cms/index.html">
+  CMS
+ </a>
 </li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../engineering/index.html">
+  Engineering
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="../index.html">
+  Template Development
+ </a>
+</li>
+
+    
 </ul>
+      </div>
+      
+    </div>
 
-                    
-                  
-                </div>
-            </div>
-        </nav>
-
-        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-            
-            <header class="wy-nav-content-header">
-            
-                <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-                    <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-                    <a href="../../index.html">PageStudio</a>
-                </nav>
-                
-            </header>
-
-            
-            <div class="wy-nav-content">
-            
-                
-<div role="search">
-  <form id="rtd-search-form" class="wy-form search-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search documentation..." />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
 </div>
-                
-                
+    </nav>
+    
 
- 
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="../../index.html">Docs</a> &raquo;</li>
-        
-          <li><a href="../index.html">Template Development</a> &raquo;</li>
-        
-          <li><a href="index.html">Template Tags Reference</a> &raquo;</li>
-        
-    <li>Entries Tag</li>
-    <li class="wy-breadcrumbs-aside">
-        
+    <div class="container-xl">
+      <div class="row">
           
-        
-    </li>
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../template-overview.html">
+   Template Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../template-variables.html">
+   Template Variables
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../template-tags/index.html">
+   Template Tags (Deepdive)
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="simple">
   </ul>
-</div>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
+   Template Tags Reference
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Entries Tag
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="collections-tag.html">
+     Collections Tag
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="galleries-tag.html">
+     Galleries Tag
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="categories-tag.html">
+     Categories Tags
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="snippets-tag.html">
+     Snippets Tag
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../template-files/index.html">
+   Template Files
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../template-files/template-configuration.html">
+     Template Configuration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../template-files/template-preview-image.html">
+     Template Preview Image
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../template-files/template-layout.html">
+     Template Layout
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../template-files/template-partial.html">
+     Template Partial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../template-files/menus-and-navigation.html">
+     Menus &amp; Navigations
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+  </div>
+</nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
                 
-                <div class="rst-content">
-                    <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-                        <div itemprop="articleBody">
-                            
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pre-defined-variables">
+   Pre-defined Variables
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#title">
+     title=
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#title-editable">
+     title_editable=
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#created-date">
+     created_date=
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modified-date">
+     modified_date=
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#url-title">
+     url_title=
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#slug">
+     slug=
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dynamic-route">
+     dynamic_route=
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#content-type">
+     content_type=
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#status">
+     status=
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#count">
+     count=
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#total-results">
+     total_results=
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#author-id">
+     author_id=
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#author">
+     author=
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#meta-title">
+     meta_title=
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#meta-description">
+     meta_description=
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#meta-keywords">
+     meta_keywords=
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#categories">
+     categories=
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#parameters">
+   Parameters
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#backspace">
+     backspace=
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#category">
+     category=
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     content_type=
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#entry-id">
+     entry_id=
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#limit">
+     limit=
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#order-by">
+     order_by=
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#paginate">
+     paginate=
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pagination-links">
+     pagination_links=
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#segment">
+     segment=
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sort">
+     sort=
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     status=
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
   <div class="section" id="entries-tag">
 <h1>Entries Tag<a class="headerlink" href="#entries-tag" title="Permalink to this headline">¶</a></h1>
 <p>Queries and returns entries based on the provided parameters.</p>
@@ -188,23 +449,23 @@
 <p>All entries have the following pre-defined tags that can be used anywhere in the content:</p>
 <div class="contents local topic" id="contents">
 <ul class="simple">
-<li><a class="reference internal" href="#title" id="id4">title=</a></li>
-<li><a class="reference internal" href="#title-editable" id="id5">title_editable=</a></li>
-<li><a class="reference internal" href="#created-date" id="id6">created_date=</a></li>
-<li><a class="reference internal" href="#modified-date" id="id7">modified_date=</a></li>
-<li><a class="reference internal" href="#url-title" id="id8">url_title=</a></li>
-<li><a class="reference internal" href="#slug" id="id9">slug=</a></li>
-<li><a class="reference internal" href="#dynamic-route" id="id10">dynamic_route=</a></li>
-<li><a class="reference internal" href="#content-type" id="id11">content_type=</a></li>
-<li><a class="reference internal" href="#status" id="id12">status=</a></li>
-<li><a class="reference internal" href="#count" id="id13">count=</a></li>
-<li><a class="reference internal" href="#total-results" id="id14">total_results=</a></li>
-<li><a class="reference internal" href="#author-id" id="id15">author_id=</a></li>
-<li><a class="reference internal" href="#author" id="id16">author=</a></li>
-<li><a class="reference internal" href="#meta-title" id="id17">meta_title=</a></li>
-<li><a class="reference internal" href="#meta-description" id="id18">meta_description=</a></li>
-<li><a class="reference internal" href="#meta-keywords" id="id19">meta_keywords=</a></li>
-<li><a class="reference internal" href="#categories" id="id20">categories=</a></li>
+<li><p><a class="reference internal" href="#title" id="id4">title=</a></p></li>
+<li><p><a class="reference internal" href="#title-editable" id="id5">title_editable=</a></p></li>
+<li><p><a class="reference internal" href="#created-date" id="id6">created_date=</a></p></li>
+<li><p><a class="reference internal" href="#modified-date" id="id7">modified_date=</a></p></li>
+<li><p><a class="reference internal" href="#url-title" id="id8">url_title=</a></p></li>
+<li><p><a class="reference internal" href="#slug" id="id9">slug=</a></p></li>
+<li><p><a class="reference internal" href="#dynamic-route" id="id10">dynamic_route=</a></p></li>
+<li><p><a class="reference internal" href="#content-type" id="id11">content_type=</a></p></li>
+<li><p><a class="reference internal" href="#status" id="id12">status=</a></p></li>
+<li><p><a class="reference internal" href="#count" id="id13">count=</a></p></li>
+<li><p><a class="reference internal" href="#total-results" id="id14">total_results=</a></p></li>
+<li><p><a class="reference internal" href="#author-id" id="id15">author_id=</a></p></li>
+<li><p><a class="reference internal" href="#author" id="id16">author=</a></p></li>
+<li><p><a class="reference internal" href="#meta-title" id="id17">meta_title=</a></p></li>
+<li><p><a class="reference internal" href="#meta-description" id="id18">meta_description=</a></p></li>
+<li><p><a class="reference internal" href="#meta-keywords" id="id19">meta_keywords=</a></p></li>
+<li><p><a class="reference internal" href="#categories" id="id20">categories=</a></p></li>
 </ul>
 </div>
 <div class="section" id="title">
@@ -401,17 +662,17 @@
 <h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
 <div class="contents local topic" id="id3">
 <ul class="simple">
-<li><a class="reference internal" href="#backspace" id="id21">backspace=</a></li>
-<li><a class="reference internal" href="#category" id="id22">category=</a></li>
-<li><a class="reference internal" href="#id1" id="id23">content_type=</a></li>
-<li><a class="reference internal" href="#entry-id" id="id24">entry_id=</a></li>
-<li><a class="reference internal" href="#limit" id="id25">limit=</a></li>
-<li><a class="reference internal" href="#order-by" id="id26">order_by=</a></li>
-<li><a class="reference internal" href="#paginate" id="id27">paginate=</a></li>
-<li><a class="reference internal" href="#pagination-links" id="id28">pagination_links=</a></li>
-<li><a class="reference internal" href="#segment" id="id29">segment=</a></li>
-<li><a class="reference internal" href="#sort" id="id30">sort=</a></li>
-<li><a class="reference internal" href="#id2" id="id31">status=</a></li>
+<li><p><a class="reference internal" href="#backspace" id="id21">backspace=</a></p></li>
+<li><p><a class="reference internal" href="#category" id="id22">category=</a></p></li>
+<li><p><a class="reference internal" href="#id1" id="id23">content_type=</a></p></li>
+<li><p><a class="reference internal" href="#entry-id" id="id24">entry_id=</a></p></li>
+<li><p><a class="reference internal" href="#limit" id="id25">limit=</a></p></li>
+<li><p><a class="reference internal" href="#order-by" id="id26">order_by=</a></p></li>
+<li><p><a class="reference internal" href="#paginate" id="id27">paginate=</a></p></li>
+<li><p><a class="reference internal" href="#pagination-links" id="id28">pagination_links=</a></p></li>
+<li><p><a class="reference internal" href="#segment" id="id29">segment=</a></p></li>
+<li><p><a class="reference internal" href="#sort" id="id30">sort=</a></p></li>
+<li><p><a class="reference internal" href="#id2" id="id31">status=</a></p></li>
 </ul>
 </div>
 <div class="section" id="backspace">
@@ -427,8 +688,8 @@
 <p><strong>Output:</strong>
 Home, Page Not Found, About Us</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">In this example the backspace is 2 because we trimmed a space and a comma. In order for there to be no space after the comma and be able to use a backspace of 1 there would have to be no whitespace between the comma and the closing <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">/content:entries</span> <span class="pre">}}</span></code> tag.</p>
+<p class="admonition-title">Note</p>
+<p>In this example the backspace is 2 because we trimmed a space and a comma. In order for there to be no space after the comma and be able to use a backspace of 1 there would have to be no whitespace between the comma and the closing <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">/content:entries</span> <span class="pre">}}</span></code> tag.</p>
 </div>
 </div>
 <div class="section" id="category">
@@ -548,72 +809,50 @@ Home, Page Not Found, About Us</p>
 </div>
 
 
-                        </div>
-                    </div>
-                    <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="collections-tag.html" class="btn btn-neutral float-right" title="Collections Tag" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="index.html" class="btn btn-neutral" title="Template Tags Reference" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="index.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Template Tags Reference</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="collections-tag.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Collections Tag</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+              
+          </main>
+          
+
+      </div>
     </div>
   
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; Copyright 2019, PageStudio.
-      Last updated on Jun 03, 2021.
-
-    </p>
-  </div> 
-
-</footer>
-
-                </div>
-            </div>
-
-        </section>
-
+    <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2019, PageStudio.<br>
+</p>
     </div>
     
-
-
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../../',
-            VERSION:'2.0.0',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="../../_static/jquery.js"></script>
-      <script type="text/javascript" src="../../_static/underscore.js"></script>
-      <script type="text/javascript" src="../../_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
-  
-
-  
-  
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
-      });
-  </script>
-   
-
-</body>
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
 </html>

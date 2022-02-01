@@ -1,4 +1,4 @@
-# Template Tags 
+# Template Tags (Deepdive)
 
 ```eval_rst
 .. sidebar:: Table of contents
@@ -318,10 +318,8 @@ The logical operators available are:
 
 ```eval_rst
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
     :hidden:
     :titlesonly:
 
-    layout-tags/index
-    tags-by-module/index
 ```

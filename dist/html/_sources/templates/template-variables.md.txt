@@ -1,6 +1,6 @@
 # Template Variables 
 
-Variables available for use in any given template layout/partial file on every page. These variables are normally categorized under two namespaces (groups) &mdash; **site** or **page**. To view them all and the data associated with, simply append `?format=json` to the end of any website url (`http://example-website.com?format=json`). Doing so will display a JSON object similar to that below for that page. 
+Variables available for use in any given template layout/partial file on every page. These variables are normally categorized under two namespaces (groups) &mdash; **site** or **page**. To view them all and the data associated with, simply append `?format=json` to the end of any website url (`http://example-website.com?format=json`). Doing so will display a JSON object similar to that below, showing the available properties for that page. These properties are accessible in your template layout/partial (`.html`).
 
 ## ?format=json (Example)
 

@@ -1,218 +1,356 @@
 
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Template Variables &mdash; PageStudio 2.0.0 documentation</title>
-  
-  
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i" rel="stylesheet"> 
 
-  
-  
-
-  
-
-  
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template Variables &#8212; PageStudio 2.4.0 documentation</title>
+    
+    <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
   
     
+    <link rel="stylesheet"
+      href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+    
+      
+  
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/pydata-sphinx-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    
+    <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Template Tags (Deepdive)" href="template-tags/index.html" />
+    <link rel="prev" title="Template Overview" href="template-overview.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../index.html">
+  <img src="../_static/logo.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
   
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index" href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="PageStudio 2.0.0 documentation" href="../index.html"/>
-        <link rel="up" title="Template Development" href="index.html"/>
-        <link rel="next" title="Template Tags Reference" href="template-tags-reference/index.html"/>
-        <link rel="prev" title="Tags By Module" href="template-tags/tags-by-module/index.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
-</head>
-
-<body class="wy-body-for-nav" role="document">
-
-    <div class="wy-grid-for-nav">
-
-        
-        <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-            <div class="wy-side-scroll">
-            
-                <div class="wy-side-nav-search">
-                  
-
-                  
-                    <a href="../index.html">
-                  
-
-                  
-                    
-                    <img src="../_static/logo.png" class="logo" />
-                  
-                  </a>
-
-                  
-                    
-                    
-                      <div class="version">
-                        2.0.0
-                      </div>
-                    
-                  
-                  
-                  
-                  
-
-                  
-                </div>
-
-                <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-                  
-                    
-                    
-                        <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../index.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../api/v1/index.html">API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../cms/index.html">CMS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../engineering/index.html">Engineering</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Template Development</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="template-overview.html">Template Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="template-tags/index.html">Template Tags</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Template Variables</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#format-json-example">?format=json (Example)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#usage-in-template">Usage In Template</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#root-variables">Root Variables</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#site-variables">Site Variables</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#page-variables">Page Variables</a></li>
-</ul>
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../index.html">
+  Introduction
+ </a>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="template-tags-reference/index.html">Template Tags Reference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="template-files/index.html">Template Files</a></li>
-</ul>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../api/v1/index.html">
+  API
+ </a>
 </li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../cms/index.html">
+  CMS
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../engineering/index.html">
+  Engineering
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="index.html">
+  Template Development
+ </a>
+</li>
+
+    
 </ul>
+      </div>
+      
+    </div>
 
-                    
-                  
-                </div>
-            </div>
-        </nav>
-
-        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-            
-            <header class="wy-nav-content-header">
-            
-                <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-                    <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-                    <a href="../index.html">PageStudio</a>
-                </nav>
-                
-            </header>
-
-            
-            <div class="wy-nav-content">
-            
-                
-<div role="search">
-  <form id="rtd-search-form" class="wy-form search-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search documentation..." />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
 </div>
-                
-                
+    </nav>
+    
 
- 
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-        
-          <li><a href="index.html">Template Development</a> &raquo;</li>
-        
-    <li>Template Variables</li>
-    <li class="wy-breadcrumbs-aside">
-        
+    <div class="container-xl">
+      <div class="row">
           
-        
-    </li>
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="template-overview.html">
+   Template Overview
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Template Variables
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="template-tags/index.html">
+   Template Tags (Deepdive)
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="simple">
   </ul>
-</div>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="template-tags-reference/index.html">
+   Template Tags Reference
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="template-tags-reference/entries-tag.html">
+     Entries Tag
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="template-tags-reference/collections-tag.html">
+     Collections Tag
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="template-tags-reference/galleries-tag.html">
+     Galleries Tag
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="template-tags-reference/categories-tag.html">
+     Categories Tags
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="template-tags-reference/snippets-tag.html">
+     Snippets Tag
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="template-files/index.html">
+   Template Files
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="template-files/template-configuration.html">
+     Template Configuration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="template-files/template-preview-image.html">
+     Template Preview Image
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="template-files/template-layout.html">
+     Template Layout
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="template-files/template-partial.html">
+     Template Partial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="template-files/menus-and-navigation.html">
+     Menus &amp; Navigations
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+  </div>
+</nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
                 
-                <div class="rst-content">
-                    <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-                        <div itemprop="articleBody">
-                            
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#format-json-example">
+   ?format=json (Example)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#usage-in-template">
+   Usage In Template
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#root-variables">
+   Root Variables
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#site-variables">
+   Site Variables
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#page-variables">
+   Page Variables
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
   <div class="section" id="template-variables">
 <h1>Template Variables<a class="headerlink" href="#template-variables" title="Permalink to this headline">¶</a></h1>
-<p>Variables available for use in any given template layout/partial file on every page. These variables are normally categorized under two namespaces (groups) — <strong>site</strong> or <strong>page</strong>. To view them all and the data associated with, simply append <code class="docutils literal notranslate"><span class="pre">?format=json</span></code> to the end of any website url (<code class="docutils literal notranslate"><span class="pre">http://example-website.com?format=json</span></code>). Doing so will display a JSON object similar to that below for that page.</p>
+<p>Variables available for use in any given template layout/partial file on every page. These variables are normally categorized under two namespaces (groups) — <strong>site</strong> or <strong>page</strong>. To view them all and the data associated with, simply append <code class="docutils literal notranslate"><span class="pre">?format=json</span></code> to the end of any website url (<code class="docutils literal notranslate"><span class="pre">http://example-website.com?format=json</span></code>). Doing so will display a JSON object similar to that below, showing the available properties for that page. These properties are accessible in your template layout/partial (<code class="docutils literal notranslate"><span class="pre">.html</span></code>).</p>
 <div class="section" id="format-json-example">
 <h2>?format=json (Example)<a class="headerlink" href="#format-json-example" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;_content&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;div&gt;&lt;/div&gt;&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;body_tag_css&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;media_relative_path&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;theme_relative_path&quot;</span><span class="p">:</span> <span class="s2">&quot;static\/rocu56\/themes\/pagestudio\/\/&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;wrapper_style&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;page&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;slug&quot;</span><span class="p">:</span> <span class="s2">&quot;home&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https:\/\/cosmointeractive.co\/home&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Web Design Anderson, SC&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Providing digital technology solutions through web design, responsive design and web development to the Anderson, SC area.&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;keywords&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;excerpt&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;author_id&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;featured_image&quot;</span><span class="p">:</span> <span class="s2">&quot;static\/rocu56\/media\/uploads\/images\/sites-collage.jpg&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;created_date&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-11-30 23:32:30&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;published_date&quot;</span><span class="p">:</span> <span class="s2">&quot;1900-01-01 00:00:00&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;modified_date&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-10-15 18:40:57&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;authorId&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;uniqueUrl&quot;</span><span class="p">:</span> <span class="s2">&quot;home&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;featuredImageUrl&quot;</span><span class="p">:</span> <span class="s2">&quot;static\/rocu56\/media\/uploads\/images\/sites-collage.jpg&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;dateCreated&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-11-30 23:32:30&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;dateModified&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-10-15 18:40:57&quot;</span>
-    <span class="p">},</span>
-    <span class="nt">&quot;site&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;cosmo-mathieu-rocu56&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https:\/\/cosmointeractive.co\/&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;primary_domain&quot;</span><span class="p">:</span> <span class="s2">&quot;http:\/\/cosmointeractive.co\/&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Cosmo Interactive&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Providing digital technology solutions through web design, responsive design and web development to the Anderson, SC area.&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;logo&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;slogan&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-        <span class="nt">&quot;timeZone&quot;</span><span class="p">:</span> <span class="s2">&quot;America\/New_York&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;lang&quot;</span><span class="p">:</span> <span class="s2">&quot;en-US&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;locale&quot;</span><span class="p">:</span> <span class="s2">&quot;en-US&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;subscription&quot;</span><span class="p">:</span> <span class="kc">null</span>
-    <span class="p">}</span>
-<span class="p">}</span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;_content&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;div&gt;&lt;/div&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;body_tag_css&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;media_relative_path&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;theme_relative_path&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;static\/rocu56\/themes\/pagestudio\/\/&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;wrapper_style&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;page&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;slug&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;home&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https:\/\/cosmointeractive.co\/home&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Web Design Anderson, SC&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Providing digital technology solutions through web design, responsive design and web development to the Anderson, SC area.&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;keywords&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;excerpt&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;author_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;9&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;featured_image&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;static\/rocu56\/media\/uploads\/images\/sites-collage.jpg&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;created_date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2018-11-30 23:32:30&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;published_date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1900-01-01 00:00:00&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;modified_date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2020-10-15 18:40:57&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;authorId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;9&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;uniqueUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;home&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;featuredImageUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;static\/rocu56\/media\/uploads\/images\/sites-collage.jpg&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;dateCreated&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2018-11-30 23:32:30&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;dateModified&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2020-10-15 18:40:57&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;site&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cosmo-mathieu-rocu56&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https:\/\/cosmointeractive.co\/&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;primary_domain&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http:\/\/cosmointeractive.co\/&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Cosmo Interactive&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Providing digital technology solutions through web design, responsive design and web development to the Anderson, SC area.&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;logo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;slogan&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;timeZone&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;America\/New_York&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;en-US&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;locale&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;en-US&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;subscription&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="usage-in-template">
 <h2>Usage In Template<a class="headerlink" href="#usage-in-template" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">When it comes to accessing page data we highly recomend that the pre-defined variables defined under <a class="reference external" href="template-tags-reference/entries-tag.html#pre-defined-variables">Entries Template Tag</a> be used. For data withing the <strong>site</strong> object follow the example below.</p>
+<p class="admonition-title">Note</p>
+<p>When it comes to accessing page data we highly recomend that the pre-defined variables defined under <a class="reference external" href="template-tags-reference/entries-tag.html#pre-defined-variables">Entries Template Tag</a> be used. For data withing the <strong>site</strong> object follow the example below.</p>
 </div>
 <p>To display the associated value of a given property you need to wrap it in curly braces <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">}}</span></code>. Nested properties can be displayed using the dot-notation i.e <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">site.title</span> <span class="pre">}}</span></code>, which would display the value “Cosmo Interactive”. In that example both <strong>site</strong> and <strong>title</strong> are nested properties of the main <code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">}</span></code> JSON object. <strong>title</strong> is thus a nested property of <strong>site</strong> and <strong>site</strong> is a nested property of the parent <code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">}</span></code> JSON object.</p>
 </div>
@@ -220,127 +358,105 @@
 <h2>Root Variables<a class="headerlink" href="#root-variables" title="Permalink to this headline">¶</a></h2>
 <p>These variables are contained at the root of the object, in other words, they are not contained within the <strong>site</strong> or <strong>page</strong> object. <em>All except <strong>_content</strong> are deprecated and should not be used from version 2 and forward.</em></p>
 <ul class="simple">
-<li><strong>_content</strong> — More info coming soon…</li>
-<li><strong>body_tag_css</strong> — More info coming soon…</li>
-<li><strong>media_relative_path</strong> — More info coming soon…</li>
-<li><strong>theme_relative_path</strong> — More info coming soon…</li>
-<li><strong>wrapper_style</strong> — More info coming soon…</li>
+<li><p><strong>_content</strong> — More info coming soon…</p></li>
+<li><p><strong>body_tag_css</strong> — More info coming soon…</p></li>
+<li><p><strong>media_relative_path</strong> — More info coming soon…</p></li>
+<li><p><strong>theme_relative_path</strong> — More info coming soon…</p></li>
+<li><p><strong>wrapper_style</strong> — More info coming soon…</p></li>
 </ul>
 </div>
 <div class="section" id="site-variables">
 <h2>Site Variables<a class="headerlink" href="#site-variables" title="Permalink to this headline">¶</a></h2>
 <p>These variables provide data relating with the site as a whole. The associated values WILL NOT change from page to page.</p>
 <ul class="simple">
-<li><strong>site.id</strong> — Defiition coming soon..</li>
-<li><strong>site.url</strong> — Defiition coming soon..</li>
-<li><strong>site.primary_domain</strong> — Defiition coming soon..</li>
-<li><strong>site.title</strong> — Defiition coming soon..</li>
-<li><strong>site.description</strong> — Defiition coming soon..</li>
-<li><strong>site.logo</strong> — Defiition coming soon..</li>
-<li><strong>site.slogan</strong> — Defiition coming soon..</li>
-<li><strong>site.timeZone</strong> — Defiition coming soon..</li>
-<li><strong>site.lang</strong> — Defiition coming soon..</li>
-<li><strong>site.locale</strong> — Defiition coming soon..</li>
-<li><strong>site.subscription</strong> — Defiition coming soon..</li>
+<li><p><strong>site.id</strong> — Defiition coming soon..</p></li>
+<li><p><strong>site.url</strong> — Defiition coming soon..</p></li>
+<li><p><strong>site.primary_domain</strong> — Defiition coming soon..</p></li>
+<li><p><strong>site.title</strong> — Defiition coming soon..</p></li>
+<li><p><strong>site.description</strong> — Defiition coming soon..</p></li>
+<li><p><strong>site.logo</strong> — Defiition coming soon..</p></li>
+<li><p><strong>site.slogan</strong> — Defiition coming soon..</p></li>
+<li><p><strong>site.timeZone</strong> — Defiition coming soon..</p></li>
+<li><p><strong>site.lang</strong> — Defiition coming soon..</p></li>
+<li><p><strong>site.locale</strong> — Defiition coming soon..</p></li>
+<li><p><strong>site.subscription</strong> — Defiition coming soon..</p></li>
 </ul>
 </div>
 <div class="section" id="page-variables">
 <h2>Page Variables<a class="headerlink" href="#page-variables" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">We highly recomend that the pre-defined variables defined under <a class="reference external" href="template-tags-reference/entries-tag.html#pre-defined-variables">Entries Template Tag</a> be used instead. They provide additional features.</p>
+<p class="admonition-title">Note</p>
+<p>We highly recomend that the pre-defined variables defined under <a class="reference external" href="template-tags-reference/entries-tag.html#pre-defined-variables">Entries Template Tag</a> be used instead. They provide additional features.</p>
 </div>
 <p>These variables provide data relating to the page being accessed. The associated values WILL change from page to page.</p>
 <ul class="simple">
-<li><strong>page.id</strong> The entity ID of the page. Used for retrieving data about the page. — 1, or 12, etc.</li>
-<li><strong>page.slug</strong></li>
-<li><strong>page.url</strong></li>
-<li><strong>page.title</strong></li>
-<li><strong>page.description</strong></li>
-<li><strong>page.keywords</strong></li>
-<li><strong>page.excerpt</strong></li>
-<li><strong>page.featured_image</strong></li>
-<li><strong>page.author_id</strong></li>
-<li><strong>page.created_date</strong> The date and time the page was created — 2020-01-01 00:00:00</li>
-<li><strong>page.modified_date</strong> The last date and time the page was last modified. — 2020-01-01 00:00:00</li>
-<li><strong>page.published_date</strong> The date and time representing when the page was published (made available for viewing). Commonly used in blog articles to — 2020-01-01 00:00:00</li>
-<li><strong>page.uniqueUrl</strong> Same as the <code class="docutils literal notranslate"><span class="pre">slug</span></code>.</li>
-<li><strong>page.authorId</strong> Same as <code class="docutils literal notranslate"><span class="pre">author_id</span></code>.</li>
-<li><strong>page.featuredImageUrl</strong> Same as <code class="docutils literal notranslate"><span class="pre">featured_image</span></code>.</li>
-<li><strong>page.dateCreated</strong> Same as <code class="docutils literal notranslate"><span class="pre">created_date</span></code>.</li>
-<li><strong>page.dateModified</strong> Same as <code class="docutils literal notranslate"><span class="pre">modified_date</span></code>.</li>
+<li><p><strong>page.id</strong> The entity ID of the page. Used for retrieving data about the page. — 1, or 12, etc.</p></li>
+<li><p><strong>page.slug</strong></p></li>
+<li><p><strong>page.url</strong></p></li>
+<li><p><strong>page.title</strong></p></li>
+<li><p><strong>page.description</strong></p></li>
+<li><p><strong>page.keywords</strong></p></li>
+<li><p><strong>page.excerpt</strong></p></li>
+<li><p><strong>page.featured_image</strong></p></li>
+<li><p><strong>page.author_id</strong></p></li>
+<li><p><strong>page.created_date</strong> The date and time the page was created — 2020-01-01 00:00:00</p></li>
+<li><p><strong>page.modified_date</strong> The last date and time the page was last modified. — 2020-01-01 00:00:00</p></li>
+<li><p><strong>page.published_date</strong> The date and time representing when the page was published (made available for viewing). Commonly used in blog articles to — 2020-01-01 00:00:00</p></li>
+<li><p><strong>page.uniqueUrl</strong> Same as the <code class="docutils literal notranslate"><span class="pre">slug</span></code>.</p></li>
+<li><p><strong>page.authorId</strong> Same as <code class="docutils literal notranslate"><span class="pre">author_id</span></code>.</p></li>
+<li><p><strong>page.featuredImageUrl</strong> Same as <code class="docutils literal notranslate"><span class="pre">featured_image</span></code>.</p></li>
+<li><p><strong>page.dateCreated</strong> Same as <code class="docutils literal notranslate"><span class="pre">created_date</span></code>.</p></li>
+<li><p><strong>page.dateModified</strong> Same as <code class="docutils literal notranslate"><span class="pre">modified_date</span></code>.</p></li>
 </ul>
 <hr /><p>In addition to the aforementioned variables, additional variables and <a class="reference external" href="http://">tag-groups</a> (defined in modules), are also accessible within a template file through template tags. They typically follow a module namespace dot <code class="docutils literal notranslate"><span class="pre">.</span></code> tag-name convention, i.e. <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">module-namespace.variable</span> <span class="pre">}}</span></code>. See the complete list of system modules for more info.</p>
 </div>
 </div>
 
 
-                        </div>
-                    </div>
-                    <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="template-tags-reference/index.html" class="btn btn-neutral float-right" title="Template Tags Reference" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="template-tags/tags-by-module/index.html" class="btn btn-neutral" title="Tags By Module" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="template-overview.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Template Overview</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="template-tags/index.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Template Tags (Deepdive)</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+              
+          </main>
+          
+
+      </div>
     </div>
   
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; Copyright 2019, PageStudio.
-      Last updated on Jun 03, 2021.
-
-    </p>
-  </div> 
-
-</footer>
-
-                </div>
-            </div>
-
-        </section>
-
+    <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2019, PageStudio.<br>
+</p>
     </div>
     
-
-
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'2.0.0',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
-      });
-  </script>
-   
-
-</body>
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
 </html>

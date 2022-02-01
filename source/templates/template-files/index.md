@@ -5,7 +5,6 @@ This section provides definitions and purpose of each file that makes up a PageS
 ```eval_rst
 .. toctree::
     :maxdepth: 1
-    :hidden:
     :titlesonly:
 
     template-configuration

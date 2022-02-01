@@ -8,7 +8,7 @@ This **tag block** allows you to lookup a gallery by `galleryId`, and display it
 <div>
 {{ galleries:gallery gallery_id="1" }}    
     <div>
-        <img src="{{ image crop"150x150" }}" alt="{{ alt }}" />
+        <img src="{{ image crop='150x150' }}" alt="{{ alt }}" />
         <h3>{{ title }}</h3>
         {{ description }}
     </div>
@@ -59,7 +59,7 @@ Using the glallery module to render a slideshow.
         <ul class="slides">
             {{ galleries:gallery gallery_id="1" }}
             <li>
-                <img src="{{ image crop="200x150" }}" alt="{{ alt }}" />
+                <img src="{{ image crop='200x150' }}" alt="{{ alt }}" />
             </li>
             {{ /galleries:gallery }}
         </ul>
