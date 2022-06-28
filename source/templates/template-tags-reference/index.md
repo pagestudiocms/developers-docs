@@ -7,6 +7,7 @@
     :titlesonly:
 
     entries-tag
+    related-entries-tag
     collections-tag
     galleries-tag
     categories-tag

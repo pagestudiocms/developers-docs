@@ -27,13 +27,6 @@ Using the tag block operator you can control what fields are outputted and how i
 
 All entries have the following pre-defined tags that can be used anywhere in the content:
 
-```eval_rst
-
-.. contents::
-    :local: 
-
-```
-
 ### title=
 
 Outputs the title of the page
@@ -133,6 +126,12 @@ An inline editable title field
 {{ meta_keywords }} - Outputs the pages meta keywords
 ```
 
+### featured_image=
+
+```
+{{ featured_image }} - Path to the primary image for an entry/page. Often appearing above or next to each content entry and on social media as the shareable image.
+```
+
 ### categories=
 
 Displays the categories assigned to the particular entry. This variable can be used in two ways, as a **single variable** or a **tag-pair**. 
@@ -199,13 +198,6 @@ url_title | The shortname of the category. In wordpress this would be the **slug
 <hr />
 
 ## Parameters
-
-```eval_rst
-
-.. contents::
-    :local: 
-
-```
 
 ### backspace=
 

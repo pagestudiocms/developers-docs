@@ -1,0 +1,473 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Related Entries Tag (Next/Previous Linking) &#8212; PageStudio 3.2.0 documentation</title>
+    
+    <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  
+    
+    <link rel="stylesheet"
+      href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+    
+      
+  
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/pydata-sphinx-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    
+    <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Collections Tag" href="collections-tag.html" />
+    <link rel="prev" title="Entries Tag" href="entries-tag.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../../index.html">
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../index.html">
+  Introduction
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../api/v1/index.html">
+  API
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../cms/index.html">
+  CMS
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../engineering/index.html">
+  Engineering
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="../index.html">
+  Template Development
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../template-overview.html">
+   Template Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../template-variables.html">
+   Template Variables
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../template-tags/index.html">
+   Template Tags (Deepdive)
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="simple">
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
+   Template Tags Reference
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="entries-tag.html">
+     Entries Tag
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Related Entries Tag (Next/Previous Linking)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="collections-tag.html">
+     Collections Tag
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="galleries-tag.html">
+     Galleries Tag
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="categories-tag.html">
+     Categories Tags
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="snippets-tag.html">
+     Snippets Tag
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../template-files/index.html">
+   Template Files
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../template-files/template-configuration.html">
+     Template Configuration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../template-files/template-preview-image.html">
+     Template Preview Image
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../template-files/template-layout.html">
+     Template Layout
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../template-files/template-partial.html">
+     Template Partial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../template-files/menus-and-navigation.html">
+     Menus &amp; Navigations
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+  </div>
+</nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pre-defined-variables">
+   Pre-defined Variables
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id">
+     id=
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#category-group-id">
+     category_group_id=
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#title">
+     title=
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#slug">
+     slug=
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#url">
+     url=
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#thumb-url">
+     thumb_url=
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#featured-image">
+     featured_image=
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#status">
+     status=
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#parameters">
+   Parameters
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#direction">
+     direction=
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="related-entries-tag-next-previous-linking">
+<h1>Related Entries Tag (Next/Previous Linking)<a class="headerlink" href="#related-entries-tag-next-previous-linking" title="Permalink to this headline">¶</a></h1>
+<p>Allows template developers the ability to implement Next and Previous entry links, which allows linking to the next or previous content_type entry, based on one or more related categories of the active entry/page.</p>
+<p><strong>Tag Pair</strong></p>
+<p>Used as a tab block you can control what fields are outputted and how it is formatted.</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>...
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;pagination left&quot;</span><span class="p">&gt;</span>
+    {{ content:related_entry direction=&quot;previous&quot; }}
+        <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;{{ thumb_url }}&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h6</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{{ url }}&quot;</span><span class="p">&gt;</span>Previous<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">h6</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>{{ title }}<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    {{ /content:related_entry }}
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;pagination right&quot;</span><span class="p">&gt;</span>
+    {{ content:related_entry direction=&quot;next&quot; }}
+        <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;{{ thumb_url }}&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h6</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{{ url }}&quot;</span><span class="p">&gt;</span>Next<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">h6</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>{{ title }}<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    {{ /content:related_entry }}
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+...
+</pre></div>
+</div>
+<hr /><div class="section" id="pre-defined-variables">
+<h2>Pre-defined Variables<a class="headerlink" href="#pre-defined-variables" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id">
+<h3>id=<a class="headerlink" href="#id" title="Permalink to this headline">¶</a></h3>
+<p>The entry_id</p>
+</div>
+<div class="section" id="category-group-id">
+<h3>category_group_id=<a class="headerlink" href="#category-group-id" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="title">
+<h3>title=<a class="headerlink" href="#title" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span> <span class="n">title</span> <span class="p">}}</span> <span class="o">-</span> <span class="n">Outputs</span> <span class="n">the</span> <span class="n">title</span> <span class="n">of</span> <span class="n">the</span> <span class="n">entry</span><span class="o">/</span><span class="n">page</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="slug">
+<h3>slug=<a class="headerlink" href="#slug" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span> <span class="n">slug</span> <span class="p">}}</span> <span class="o">-</span> <span class="n">The</span> <span class="n">page</span> <span class="n">URI</span> <span class="n">of</span> <span class="n">the</span> <span class="n">current</span> <span class="n">entry</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="url">
+<h3>url=<a class="headerlink" href="#url" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span> <span class="n">url</span> <span class="p">}}</span> <span class="o">-</span> <span class="n">The</span> <span class="o">**</span><span class="n">slug</span><span class="o">**</span> <span class="n">prefixed</span> <span class="k">with</span> <span class="n">the</span> <span class="n">website</span> <span class="n">url</span><span class="o">.</span> 
+</pre></div>
+</div>
+</div>
+<div class="section" id="thumb-url">
+<h3>thumb_url=<a class="headerlink" href="#thumb-url" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span> <span class="n">thumb_url</span> <span class="p">}}</span> <span class="o">-</span> <span class="n">The</span> <span class="o">**</span><span class="n">featured_image</span><span class="o">**</span> <span class="n">prefixed</span> <span class="k">with</span> <span class="n">the</span> <span class="n">website</span> <span class="n">url</span><span class="o">.</span> 
+</pre></div>
+</div>
+</div>
+<div class="section" id="featured-image">
+<h3>featured_image=<a class="headerlink" href="#featured-image" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span> <span class="n">featured_image</span> <span class="p">}}</span> <span class="o">-</span> <span class="n">Path</span> <span class="n">to</span> <span class="n">the</span> <span class="n">primary</span> <span class="n">image</span> <span class="k">for</span> <span class="n">an</span> <span class="n">entry</span><span class="o">/</span><span class="n">page</span><span class="o">.</span> <span class="n">Often</span> <span class="n">appearing</span> <span class="n">above</span> <span class="ow">or</span> <span class="nb">next</span> <span class="n">to</span> <span class="n">each</span> <span class="n">content</span> <span class="n">entry</span> <span class="ow">and</span> <span class="n">on</span> <span class="n">social</span> <span class="n">media</span> <span class="k">as</span> <span class="n">the</span> <span class="n">shareable</span> <span class="n">image</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="status">
+<h3>status=<a class="headerlink" href="#status" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span> <span class="n">status</span> <span class="p">}}</span> <span class="o">-</span> <span class="n">The</span> <span class="n">content</span> <span class="nb">type</span> <span class="n">status</span> <span class="p">(</span><span class="n">draft</span><span class="o">|</span><span class="n">published</span><span class="o">|</span><span class="n">closed</span><span class="o">|</span><span class="n">disabled</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="parameters">
+<h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="direction">
+<h3>direction=<a class="headerlink" href="#direction" title="Permalink to this headline">¶</a></h3>
+<p>Determins whether to fetch the next or previous entry related to the current entry/page being viewed.</p>
+<p><code class="docutils literal notranslate"><span class="pre">direction=&quot;previous|next&quot;</span></code></p>
+<p><strong>Example:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span> <span class="n">content</span><span class="p">:</span><span class="n">related_entry</span> <span class="n">direction</span><span class="o">=</span><span class="s2">&quot;next&quot;</span> <span class="p">}}</span>
+    <span class="o">...</span>
+<span class="p">{{</span> <span class="o">/</span><span class="n">content</span><span class="p">:</span><span class="n">related_entry</span> <span class="p">}}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="entries-tag.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Entries Tag</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="collections-tag.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Collections Tag</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+    <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2019, PageStudio.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>
