@@ -1,14 +1,5 @@
 # Template Overview
 
-```eval_rst
-.. sidebar:: Table of contents
-
-    .. contents::
-        :local:
-        :depth: 2
-
-```
-
 PageStudio website templates have different [insertion points](#) where content can be attached while using the [Visual Editor](/cms/visual-editor/index) that display specific content. To support all available functionality each PageStudio template must contain a specific set of predefined directives, folders and files. This page is aimed at developers looking to better understand the template file and folder hierarchy. 
 
 ## Languages & Filetypes
