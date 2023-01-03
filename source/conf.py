@@ -71,7 +71,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'PageStudio'
-copyright = '2019, PageStudio'
+copyright = '2023, PageStudio'
 author = 'PageStudio'
 
 # The version info for the project you're documenting, acts as replacement for
