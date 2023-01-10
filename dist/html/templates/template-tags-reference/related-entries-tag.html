@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Related Entries Tag (Next/Previous Linking) &#8212; PageStudio 3.2.0 documentation</title>
+    <title>Next/Previous Entries &#8212; PageStudio 3.2.0 documentation</title>
     
     <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -173,7 +173,7 @@
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Related Entries Tag (Next/Previous Linking)
+     Next/Previous Entries
     </a>
    </li>
    <li class="toctree-l2">
@@ -259,8 +259,8 @@
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#pre-defined-variables">
-   Pre-defined Variables
+  <a class="reference internal nav-link" href="#variables">
+   Variables
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -300,18 +300,6 @@
    </li>
   </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#parameters">
-   Parameters
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#direction">
-     direction=
-    </a>
-   </li>
-  </ul>
- </li>
 </ul>
 
 </nav>
@@ -333,31 +321,35 @@
               
               <div>
                 
-  <div class="section" id="related-entries-tag-next-previous-linking">
-<h1>Related Entries Tag (Next/Previous Linking)<a class="headerlink" href="#related-entries-tag-next-previous-linking" title="Permalink to this headline">¶</a></h1>
-<p>Allows template developers the ability to implement Next and Previous entry links, which allows linking to the next or previous content_type entry, based on one or more related categories of the active entry/page.</p>
+  <div class="section" id="next-previous-entries">
+<h1>Next/Previous Entries<a class="headerlink" href="#next-previous-entries" title="Permalink to this headline">¶</a></h1>
+<p>Allow template developers the ability to generate links to the Next or Previous entry, based on one or more related categories to the current entry/page.</p>
 <p><strong>Tag Pair</strong></p>
-<p>Used as a tab block you can control what fields are outputted and how it is formatted.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Must be implemented as a tab pair to allow control over the HTML markup.</p>
+</div>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span>...
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;pagination left&quot;</span><span class="p">&gt;</span>
-    {{ content:related_entry direction=&quot;previous&quot; }}
+    {{ content:prev_entry }}
         <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;{{ thumb_url crop=&#39;150x150&#39; }}&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">h6</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{{ url }}&quot;</span><span class="p">&gt;</span>Previous<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">h6</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>{{ title }}<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-    {{ /content:related_entry }}
+    {{ /content:prev_entry }}
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;pagination right&quot;</span><span class="p">&gt;</span>
-    {{ content:related_entry direction=&quot;next&quot; }}
+    {{ content:next_entry }}
         <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;{{ thumb_url crop=&#39;150x150&#39; }}&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">h6</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{{ url }}&quot;</span><span class="p">&gt;</span>Next<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">h6</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>{{ title }}<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-    {{ /content:related_entry }}
+    {{ /content:next_entry }}
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 ...
 </pre></div>
 </div>
-<hr /><div class="section" id="pre-defined-variables">
-<h2>Pre-defined Variables<a class="headerlink" href="#pre-defined-variables" title="Permalink to this headline">¶</a></h2>
+<hr /><div class="section" id="variables">
+<h2>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id">
 <h3>id=<a class="headerlink" href="#id" title="Permalink to this headline">¶</a></h3>
 <p>The entry_id</p>
@@ -388,7 +380,7 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span> <span class="n">thumb_url</span> <span class="p">}}</span> <span class="o">-</span> <span class="n">Outputs</span> <span class="n">the</span> <span class="n">full</span> <span class="n">url</span> <span class="n">to</span> <span class="n">the</span>  <span class="o">**</span><span class="n">featured_image</span><span class="o">**</span> <span class="n">image</span><span class="o">.</span>
 </pre></div>
 </div>
-<p>The <strong>thumb_url</strong> variable is a pointer to the <strong>featured_image</strong>; the primary image for an entry/page, often appearing above or next to each content entry, and on social media as the shareable image. To avoid conflict with the <strong>featured_image</strong> of the current page related entry links will be created for, this variable is made available as <strong>thumb_url</strong> for use within the <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">content:related_entry</span> <span class="pre">}}...{{</span> <span class="pre">/content:related_entry</span> <span class="pre">}}</span></code> tag pair. Use it to generate thumbnails for the next/previous links.</p>
+<p>The <strong>thumb_url</strong> variable is a pointer to the <strong>featured_image</strong>; the primary image for an entry/page, often appearing above or next to each content entry, and on social media as the shareable image. To avoid conflict with the <strong>featured_image</strong> of the current page related entry links will be created for, this variable is made available as <strong>thumb_url</strong> for use within the <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">content:prev_entry</span> <span class="pre">}}...{{</span> <span class="pre">/content:prev_entry</span> <span class="pre">}}</span></code> and <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">content:next_entry</span> <span class="pre">}}...{{</span> <span class="pre">/content:next_entry</span> <span class="pre">}}</span></code> tag pair. Use it to generate thumbnails for the next/previous links.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This tag has two optional parameters; <strong>crop</strong> and <strong>show_path_only</strong>. Use <code class="docutils literal notranslate"><span class="pre">crop=&quot;${width}x${height}&quot;</span></code> e.g. <code class="docutils literal notranslate"><span class="pre">crop=&quot;200x150&quot;</span></code> to return a resized/cropped and cached version of the image. Use <code class="docutils literal notranslate"><span class="pre">show_path_only='y'</span></code> to return the path to the image without the website url prefixed.</p>
@@ -397,20 +389,6 @@
 <div class="section" id="status">
 <h3>status=<a class="headerlink" href="#status" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span> <span class="n">status</span> <span class="p">}}</span> <span class="o">-</span> <span class="n">The</span> <span class="n">content</span> <span class="nb">type</span> <span class="n">status</span> <span class="p">(</span><span class="n">draft</span><span class="o">|</span><span class="n">published</span><span class="o">|</span><span class="n">closed</span><span class="o">|</span><span class="n">disabled</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="parameters">
-<h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="direction">
-<h3>direction=<a class="headerlink" href="#direction" title="Permalink to this headline">¶</a></h3>
-<p>Determins whether to fetch the next or previous entry related to the current entry/page being viewed.</p>
-<p><code class="docutils literal notranslate"><span class="pre">direction=&quot;previous|next&quot;</span></code></p>
-<p><strong>Example:</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span> <span class="n">content</span><span class="p">:</span><span class="n">related_entry</span> <span class="n">direction</span><span class="o">=</span><span class="s2">&quot;next&quot;</span> <span class="p">}}</span>
-    <span class="o">...</span>
-<span class="p">{{</span> <span class="o">/</span><span class="n">content</span><span class="p">:</span><span class="n">related_entry</span> <span class="p">}}</span>
 </pre></div>
 </div>
 </div>
@@ -451,7 +429,7 @@
     
     <div class="footer-item">
       <p class="copyright">
-    &copy; Copyright 2019, PageStudio.<br>
+    &copy; Copyright 2023, PageStudio.<br>
 </p>
     </div>
     
