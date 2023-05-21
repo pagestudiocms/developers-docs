@@ -130,6 +130,7 @@ An inline editable title field
 
 ```
 {{ featured_image }} - Path to the primary image for an entry/page. Often appearing above or next to each content entry and on social media as the shareable image.
+Has an optional parameter for cropping the image (ex: crop="420x280").
 ```
 
 ### categories=
