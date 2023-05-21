@@ -8,13 +8,6 @@ Displays an unordered list of your blog categories based on the provided paramet
 
 ## Parameters
 
-```eval_rst
-
-.. contents::
-    :local: 
-
-```
-
 ### category_group_id=*
 
 The category group id that the entry belongs to. This is a required field.
@@ -24,7 +17,7 @@ category_group_id="1"
 **Example:**
 
 ```
-{{ content:categories category_group_id="1" }}
+{{ content:categories category_group_id="1" path="blog" }}
 ```
     
 ### id=
@@ -110,3 +103,7 @@ entry_id="6"
     Only categories relating to entry ID [6] ...
 </ul>
 ```
+
+### path=
+
+The content type **slug**. e.g. "blog". 

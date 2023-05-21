@@ -35,7 +35,7 @@
     <script src="../../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Next/Previous Entry Linking" href="related-entries-tag.html" />
+    <link rel="next" title="Next/Previous Entries" href="related-entries-tag.html" />
     <link rel="prev" title="Template Tags Reference" href="index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -173,7 +173,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="related-entries-tag.html">
-     Next/Previous Entry Linking
+     Next/Previous Entries
     </a>
    </li>
    <li class="toctree-l2">
@@ -566,19 +566,19 @@
 <p>Displays the categories assigned to the particular entry. This variable can be used in two ways, as a <strong>single variable</strong> or a <strong>tag-pair</strong>.</p>
 <p><strong>Usage as a single tag</strong></p>
 <p>Single requires the <code class="docutils literal notranslate"><span class="pre">display</span></code> parameter.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span> <span class="n">categories</span> <span class="n">display</span><span class="o">=</span><span class="s2">&quot;inline&quot;</span><span class="p">}}</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span> <span class="n">categories</span> <span class="n">display</span><span class="o">=</span><span class="s2">&quot;inline&quot;</span> <span class="n">path</span><span class="o">=</span><span class="s2">&quot;blog&quot;</span> <span class="p">}}</span>
 </pre></div>
 </div>
 <p>An optional parameter <code class="docutils literal notranslate"><span class="pre">class</span></code> is also available. It allows you to pass a CSS class to be included in the rendered HTLM content.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span> <span class="n">categories</span> <span class="n">display</span><span class="o">=</span><span class="s2">&quot;inline&quot;</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;some-css-class&quot;</span> <span class="p">}}</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span> <span class="n">categories</span> <span class="n">display</span><span class="o">=</span><span class="s2">&quot;inline&quot;</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;some-css-class&quot;</span> <span class="n">path</span><span class="o">=</span><span class="s2">&quot;blog&quot;</span> <span class="p">}}</span>
 </pre></div>
 </div>
 <p><strong>Output</strong></p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;some-css-class&quot;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;first current current_trail&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;&lt;site-url&gt;/category/general&quot;</span><span class="p">&gt;</span>General<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;&lt;site-url&gt;/category/news-press&quot;</span><span class="p">&gt;</span>News Press<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;&lt;site-url&gt;/blog/category/news-press&quot;</span><span class="p">&gt;</span>News Press<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
     ...
-    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;last&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;&lt;site-url&gt;/category/uncategorize&quot;</span><span class="p">&gt;</span>Uncategorize<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;last&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;&lt;site-url&gt;/blog/category/uncategorize&quot;</span><span class="p">&gt;</span>Uncategorize<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">uL</span><span class="p">&gt;</span>
 </pre></div>
 </div>
@@ -804,7 +804,7 @@ Home, Page Not Found, About Us</p>
     <a class='right-next' id="next-link" href="related-entries-tag.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Next/Previous Entry Linking</p>
+        <p class="prev-next-title">Next/Previous Entries</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

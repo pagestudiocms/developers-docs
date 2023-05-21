@@ -141,13 +141,13 @@ Displays the categories assigned to the particular entry. This variable can be u
 Single requires the `display` parameter. 
 
 ```
-{{ categories display="inline"}}
+{{ categories display="inline" path="blog" }}
 ```
 
 An optional parameter `class` is also available. It allows you to pass a CSS class to be included in the rendered HTLM content.
 
 ```
-{{ categories display="inline" class="some-css-class" }}
+{{ categories display="inline" class="some-css-class" path="blog" }}
 ```
 
 **Output**
@@ -155,9 +155,9 @@ An optional parameter `class` is also available. It allows you to pass a CSS cla
 ```html
 <ul class="some-css-class">
     <li class="first current current_trail"><a href="<site-url>/category/general">General</a></li>
-    <li><a href="<site-url>/category/news-press">News Press</a></li>
+    <li><a href="<site-url>/blog/category/news-press">News Press</a></li>
     ...
-    <li class="last"><a href="<site-url>/category/uncategorize">Uncategorize</a></li>
+    <li class="last"><a href="<site-url>/blog/category/uncategorize">Uncategorize</a></li>
 </uL>
 ```
 
