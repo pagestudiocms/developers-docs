@@ -25,19 +25,13 @@ Tag                 | Description                                              |
 | {{ alt }}         | Outputs alternative text defined for the image. Intended for use in the `<img>` alt attribute. 
 | {{ count }}       | Outputs the current image pointer in the array.          |
 | {{&nbsp;description&nbsp;}} | Outputs the description that was defined for the image.  |
-| {{ image }}       | Outputs the full url for the current image. (Note: Has optional resize parameter `crop="${width}x${height}"` e.g. `crop="200x150"`. When set returns a full url path to a resized/cropped and cached version of the image.) |
+| {{ image }}       | Outputs the full url for the current image. <br/>(Note: Has optional resize parameter `crop="${width}x${height}"` e.g. `{{ image crop="200x150" }}`. When set returns a full url path to a resized/cropped and cached version of the image.) |
 | {{ link }}        | Outputs an optional link. Provides the ability to link the image to another page. |
 | {{ link_text }}   | Outputs (optional) link text.                            |
 | {{ title }}       | Outputs the title that was defined for the current image.|
+| {{&nbsp;total_results&nbsp;}} | Outputs the total number of images in the array.|
 
 ## Parameters
-
-```eval_rst 
-
-.. contents::
-    :local:
-
-```
 
 ### gallery_id *Required 
 
@@ -48,45 +42,40 @@ The id or the variable name of the gallery you would like to render and output.
 Using the glallery module to render a slideshow.
 
 ```eval_rst
-.. note:: You can use the ``gallery_exists`` function to check if a given gallery exists before displaying any HTML to the screen. 
+.. note:: Use the ``{{ no_results }}`` tag pair to display content if the referenced gallery is empty or does not exit. 
 ```
 
 ```html
-<div>
-{{ if {galleries:gallery_exists gallery_id="1"} }}
-    <!-- flexSlider -->
-    <div class="flexslider">
-        <ul class="slides">
-            {{ galleries:gallery gallery_id="1" }}
-            <li>
-                <img src="{{ image crop='200x150' }}" alt="{{ alt }}" />
-            </li>
-            {{ /galleries:gallery }}
-        </ul>
-    </div>
-{{ endif }}
-</div>
+<!-- Typical unordered list  -->
+<ul class="ul-list">
+    {{ galleries:gallery gallery_id="1" }}
+        <li>
+            <img src="{{ image crop='200x150' }}" alt="{{ alt }}" />
+        </li>
+        {{ no_results }}
+            <li>Nothing to display.</li>
+        {{ /no_results }}
+    {{ /galleries:gallery }}
+</ul>
 ```
 
-Alternative option to validate if a slideshow exists. 
-
-```eval_rst
-.. note:: **slideshow** is the name of your gallery content_type field name.
-```
+```html
+{{ galleries:gallery gallery_id="1" }}
     
-```html
-<div>
-{{ if slideshow }}
     <!-- flexSlider -->
     <div class="flexslider">
         <ul class="slides">
-            {{ galleries:gallery gallery_id=slideshow }}
-            <li>
-                <img src="{{ image }}" alt="{{ alt }}" />
-            </li>
-            {{ /galleries:gallery }}
+            {{ loop }}
+                <li>
+                    <img src="{{ image crop='200x150' }}" alt="{{ alt }}" />
+                </li>
+            {{ /loop }}
         </ul>
     </div>
-{{ endif }}
-</div>
+
+    {{ no_results }}
+        <p>Nothing to display.</p>
+    {{ /no_results }}
+
+{{ /galleries:gallery }}
 ```

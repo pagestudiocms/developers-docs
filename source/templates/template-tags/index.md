@@ -1,13 +1,5 @@
 # Template Tags (Deepdive)
 
-```eval_rst
-.. sidebar:: Table of contents
-
-    .. contents::
-        :local:
-        :depth: 2
-```
-
 Tags allow you to tap into more advanced functionality using simple syntax right inside your layouts, page layouts, and even pages themselves. Tags can allow you to do some really powerful things without the need to understand complex programming logic.
 
 The following guide will teach you the basics of tags and how to use them in your layouts.

@@ -5,12 +5,32 @@ The PageStudio Developer Guide contains information for developers seeking to le
 
 ```eval_rst
 .. toctree::
-    :maxdepth: 3
+    :maxdepth: 6
     :hidden:
+    :titlesOnly:
 
     self
     api/v1/index
+    cms
+    /cms/index
     cms/index
+    cms/visual-editor
+    cms/visual-editor/index
     engineering/index
     templates/index
+```
+
+```eval_rst
+.. contents::
+   :local:
+   :depth: 3
+```
+
+```eval_rst
+.. toctree::
+    :glob:
+    :maxdepth: 3
+    :hidden:
+
+    *
 ```
