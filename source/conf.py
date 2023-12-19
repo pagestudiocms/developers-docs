@@ -15,6 +15,7 @@
 
 import sys
 import os
+from pathlib import Path
 import shlex
 
 # If extensions (or modules to document with autodoc) are in another directory,
@@ -134,17 +135,18 @@ todo_include_todos = True
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 # html_theme = 'alabaster'
-# import sphinx_rtd_theme
+# import sphinx_rtd_theme_ci
 # html_theme = "sphinx_rtd_theme"
 # html_theme = "sphinx_rtd_theme_ps_v4"
-html_theme = "pydata_sphinx_theme"
+# html_theme = "pydata_sphinx_theme"
+html_theme = "my_pydata_sphinx_theme"
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
-html_theme_options = {
-  'logo_only': True,
-}
+# html_theme_options = {
+#   'logo_only': True,
+# }
 
 # Add any paths that contain custom themes here, relative to this directory.
 html_theme_path = ['_templates']
@@ -397,6 +399,15 @@ epub_exclude_files = ['search.html']
 intersphinx_mapping = {'https://docs.python.org/': None}
 
 github_doc_root = 'https://developers.pagestudiocms.com/'
+
+_THEME_PATH = (Path(__file__).parent / "_templates").resolve()
+sys.path.append(
+  os.path.abspath(_THEME_PATH)
+)
+
+import my_pydata_sphinx_theme
+# from pydata_sphinx_theme import *
+
 def setup(app):
     app.add_source_parser(CommonMarkParser)
     app.add_config_value('recommonmark_config', {
@@ -404,6 +415,17 @@ def setup(app):
         'enable_auto_toc_tree': True,
         # 'auto_toc_tree_section': 'Contents',
         'enable_eval_rst': True,
-        'enable_auto_doc_ref': True,
+        # 'enable_auto_doc_ref': True,
     }, True)
     app.add_transform(AutoStructify)
+
+    # Run theme __init__.py setup
+    print(my_pydata_sphinx_theme.setup(app))
+    
+    # app.config.templates_path.append(
+    #   os.fsdecode(_THEME_PATH / html_theme)
+    # )
+    # app.config.templates_path.append(
+    #   os.fsdecode(_THEME_PATH / html_theme / "_templates")
+    # )
+    # print(app.config.templates_path)
