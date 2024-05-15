@@ -1,11 +1,11 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Categories Tags &#8212; PageStudio 3.2.0 documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Categories Tags &#8212; PageStudio 3.3.1 documentation</title>
     
     <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -22,23 +22,24 @@
       
   
     
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/pydata-sphinx-theme.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b20cc3f5" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/pydata-sphinx-theme.css?v=1140d252" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=45efc450" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=cb90036b" />
     
     <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
   
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/documentation_options.js?v=6f23fdb8"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Snippets Tag" href="snippets-tag.html" />
     <link rel="prev" title="Galleries Tag" href="galleries-tag.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
@@ -54,11 +55,9 @@
   <div id="navbar-start">
     
     
-
 <a class="navbar-brand" href="../../index.html">
-  <img src="../../_static/logo.png" class="logo" alt="logo">
+<p class="title">PageStudio</p>
 </a>
-
 
     
   </div>
@@ -68,7 +67,7 @@
   </button>
 
   
-  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+  <div id="navbar-collapsible" class=" collapse navbar-collapse">
     <div id="navbar-center" class="mr-auto">
       
       <div class="navbar-center-item">
@@ -88,18 +87,6 @@
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../cms/index.html">
   CMS
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../cms/index.html">
-  CMS
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../cms/visual-editor/index.html">
-  Visual Editor
  </a>
 </li>
 
@@ -323,25 +310,25 @@
               
               <div>
                 
-  <div class="section" id="categories-tags">
-<h1>Categories Tags<a class="headerlink" href="#categories-tags" title="Permalink to this headline">¶</a></h1>
+  <section id="categories-tags">
+<h1>Categories Tags<a class="headerlink" href="#categories-tags" title="Link to this heading">¶</a></h1>
 <p>Displays an unordered list of your blog categories based on the provided parameters. Each category links to its blog category archive page.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span> <span class="n">content</span><span class="p">:</span><span class="n">categories</span> <span class="n">category_group_id</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;categories&quot;</span> <span class="p">}}</span>
 </pre></div>
 </div>
-<div class="section" id="parameters">
-<h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="category-group-id">
-<h3>category_group_id=*<a class="headerlink" href="#category-group-id" title="Permalink to this headline">¶</a></h3>
+<section id="parameters">
+<h2>Parameters<a class="headerlink" href="#parameters" title="Link to this heading">¶</a></h2>
+<section id="category-group-id">
+<h3>category_group_id=*<a class="headerlink" href="#category-group-id" title="Link to this heading">¶</a></h3>
 <p>The category group id that the entry belongs to. This is a required field.</p>
 <p>category_group_id=”1”</p>
 <p><strong>Example:</strong></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span> <span class="n">content</span><span class="p">:</span><span class="n">categories</span> <span class="n">category_group_id</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">path</span><span class="o">=</span><span class="s2">&quot;blog&quot;</span> <span class="p">}}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="id">
-<h3>id=<a class="headerlink" href="#id" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="id">
+<h3>id=<a class="headerlink" href="#id" title="Link to this heading">¶</a></h3>
 <p>The html <code class="docutils literal notranslate"><span class="pre">id</span></code> attribute.</p>
 <p>id=”blog”</p>
 <p><strong>Example:</strong></p>
@@ -357,9 +344,9 @@
 <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="class">
-<h3>class=<a class="headerlink" href="#class" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="class">
+<h3>class=<a class="headerlink" href="#class" title="Link to this heading">¶</a></h3>
 <p>The html <code class="docutils literal notranslate"><span class="pre">class</span></code> attribute.</p>
 <p>class=”categories”</p>
 <p><strong>Example:</strong></p>
@@ -375,9 +362,9 @@
 <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="entry-id">
-<h3>entry_id=<a class="headerlink" href="#entry-id" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="entry-id">
+<h3>entry_id=<a class="headerlink" href="#entry-id" title="Link to this heading">¶</a></h3>
 <p>Passing the <code class="docutils literal notranslate"><span class="pre">entry_id</span></code> to the categories tag specifies that you only want categories relating to that entry.</p>
 <p>entry_id=”6”</p>
 <div class="admonition note">
@@ -406,13 +393,13 @@
 <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="path">
-<h3>path=<a class="headerlink" href="#path" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="path">
+<h3>path=<a class="headerlink" href="#path" title="Link to this heading">¶</a></h3>
 <p>The content type <strong>slug</strong>. e.g. “blog”.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
               </div>
@@ -454,7 +441,7 @@
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 7.3.7.<br>
 </p>
     </div>
     

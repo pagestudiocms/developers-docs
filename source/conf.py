@@ -44,7 +44,8 @@ extensions = [
     'sphinx.ext.ifconfig',
     'sphinx.ext.viewcode',
     'sphinx_tabs.tabs',
-    'sphinx_markdown_tables'
+    'sphinx_markdown_tables',
+    'sphinx_design'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -88,7 +89,7 @@ release = '3.3.1'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = None
+language = 'en'
 
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:
@@ -139,11 +140,26 @@ todo_include_todos = True
 # html_theme = "sphinx_rtd_theme_ps_v4"
 html_theme = "pydata_sphinx_theme"
 
+# The name of an image file (relative to this directory) to place at the top
+# of the sidebar.
+html_logo = "_static/logo-white_175x15.png"
+
+# The name of an image file (within the static path) to use as favicon of the
+# docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
+# pixels large.
+# html_favicon = "_static/logo.png"
+
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
 html_theme_options = {
-  'logo_only': True,
+  "logo": {
+    "image_dark": "_static/logo.png",
+    "image_light": "_static/logo.png",
+    "alt_text": "My awesome documentation - Home",
+  },
+  "navbar_align": "left",  # [left, content, right] For testing that the navbar items align properly
+  "navbar_start": ["navbar-logo"]
 }
 
 # Add any paths that contain custom themes here, relative to this directory.
@@ -157,16 +173,6 @@ html_theme_path = ['_templates']
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
-
-# The name of an image file (relative to this directory) to place at the top
-# of the sidebar.
-#html_logo = None
-html_logo = '_static/logo.png'
-
-# The name of an image file (within the static path) to use as favicon of the
-# docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
-# pixels large.
-#html_favicon = None
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -394,7 +400,7 @@ epub_exclude_files = ['search.html']
 
 
 # Example configuration for intersphinx: refer to the Python standard library.
-intersphinx_mapping = {'https://docs.python.org/': None}
+# intersphinx_mapping = {'https://docs.python.org/': None}
 
 github_doc_root = 'https://developers.pagestudiocms.com/'
 def setup(app):
@@ -404,6 +410,6 @@ def setup(app):
         'enable_auto_toc_tree': True,
         # 'auto_toc_tree_section': 'Contents',
         'enable_eval_rst': True,
-        'enable_auto_doc_ref': True,
+        # 'enable_auto_doc_ref': True,
     }, True)
     app.add_transform(AutoStructify)

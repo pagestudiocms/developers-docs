@@ -1,11 +1,11 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Template Overview &#8212; PageStudio 3.2.0 documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Template Overview &#8212; PageStudio 3.3.1 documentation</title>
     
     <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -22,23 +22,24 @@
       
   
     
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/pydata-sphinx-theme.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b20cc3f5" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/pydata-sphinx-theme.css?v=1140d252" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=45efc450" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=cb90036b" />
     
     <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
   
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
+    <script src="../_static/documentation_options.js?v=6f23fdb8"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Template Variables" href="template-variables.html" />
     <link rel="prev" title="Template Development" href="index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
@@ -54,11 +55,9 @@
   <div id="navbar-start">
     
     
-
 <a class="navbar-brand" href="../index.html">
-  <img src="../_static/logo.png" class="logo" alt="logo">
+<p class="title">PageStudio</p>
 </a>
-
 
     
   </div>
@@ -68,7 +67,7 @@
   </button>
 
   
-  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+  <div id="navbar-collapsible" class=" collapse navbar-collapse">
     <div id="navbar-center" class="mr-auto">
       
       <div class="navbar-center-item">
@@ -88,18 +87,6 @@
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../cms/index.html">
   CMS
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../cms/index.html">
-  CMS
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../cms/visual-editor/index.html">
-  Visual Editor
  </a>
 </li>
 
@@ -306,15 +293,15 @@
               
               <div>
                 
-  <div class="section" id="template-overview">
-<h1>Template Overview<a class="headerlink" href="#template-overview" title="Permalink to this headline">¶</a></h1>
+  <section id="template-overview">
+<h1>Template Overview<a class="headerlink" href="#template-overview" title="Link to this heading">¶</a></h1>
 <p>PageStudio website templates have different <a class="reference external" href="#">insertion points</a> where content can be attached while using the <a class="reference internal" href="../cms/visual-editor/index.html"><span class="doc">Visual Editor</span></a> that display specific content. To support all available functionality each PageStudio template must contain a specific set of predefined directives, folders and files. This page is aimed at developers looking to better understand the template file and folder hierarchy.</p>
-<div class="section" id="languages-filetypes">
-<h2>Languages &amp; Filetypes<a class="headerlink" href="#languages-filetypes" title="Permalink to this headline">¶</a></h2>
+<section id="languages-filetypes">
+<h2>Languages &amp; Filetypes<a class="headerlink" href="#languages-filetypes" title="Link to this heading">¶</a></h2>
 <p>Templates are created using traditional front-end code languages like HTML, CSS, and JavaScript. HTML pages are typically embeded with our own custom variable syntax known as the “Lex Parsing” language to identify <a class="reference external" href="#">insertion points</a> and to perform basic conditional logic.</p>
-</div>
-<div class="section" id="folder-hierarchy">
-<h2>Folder Hierarchy<a class="headerlink" href="#folder-hierarchy" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="folder-hierarchy">
+<h2>Folder Hierarchy<a class="headerlink" href="#folder-hierarchy" title="Link to this heading">¶</a></h2>
 <p>The following predefined folder structure is required for a properly functioning PageStudio website.</p>
 <ul class="simple">
 <li><p><strong>assets</strong> design assets — Stylesheets, JavaScripts, images, fonts and icons</p></li>
@@ -322,9 +309,9 @@
 <li><p><strong>partials</strong> partial files to be embeded into layout files — header.html, footer.html, sidebar.html</p></li>
 <li><p>[root] config files — template.conf, template-preview.png</p></li>
 </ul>
-</div>
-<div class="section" id="folders-explained">
-<h2>Folders Explained<a class="headerlink" href="#folders-explained" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="folders-explained">
+<h2>Folders Explained<a class="headerlink" href="#folders-explained" title="Link to this heading">¶</a></h2>
 <p>Further explaination of the pre-defined template folder hierarchy.</p>
 <p><strong>/assets/</strong></p>
 <p>This folder contains images, svg, icons, css, and javascript files. These files can be further organized into folders of their own and may use separate hierarchies.</p>
@@ -342,8 +329,8 @@
 <p>This folder contains reusable static HTML files meant to be embeded into layout files. Making up a complete page. Typical use case is the futher break down of template files into resuable bits and pieces (header.html, footer.html, nav.html). A <strong>header.html</strong> as an example may contain HTML code from the opening <code class="docutils literal notranslate"><span class="pre">&lt;!DOCTYPE</span> <span class="pre">html&gt;</span></code> tag to the opening <code class="docutils literal notranslate"><span class="pre">&lt;body&gt;</span></code> tag, to even the opening <code class="docutils literal notranslate"><span class="pre">&lt;main&gt;</span></code> tag. <strong>footer.html</strong> may include anything from <code class="docutils literal notranslate"><span class="pre">&lt;/main&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;/body&gt;</span></code>, to the closing <code class="docutils literal notranslate"><span class="pre">&lt;/html&gt;</span></code> tag.</p>
 <p><strong>/[root]/</strong></p>
 <p>The root folder is the main folder containing all the aforementioned folders. It usually carries the name of your template. At its base are two <strong>required</strong> files — <a class="reference internal" href="template-files/template-configuration.html"><span class="doc">template.conf</span></a> and <a class="reference internal" href="template-files/template-preview-image.html"><span class="doc">template-preview.png</span></a>.</p>
-</div>
-</div>
+</section>
+</section>
 
 
               </div>
@@ -385,7 +372,7 @@
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 7.3.7.<br>
 </p>
     </div>
     

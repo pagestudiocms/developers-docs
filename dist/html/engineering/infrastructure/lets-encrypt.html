@@ -1,11 +1,11 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lets Encrypt &#8212; PageStudio 3.2.0 documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Lets Encrypt &#8212; PageStudio 3.3.1 documentation</title>
     
     <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -22,21 +22,22 @@
       
   
     
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/pydata-sphinx-theme.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b20cc3f5" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/pydata-sphinx-theme.css?v=1140d252" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=45efc450" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=cb90036b" />
     
     <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
   
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/documentation_options.js?v=6f23fdb8"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
@@ -52,11 +53,9 @@
   <div id="navbar-start">
     
     
-
 <a class="navbar-brand" href="../../index.html">
-  <img src="../../_static/logo.png" class="logo" alt="logo">
+<p class="title">PageStudio</p>
 </a>
-
 
     
   </div>
@@ -66,7 +65,7 @@
   </button>
 
   
-  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+  <div id="navbar-collapsible" class=" collapse navbar-collapse">
     <div id="navbar-center" class="mr-auto">
       
       <div class="navbar-center-item">
@@ -86,18 +85,6 @@
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../cms/index.html">
   CMS
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../cms/index.html">
-  CMS
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../cms/visual-editor/index.html">
-  Visual Editor
  </a>
 </li>
 
@@ -218,22 +205,22 @@
               
               <div>
                 
-  <div class="section" id="lets-encrypt">
-<h1>Lets Encrypt<a class="headerlink" href="#lets-encrypt" title="Permalink to this headline">¶</a></h1>
-</div>
-<div class="section" id="certbot">
-<h1>Certbot<a class="headerlink" href="#certbot" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="installing-certbot-on-apache">
-<h2>Installing Certbot on Apache<a class="headerlink" href="#installing-certbot-on-apache" title="Permalink to this headline">¶</a></h2>
+  <section id="lets-encrypt">
+<h1>Lets Encrypt<a class="headerlink" href="#lets-encrypt" title="Link to this heading">¶</a></h1>
+</section>
+<section id="certbot">
+<h1>Certbot<a class="headerlink" href="#certbot" title="Link to this heading">¶</a></h1>
+<section id="installing-certbot-on-apache">
+<h2>Installing Certbot on Apache<a class="headerlink" href="#installing-certbot-on-apache" title="Link to this heading">¶</a></h2>
 <p>See https://www.digitalocean.com/community/tutorials/how-to-set-up-let-s-encrypt-certificates-for-multiple-apache-virtual-hosts-on-ubuntu-14-04
 See https://certbot.eff.org/lets-encrypt/ubuntuxenial-apache</p>
 <p>Certificates for multiple domains</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">certbot</span><span class="o">-</span><span class="n">auto</span> <span class="o">-</span><span class="n">d</span> <span class="n">one</span><span class="o">.</span><span class="n">example</span><span class="o">.</span><span class="n">com</span> <span class="o">-</span><span class="n">d</span> <span class="n">two</span><span class="o">.</span><span class="n">example</span><span class="o">.</span><span class="n">com</span> <span class="o">-</span><span class="n">d</span> <span class="n">three</span><span class="o">.</span><span class="n">example</span><span class="o">.</span><span class="n">com</span> <span class="o">-</span><span class="n">d</span> <span class="n">example</span><span class="o">.</span><span class="n">org</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="wildcard">
-<h2>Wildcard<a class="headerlink" href="#wildcard" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="wildcard">
+<h2>Wildcard<a class="headerlink" href="#wildcard" title="Link to this heading">¶</a></h2>
 <p>https://github.com/veeti/manuale#usage</p>
 <p>Wildcard certs are known as SAN’s. To generate a SAN cert you’ll need to specify the <code class="docutils literal notranslate"><span class="pre">--manual</span></code> directive.</p>
 <p>With Certbot you should add an additional <code class="docutils literal notranslate"><span class="pre">-d</span></code> item for each domain that needs to be covered by the cert.</p>
@@ -252,9 +239,9 @@ See https://certbot.eff.org/lets-encrypt/ubuntuxenial-apache</p>
 certbot –manual –installer apache -d *.pagestudiocms.com -d pagestudiocms.com –preferred-challenges=dns</p>
 <p>See: https://www.digitalocean.com/community/tutorials/how-to-set-up-let-s-encrypt-certificates-for-multiple-apache-virtual-hosts-on-ubuntu-14-04
 https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-ubuntu-18-04</p>
-</div>
-<div class="section" id="single-domain-renewal">
-<h2>Single Domain Renewal<a class="headerlink" href="#single-domain-renewal" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="single-domain-renewal">
+<h2>Single Domain Renewal<a class="headerlink" href="#single-domain-renewal" title="Link to this heading">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Renew single domain </span>
 <span class="c1"># </span>
 <span class="c1"># certbot --apache certonly -n -d *.pagestudiocms.com~</span>
@@ -264,9 +251,9 @@ https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">/etc/letsencrypt/live/</span></code></p>
-</div>
-<div class="section" id="new-renewal-method-2019-12-17">
-<h2>New Renewal Method - 2019-12-17<a class="headerlink" href="#new-renewal-method-2019-12-17" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="new-renewal-method-2019-12-17">
+<h2>New Renewal Method - 2019-12-17<a class="headerlink" href="#new-renewal-method-2019-12-17" title="Link to this heading">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">certbot</span> <span class="n">certonly</span> <span class="o">--</span><span class="n">manual</span> <span class="o">--</span><span class="n">manual</span><span class="o">-</span><span class="n">public</span><span class="o">-</span><span class="n">ip</span><span class="o">-</span><span class="n">logging</span><span class="o">-</span><span class="n">ok</span> <span class="o">--</span><span class="n">preferred</span><span class="o">-</span><span class="n">challenges</span> <span class="n">dns</span><span class="o">-</span><span class="mi">01</span> <span class="o">--</span><span class="n">server</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">acme</span><span class="o">-</span><span class="n">v02</span><span class="o">.</span><span class="n">api</span><span class="o">.</span><span class="n">letsencrypt</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">directory</span> <span class="o">-</span><span class="n">d</span> <span class="s2">&quot;*.pagestudiocms.com&quot;</span> <span class="o">-</span><span class="n">d</span> <span class="n">pagestudiocms</span><span class="o">.</span><span class="n">com</span>
 </pre></div>
 </div>
@@ -284,8 +271,8 @@ https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s
  <span class="o">-</span><span class="n">d</span> <span class="n">pagestudiocms</span><span class="o">.</span><span class="n">com</span>
 </pre></div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
               </div>
@@ -313,7 +300,7 @@ https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 7.3.7.<br>
 </p>
     </div>
     

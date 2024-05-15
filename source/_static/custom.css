@@ -1,10 +1,205 @@
+:root {
+  /*****************************************************************************
+	* Theme config
+	**/
+  --pst-header-height: 50px;
+
+  /*****************************************************************************
+	* Font size
+	**/
+  --pst-font-size-base: 15px;
+  /* base font size - applied at body / html level */
+
+  /* heading font sizes */
+  --pst-font-size-h1: 36px;
+  --pst-font-size-h2: 32px;
+  --pst-font-size-h3: 26px;
+  --pst-font-size-h4: 21px;
+  --pst-font-size-h5: 18px;
+  --pst-font-size-h6: 16px;
+
+  /* smaller then heading font sizes*/
+  --pst-font-size-milli: 12px;
+
+  --pst-sidebar-font-size: 0.9em;
+  --pst-sidebar-caption-font-size: 0.9em;
+
+  /*****************************************************************************
+	* Font family
+	**/
+  /* These are adapted from https://systemfontstack.com/ */
+  --pst-font-family-base-system: "Open Sans",
+    "Helvetica Neue", Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+    Segoe UI Symbol;
+  --pst-font-family-monospace-system: "SFMono-Regular", Menlo, Consolas, Monaco,
+    Liberation Mono, Lucida Console, monospace;
+
+  --pst-font-family-base: var(--pst-font-family-base-system);
+  --pst-font-family-heading: var(--pst-font-family-base-system);
+  --pst-font-family-monospace: var(--pst-font-family-monospace-system);
+
+   /*****************************************************************************
+  * Color
+  *
+  * Colors are defined in rgb string way, "red, green, blue"
+  **/
+  /* --pst-color-primary: 19, 6, 84; */
+  /* --pst-color-primary: 0, 123, 255; */
+  /* --pst-color-primary: 4, 117, 238; */
+  --pst-color-primary: 12, 12, 14;
+  --pst-color-success: 40, 167, 69;
+  --pst-color-info: 0, 123, 255; /*23, 162, 184;*/
+  --pst-color-warning: 255, 193, 7;
+  --pst-color-danger: 220, 53, 69;
+  --pst-color-text-base: 51, 51, 51;
+
+  --pst-color-h1: var(--pst-color-primary);
+  --pst-color-h2: var(--pst-color-primary);
+  --pst-color-h3: var(--pst-color-text-base);
+  --pst-color-h4: var(--pst-color-text-base);
+  --pst-color-h5: var(--pst-color-text-base);
+  --pst-color-h6: var(--pst-color-text-base);
+  --pst-color-paragraph: var(--pst-color-text-base);
+  --pst-color-link: var(--pst-color-info);
+  --pst-color-link-hover: var(--pst-color-info);
+  /* --pst-color-headerlink: 198, 15, 15; */
+  --pst-color-headerlink: var(--pst-color-info);
+  --pst-color-headerlink-hover: 255, 255, 255;
+  --pst-color-preformatted-text: 34, 34, 34;
+  --pst-color-preformatted-background: 250, 250, 250;
+  --pst-color-inline-code: 232, 62, 140;
+
+  /* --pst-color-active-navigation: 19, 6, 84; */
+  --pst-color-active-navigation: var(--pst-color-info);
+  --pst-color-navbar-link: 255, 255, 255;
+  --pst-color-navbar-link-hover: 255, 255, 255;
+  --pst-color-navbar-link-active: var(--pst-color-info); /* Old #61aeee; */
+  --pst-color-navbar-bg: 12, 12, 14; /* #0c0c0e */
+  --pst-color-sidebar-link: 77, 77, 77;
+  --pst-color-sidebar-link-hover: var(--pst-color-active-navigation);
+  --pst-color-sidebar-link-active: var(--pst-color-active-navigation);
+  --pst-color-sidebar-expander-background-hover: 244, 244, 244;
+  --pst-color-sidebar-caption: 77, 77, 77;
+  --pst-color-toc-link: 119, 117, 122;
+  --pst-color-toc-link-hover: var(--pst-color-active-navigation);
+  --pst-color-toc-link-active: var(--pst-color-active-navigation);
+}
+
+body {
+  padding-top: calc(var(--pst-header-height));
+}
+
+a.headerlink {
+  color: rgba(var(--pst-color-headerlink),1);
+}
+a.headerlink:hover {
+  background-color: rgba(var(--pst-color-headerlink),1);
+  color: rgba(var(--pst-color-headerlink-hover),1)
+}
+
 pre {
-	margin: 1.5em 0;
-	padding: 10px;
-	line-height: 1.2em;
-	color: #ccc;
-	background-color: #212121;
-	border: 1px solid #212121;
-	border-radius: 0;
-	box-shadow: 1px 1px 1px #d8d8d8;
+  margin: 1.5em 0;
+  padding: 10px;
+  line-height: 1.2em;
+  color: #ccc;
+  background-color: #212121;
+  border: 1px solid #212121;
+  border-radius: 0;
+  box-shadow: 1px 1px 1px #d8d8d8;
+}
+
+@media (min-width: 720px) {
+  @supports (position:-webkit-sticky) or (position:sticky) {
+    .bd-sidebar {
+      /* position: -webkit-sticky; */
+      /* position: sticky; */
+      top: calc(var(--pst-header-height));
+      /* z-index: 1000; */
+      height: calc(100vh - var(--pst-header-height));
+    }
+  }
+  #navbar-collapsible {
+    padding-left: 50px;
+  }
+}
+
+/* Navbar */
+.navbar-light {
+	background: rgba(var(--pst-color-navbar-bg), 1) !important;
+	box-shadow: none;
+}
+.navbar-light .navbar-nav li a.nav-link {
+  /* padding:0 .5rem; */
+  color: rgba(var(--pst-color-navbar-link),1)
+  /* color: rgba(255, 255, 255, 1); */
+}
+.navbar-light .navbar-nav li a.nav-link:hover {
+  color: rgba(var(--pst-color-navbar-link-hover),.8);
+}
+.navbar-light .navbar-nav > .active > .nav-link {
+  color: rgba(var(--pst-color-navbar-link-active),1);
+}
+.navbar-light .navbar-nav > .active > .nav-link:hover {
+  color: rgba(var(--pst-color-navbar-link-active),1);
+}
+
+/* .navbar-light .navbar-brand,
+.navbar-light .navbar-brand:focus,
+.navbar-light .navbar-brand:hover {
+  color:#fff
+}
+.navbar-light .navbar-nav .nav-link {
+  color:hsla(0,0%,100%,.5)
+}
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+  color:hsla(0,0%,100%,.75)
+}
+.navbar-light .navbar-nav .nav-link.disabled {
+  color:hsla(0,0%,100%,.25)
+}
+.navbar-light .navbar-nav .active>.nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show>.nav-link {
+  color:#fff
+}
+.navbar-light .navbar-toggler {
+  color:hsla(0,0%,100%,.5);
+  border-color:hsla(0,0%,100%,.1)
+}
+.navbar-light .navbar-toggler-icon {
+  background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30'%3E%3Cpath stroke='rgba(255,255,255,0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E")
+}
+.navbar-light .navbar-text {
+  color:hsla(0,0%,100%,.5)
+}
+.navbar-light .navbar-text a,
+.navbar-light .navbar-text a:focus,
+.navbar-light .navbar-text a:hover {
+  color:#fff
+} */
+
+.navbar .navbar-brand {
+  background: url('logo-white_175x15.png') no-repeat left center;
+  width: 175px;
+}
+.navbar .navbar-brand p {
+  opacity: 0;
+}
+
+.container,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl {
+  max-width: 1900px;
+}
+
+/* Sidebar */
+@media (min-width: 1200px) {
+  .col-md-3 {
+    flex: 0 0 16.66667%;
+    max-width: 16.66667%;
+  }
 }

@@ -1,11 +1,11 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Template Tags (Deepdive) &#8212; PageStudio 3.2.0 documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Template Tags (Deepdive) &#8212; PageStudio 3.3.1 documentation</title>
     
     <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -22,23 +22,24 @@
       
   
     
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/pydata-sphinx-theme.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b20cc3f5" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/pydata-sphinx-theme.css?v=1140d252" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=45efc450" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=cb90036b" />
     
     <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
   
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/documentation_options.js?v=6f23fdb8"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Template Tags Reference" href="../template-tags-reference/index.html" />
     <link rel="prev" title="Template Variables" href="../template-variables.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
@@ -54,11 +55,9 @@
   <div id="navbar-start">
     
     
-
 <a class="navbar-brand" href="../../index.html">
-  <img src="../../_static/logo.png" class="logo" alt="logo">
+<p class="title">PageStudio</p>
 </a>
-
 
     
   </div>
@@ -68,7 +67,7 @@
   </button>
 
   
-  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+  <div id="navbar-collapsible" class=" collapse navbar-collapse">
     <div id="navbar-center" class="mr-auto">
       
       <div class="navbar-center-item">
@@ -88,18 +87,6 @@
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../cms/index.html">
   CMS
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../cms/index.html">
-  CMS
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../cms/visual-editor/index.html">
-  Visual Editor
  </a>
 </li>
 
@@ -360,12 +347,12 @@
               
               <div>
                 
-  <div class="section" id="template-tags-deepdive">
-<h1>Template Tags (Deepdive)<a class="headerlink" href="#template-tags-deepdive" title="Permalink to this headline">¶</a></h1>
+  <section id="template-tags-deepdive">
+<h1>Template Tags (Deepdive)<a class="headerlink" href="#template-tags-deepdive" title="Link to this heading">¶</a></h1>
 <p>Tags allow you to tap into more advanced functionality using simple syntax right inside your layouts, page layouts, and even pages themselves. Tags can allow you to do some really powerful things without the need to understand complex programming logic.</p>
 <p>The following guide will teach you the basics of tags and how to use them in your layouts.</p>
-<hr /><div class="section" id="variables">
-<h2>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h2>
+<hr /><section id="variables">
+<h2>Variables<a class="headerlink" href="#variables" title="Link to this heading">¶</a></h2>
 <p>At their very basic form, tags are simply a variable:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span> <span class="n">my_var</span> <span class="p">}}</span>
 </pre></div>
@@ -376,9 +363,9 @@
 <p>The white-space inside the curly braces is optional, but does help with aesthetics and readability.</p>
 </div>
 <p>For a complete list of all available template tags see the <a class="reference internal" href="../template-variables.html"><span class="doc">Template Variables</span></a> page.</p>
-</div>
-<div class="section" id="tags-vs-tag-pairs">
-<h2>Tags vs Tag Pairs<a class="headerlink" href="#tags-vs-tag-pairs" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="tags-vs-tag-pairs">
+<h2>Tags vs Tag Pairs<a class="headerlink" href="#tags-vs-tag-pairs" title="Link to this heading">¶</a></h2>
 <p>Tag groups (also referred to as “tag pairs”) differ from variable tags in that they allow additional markup within the opening and closing tags. They grant developers the ability to insert business logic into templates for finer control over the display of rendered template layout.</p>
 <p><strong>Example</strong></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span> <span class="n">module</span><span class="o">-</span><span class="n">namespace</span><span class="o">.</span><span class="n">tag</span> <span class="p">}}</span>
@@ -386,13 +373,13 @@
 <span class="p">{{</span> \<span class="n">module</span><span class="o">-</span><span class="n">namespace</span><span class="o">.</span><span class="n">tag</span> <span class="p">}}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="comments">
-<h2>Comments<a class="headerlink" href="#comments" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="comments">
+<h2>Comments<a class="headerlink" href="#comments" title="Link to this heading">¶</a></h2>
 <p>If you’d like to comment out a section of code or content, you can wrap them inside <code class="docutils literal notranslate"><span class="pre">{{#</span> <span class="pre">and</span> <span class="pre">#}}</span></code>. Ex: <code class="docutils literal notranslate"><span class="pre">{{#</span> <span class="pre">This</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">comment</span> <span class="pre">#}}</span></code>. This has the advantage over conventional HTML comment tags that it won’t be visible to users viewing your website’s source code.</p>
-<hr /></div>
-<div class="section" id="tag-attributes">
-<h2>Tag Attributes<a class="headerlink" href="#tag-attributes" title="Permalink to this headline">¶</a></h2>
+<hr /></section>
+<section id="tag-attributes">
+<h2>Tag Attributes<a class="headerlink" href="#tag-attributes" title="Link to this heading">¶</a></h2>
 <p>What makes tags really powerful is they can take attributes that give you the freedom to modify the tag output based on input data. Here is an example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span> <span class="n">url</span><span class="p">:</span><span class="n">segments</span> <span class="n">segment</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="p">}}</span>
 </pre></div>
@@ -411,8 +398,8 @@
 <p>Some parameters are required and some are optional. Make sure to check the plugins section to make sure you are passing</p>
 </div>
 <p>all of the right parameters, and if there are any optional ones that will give you added functionality you need.</p>
-<div class="section" id="using-tags-and-variables-in-tag-parameters">
-<h3>Using Tags and Variables In Tag Parameters<a class="headerlink" href="#using-tags-and-variables-in-tag-parameters" title="Permalink to this headline">¶</a></h3>
+<section id="using-tags-and-variables-in-tag-parameters">
+<h3>Using Tags and Variables In Tag Parameters<a class="headerlink" href="#using-tags-and-variables-in-tag-parameters" title="Link to this heading">¶</a></h3>
 <p>Inside quotes, PageStudioCMS cannot parse curly braces. So, for instance, if you wanted to pass the value of the slug from the page plugin, this <strong>will not work</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span> <span class="n">url</span><span class="p">:</span><span class="n">segments</span> <span class="n">segment</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">default</span><span class="o">=</span><span class="s2">&quot;{{ page:slug }}&quot;</span> <span class="p">}}</span>
 </pre></div>
@@ -433,10 +420,10 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span> <span class="n">url</span><span class="p">:</span><span class="n">segments</span> <span class="n">segment</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">default</span><span class="o">=</span><span class="s2">&quot;[[ if global:environment == &#39;development&#39; ]]dev_home[[ else ]]home[[ endif ]]&quot;</span> <span class="p">}}</span>
 </pre></div>
 </div>
-<hr /></div>
-</div>
-<div class="section" id="tag-pairs">
-<h2>Tag Pairs<a class="headerlink" href="#tag-pairs" title="Permalink to this headline">¶</a></h2>
+<hr /></section>
+</section>
+<section id="tag-pairs">
+<h2>Tag Pairs<a class="headerlink" href="#tag-pairs" title="Link to this heading">¶</a></h2>
 <p>Another powerful feature of PageStudioCMS tags is the ability to use data between tags. Take this example of a blog posts tag:</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span>{{ blog:posts limit=&quot;2&quot; order-by=&quot;title&quot; order-dir=&quot;desc&quot; }}
     <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>{{ title }}<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
@@ -452,25 +439,25 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span> <span class="nb">format</span><span class="p">:</span><span class="n">markdown</span> <span class="p">}}</span><span class="n">Let</span><span class="s1">&#39;s _convert_ this to **HTML**.{{ /format:markdown }}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="single-variable-loops">
-<h2>Single Variable Loops<a class="headerlink" href="#single-variable-loops" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="single-variable-loops">
+<h2>Single Variable Loops<a class="headerlink" href="#single-variable-loops" title="Link to this heading">¶</a></h2>
 <p>Occasionally, single tags can act as arrays of data that you can loop through. You can do so using a similar tag pair syntax:</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span>{{ images }}
     <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;{{ url }}&quot;</span> <span class="p">/&gt;</span>
 {{ /images }}
 </pre></div>
 </div>
-<hr /></div>
-<div class="section" id="tag-conditionals">
-<h2>Tag Conditionals<a class="headerlink" href="#tag-conditionals" title="Permalink to this headline">¶</a></h2>
+<hr /></section>
+<section id="tag-conditionals">
+<h2>Tag Conditionals<a class="headerlink" href="#tag-conditionals" title="Link to this heading">¶</a></h2>
 <p>Many times in your layouts you will want to show something under certain conditions. For instance, if a user is logged in or if a url segment has a certain value. PageStudioCMS tags allow you to do that with an if/else tag syntax.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Undefined variables in Conditionals are evaluated to be null. This allows you to do things like <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">if</span> <span class="pre">foo</span> <span class="pre">}}</span></code> to check if a variable exists.</p>
 </div>
-<div class="section" id="basic-conditionals">
-<h3>Basic Conditionals<a class="headerlink" href="#basic-conditionals" title="Permalink to this headline">¶</a></h3>
+<section id="basic-conditionals">
+<h3>Basic Conditionals<a class="headerlink" href="#basic-conditionals" title="Link to this heading">¶</a></h3>
 <p>Here is a simple example of a conditional tag statement:</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span>{{ if user:logged_in }}
      <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>You are logged in.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
@@ -487,9 +474,9 @@
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;path/to/your/image/image_name.jpg&quot;</span> <span class="p">/&gt;</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="conditional-operators">
-<h3>Conditional Operators<a class="headerlink" href="#conditional-operators" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="conditional-operators">
+<h3>Conditional Operators<a class="headerlink" href="#conditional-operators" title="Link to this heading">¶</a></h3>
 <p>You can use operators to compare values in an if statement. These used to compare two values. Here’s an example:</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span>{{ if {url:segments segment=&quot;2&quot;} == &#39;categories&#39; }}
     <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Looks like you are in the categories section.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
@@ -506,10 +493,6 @@
 </div>
 <p>Here are the available conditional operators:</p>
 <table class="table">
-<colgroup>
-<col style="width: 17%" />
-<col style="width: 83%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Operator</p></th>
 <th class="head"><p>Notes</p></th>
@@ -557,9 +540,9 @@ or desc, default is asc.</p></td>
 <p class="admonition-title">Note</p>
 <p><strong>!</strong> and <strong>not</strong> are interchangeable. The only requirement is that not must have a space on both sides.</p>
 </div>
-</div>
-<div class="section" id="checking-if-a-variable-exists">
-<h3>Checking if a Variable Exists<a class="headerlink" href="#checking-if-a-variable-exists" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="checking-if-a-variable-exists">
+<h3>Checking if a Variable Exists<a class="headerlink" href="#checking-if-a-variable-exists" title="Link to this heading">¶</a></h3>
 <p>To check if a variable exists in a conditional, you use the exists keyword.</p>
 <p><strong>Examples</strong></p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span>{{ if exists foo }}
@@ -579,9 +562,9 @@ or desc, default is asc.</p></td>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span> <span class="k">if</span> <span class="n">exists</span> <span class="n">foo</span> <span class="o">==</span> <span class="n">false</span> <span class="p">}}</span> <span class="o">...</span> <span class="p">{{</span> <span class="n">endif</span> <span class="p">}}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="multiple-conditionals">
-<h3>Multiple Conditionals<a class="headerlink" href="#multiple-conditionals" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="multiple-conditionals">
+<h3>Multiple Conditionals<a class="headerlink" href="#multiple-conditionals" title="Link to this heading">¶</a></h3>
 <p>You can have multiple conditionals for some more advanced conditional statements:</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span>{{ if variables:custom_var == &#39;foo&#39; }}
     <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Looks like a foo.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
@@ -592,9 +575,9 @@ or desc, default is asc.</p></td>
 {{ endif }}
 </pre></div>
 </div>
-</div>
-<div class="section" id="logical-operators">
-<h3>Logical Operators<a class="headerlink" href="#logical-operators" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="logical-operators">
+<h3>Logical Operators<a class="headerlink" href="#logical-operators" title="Link to this heading">¶</a></h3>
 <p>You can also use logical operators like so:</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span>{{ if variables:custom_var != &#39;foo&#39; and variables:custom_var != &#39;bar&#39; }}
      <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>No foos and no bars!<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
@@ -608,9 +591,9 @@ or desc, default is asc.</p></td>
 </ul>
 <div class="toctree-wrapper compound">
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
               </div>
@@ -652,7 +635,7 @@ or desc, default is asc.</p></td>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 7.3.7.<br>
 </p>
     </div>
     
