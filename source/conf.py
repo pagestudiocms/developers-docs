@@ -139,10 +139,11 @@ todo_include_todos = True
 # html_theme = "sphinx_rtd_theme"
 # html_theme = "sphinx_rtd_theme_ps_v4"
 html_theme = "pydata_sphinx_theme"
+# html_theme = "my_pydata_sphinx_theme"
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-html_logo = "_static/logo-white_175x15.png"
+# html_logo = "_static/logo-white_175x15.png"
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
@@ -154,9 +155,9 @@ html_logo = "_static/logo-white_175x15.png"
 # documentation.
 html_theme_options = {
   "logo": {
-    "image_dark": "_static/logo.png",
-    "image_light": "_static/logo.png",
-    "alt_text": "My awesome documentation - Home",
+    "image_dark": "_static/logo-white_175x15.png",
+    "image_light": "_static/logo_175x15.png",
+    "alt_text": "Pagestudio Developer Docs - Home",
   },
   "navbar_align": "left",  # [left, content, right] For testing that the navbar items align properly
   "navbar_start": ["navbar-logo"]

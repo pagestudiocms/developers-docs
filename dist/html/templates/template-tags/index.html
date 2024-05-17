@@ -1,36 +1,44 @@
+
 <!DOCTYPE html>
 
-<html lang="en" data-content_root="../../">
+
+<html lang="en" data-content_root="../../" >
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Template Tags (Deepdive) &#8212; PageStudio 3.3.1 documentation</title>
-    
-    <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
   
-    
-    <link rel="stylesheet"
-      href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
   
-    
-      
   
-    
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b20cc3f5" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/pydata-sphinx-theme.css?v=1140d252" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=45efc450" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
-    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=cb90036b" />
-    
-    <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=6d6855a2" />
   
-    <script src="../../_static/documentation_options.js?v=6f23fdb8"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=9ac01507"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/design-tabs.js?v=36754332"></script>
@@ -38,321 +46,365 @@
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Template Tags Reference" href="../template-tags-reference/index.html" />
     <link rel="prev" title="Template Variables" href="../template-variables.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+    <meta name="docbuild:last-update" content="May 17, 2024"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
-
-  <div id="navbar-start">
-    
-    
-<a class="navbar-brand" href="../../index.html">
-<p class="title">PageStudio</p>
-</a>
-
-    
-  </div>
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
   </button>
 
   
-  <div id="navbar-collapsible" class=" collapse navbar-collapse">
-    <div id="navbar-center" class="mr-auto">
-      
-      <div class="navbar-center-item">
-        <ul id="navbar-main-elements" class="navbar-nav">
-    <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../index.html">
-  Introduction
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../api/v1/index.html">
-  API
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../cms/index.html">
-  CMS
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../engineering/index.html">
-  Engineering
- </a>
-</li>
-
-<li class="toctree-l1 current active nav-item">
- <a class="reference internal nav-link" href="../index.html">
-  Template Development
- </a>
-</li>
-
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class=" navbar-header-items__start">
     
-</ul>
-      </div>
+      <div class="navbar-item">
+
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo_175x15.png" class="logo__image only-light" alt="Pagestudio Developer Docs - Home"/>
+    <script>document.write(`<img src="../../_static/logo-white_175x15.png" class="logo__image only-dark" alt="Pagestudio Developer Docs - Home"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../index.html">
+                        Introduction
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../api/v1/index.html">
+                        API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../cms/index.html">
+                        CMS
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../engineering/index.html">
+                        Engineering
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../index.html">
+                        Template Development
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
       
     </div>
-
-    <div id="navbar-end">
+    
+    
+    <div class="navbar-header-items__end">
       
-      <div class="navbar-end-item">
-        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
-      </ul>
-      </div>
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
       
     </div>
-  </div>
-</div>
-    </nav>
     
-
-    <div class="container-xl">
-      <div class="row">
-          
-            
-            <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar">
-              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-  <div class="bd-toc-item active">
-    <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../template-overview.html">
-   Template Overview
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../template-variables.html">
-   Template Variables
-  </a>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
-   Template Tags (Deepdive)
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="simple">
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../template-tags-reference/index.html">
-   Template Tags Reference
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../template-tags-reference/entries-tag.html">
-     Entries Tag
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../template-tags-reference/related-entries-tag.html">
-     Next/Previous Entries
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../template-tags-reference/collections-tag.html">
-     Collections Tag
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../template-tags-reference/galleries-tag.html">
-     Galleries Tag
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../template-tags-reference/categories-tag.html">
-     Categories Tags
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../template-tags-reference/snippets-tag.html">
-     Snippets Tag
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../template-files/index.html">
-   Template Files
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../template-files/template-configuration.html">
-     Template Configuration
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../template-files/template-preview-image.html">
-     Template Preview Image
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../template-files/template-layout.html">
-     Template Layout
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../template-files/template-partial.html">
-     Template Partial
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../template-files/menus-and-navigation.html">
-     Menus &amp; Navigations
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
   </div>
-</nav>
-              </div>
-              <div class="sidebar-end-items">
-              </div>
-            </div>
-            
-          
+  
+  
+    <div class="navbar-persistent--mobile">
 
-          
-          <div class="d-none d-xl-block col-xl-2 bd-toc">
-            
-              
-              <div class="toc-item">
-                
-<div class="tocsection onthispage pt-5 pb-3">
-    <i class="fas fa-list"></i> On this page
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
 </div>
 
-<nav id="bd-toc-nav">
-    <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#variables">
-   Variables
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tags-vs-tag-pairs">
-   Tags vs Tag Pairs
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#comments">
-   Comments
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tag-attributes">
-   Tag Attributes
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#using-tags-and-variables-in-tag-parameters">
-     Using Tags and Variables In Tag Parameters
-    </a>
-   </li>
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../index.html">
+                        Introduction
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../api/v1/index.html">
+                        API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../cms/index.html">
+                        CMS
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../engineering/index.html">
+                        Engineering
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../index.html">
+                        Template Development
+                      </a>
+                    </li>
+                
   </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tag-pairs">
-   Tag Pairs
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#single-variable-loops">
-   Single Variable Loops
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tag-conditionals">
-   Tag Conditionals
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#basic-conditionals">
-     Basic Conditionals
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#conditional-operators">
-     Conditional Operators
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#checking-if-a-variable-exists">
-     Checking if a Variable Exists
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#multiple-conditionals">
-     Multiple Conditionals
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#logical-operators">
-     Logical Operators
-    </a>
-   </li>
-  </ul>
- </li>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../template-overview.html">Template Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../template-variables.html">Template Variables</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Template Tags (Deepdive)</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
 </ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../template-tags-reference/index.html">Template Tags Reference</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../template-tags-reference/entries-tag.html">Entries Tag</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../template-tags-reference/related-entries-tag.html">Next/Previous Entries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../template-tags-reference/collections-tag.html">Collections Tag</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../template-tags-reference/galleries-tag.html">Galleries Tag</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../template-tags-reference/categories-tag.html">Categories Tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../template-tags-reference/snippets-tag.html">Snippets Tag</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../template-files/index.html">Template Files</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../template-files/template-configuration.html">Template Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../template-files/template-preview-image.html">Template Preview Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../template-files/template-layout.html">Template Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../template-files/template-partial.html">Template Partial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../template-files/menus-and-navigation.html">Menus &amp; Navigations</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Template Development</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Template...</li>
+  </ul>
 </nav>
-              </div>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
               
-              <div class="toc-item">
+              
+              
                 
-              </div>
-              
-            
-          </div>
-          
-
-          
-          
-            
-          
-          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
-              
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
   <section id="template-tags-deepdive">
-<h1>Template Tags (Deepdive)<a class="headerlink" href="#template-tags-deepdive" title="Link to this heading">¶</a></h1>
+<h1>Template Tags (Deepdive)<a class="headerlink" href="#template-tags-deepdive" title="Link to this heading">#</a></h1>
 <p>Tags allow you to tap into more advanced functionality using simple syntax right inside your layouts, page layouts, and even pages themselves. Tags can allow you to do some really powerful things without the need to understand complex programming logic.</p>
 <p>The following guide will teach you the basics of tags and how to use them in your layouts.</p>
 <hr /><section id="variables">
-<h2>Variables<a class="headerlink" href="#variables" title="Link to this heading">¶</a></h2>
+<h2>Variables<a class="headerlink" href="#variables" title="Link to this heading">#</a></h2>
 <p>At their very basic form, tags are simply a variable:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span> <span class="n">my_var</span> <span class="p">}}</span>
 </pre></div>
@@ -365,7 +417,7 @@
 <p>For a complete list of all available template tags see the <a class="reference internal" href="../template-variables.html"><span class="doc">Template Variables</span></a> page.</p>
 </section>
 <section id="tags-vs-tag-pairs">
-<h2>Tags vs Tag Pairs<a class="headerlink" href="#tags-vs-tag-pairs" title="Link to this heading">¶</a></h2>
+<h2>Tags vs Tag Pairs<a class="headerlink" href="#tags-vs-tag-pairs" title="Link to this heading">#</a></h2>
 <p>Tag groups (also referred to as “tag pairs”) differ from variable tags in that they allow additional markup within the opening and closing tags. They grant developers the ability to insert business logic into templates for finer control over the display of rendered template layout.</p>
 <p><strong>Example</strong></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span> <span class="n">module</span><span class="o">-</span><span class="n">namespace</span><span class="o">.</span><span class="n">tag</span> <span class="p">}}</span>
@@ -375,11 +427,11 @@
 </div>
 </section>
 <section id="comments">
-<h2>Comments<a class="headerlink" href="#comments" title="Link to this heading">¶</a></h2>
+<h2>Comments<a class="headerlink" href="#comments" title="Link to this heading">#</a></h2>
 <p>If you’d like to comment out a section of code or content, you can wrap them inside <code class="docutils literal notranslate"><span class="pre">{{#</span> <span class="pre">and</span> <span class="pre">#}}</span></code>. Ex: <code class="docutils literal notranslate"><span class="pre">{{#</span> <span class="pre">This</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">comment</span> <span class="pre">#}}</span></code>. This has the advantage over conventional HTML comment tags that it won’t be visible to users viewing your website’s source code.</p>
 <hr /></section>
 <section id="tag-attributes">
-<h2>Tag Attributes<a class="headerlink" href="#tag-attributes" title="Link to this heading">¶</a></h2>
+<h2>Tag Attributes<a class="headerlink" href="#tag-attributes" title="Link to this heading">#</a></h2>
 <p>What makes tags really powerful is they can take attributes that give you the freedom to modify the tag output based on input data. Here is an example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span> <span class="n">url</span><span class="p">:</span><span class="n">segments</span> <span class="n">segment</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="p">}}</span>
 </pre></div>
@@ -399,7 +451,7 @@
 </div>
 <p>all of the right parameters, and if there are any optional ones that will give you added functionality you need.</p>
 <section id="using-tags-and-variables-in-tag-parameters">
-<h3>Using Tags and Variables In Tag Parameters<a class="headerlink" href="#using-tags-and-variables-in-tag-parameters" title="Link to this heading">¶</a></h3>
+<h3>Using Tags and Variables In Tag Parameters<a class="headerlink" href="#using-tags-and-variables-in-tag-parameters" title="Link to this heading">#</a></h3>
 <p>Inside quotes, PageStudioCMS cannot parse curly braces. So, for instance, if you wanted to pass the value of the slug from the page plugin, this <strong>will not work</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span> <span class="n">url</span><span class="p">:</span><span class="n">segments</span> <span class="n">segment</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">default</span><span class="o">=</span><span class="s2">&quot;{{ page:slug }}&quot;</span> <span class="p">}}</span>
 </pre></div>
@@ -423,7 +475,7 @@
 <hr /></section>
 </section>
 <section id="tag-pairs">
-<h2>Tag Pairs<a class="headerlink" href="#tag-pairs" title="Link to this heading">¶</a></h2>
+<h2>Tag Pairs<a class="headerlink" href="#tag-pairs" title="Link to this heading">#</a></h2>
 <p>Another powerful feature of PageStudioCMS tags is the ability to use data between tags. Take this example of a blog posts tag:</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span>{{ blog:posts limit=&quot;2&quot; order-by=&quot;title&quot; order-dir=&quot;desc&quot; }}
     <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>{{ title }}<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
@@ -441,7 +493,7 @@
 </div>
 </section>
 <section id="single-variable-loops">
-<h2>Single Variable Loops<a class="headerlink" href="#single-variable-loops" title="Link to this heading">¶</a></h2>
+<h2>Single Variable Loops<a class="headerlink" href="#single-variable-loops" title="Link to this heading">#</a></h2>
 <p>Occasionally, single tags can act as arrays of data that you can loop through. You can do so using a similar tag pair syntax:</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span>{{ images }}
     <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;{{ url }}&quot;</span> <span class="p">/&gt;</span>
@@ -450,14 +502,14 @@
 </div>
 <hr /></section>
 <section id="tag-conditionals">
-<h2>Tag Conditionals<a class="headerlink" href="#tag-conditionals" title="Link to this heading">¶</a></h2>
+<h2>Tag Conditionals<a class="headerlink" href="#tag-conditionals" title="Link to this heading">#</a></h2>
 <p>Many times in your layouts you will want to show something under certain conditions. For instance, if a user is logged in or if a url segment has a certain value. PageStudioCMS tags allow you to do that with an if/else tag syntax.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Undefined variables in Conditionals are evaluated to be null. This allows you to do things like <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">if</span> <span class="pre">foo</span> <span class="pre">}}</span></code> to check if a variable exists.</p>
 </div>
 <section id="basic-conditionals">
-<h3>Basic Conditionals<a class="headerlink" href="#basic-conditionals" title="Link to this heading">¶</a></h3>
+<h3>Basic Conditionals<a class="headerlink" href="#basic-conditionals" title="Link to this heading">#</a></h3>
 <p>Here is a simple example of a conditional tag statement:</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span>{{ if user:logged_in }}
      <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>You are logged in.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
@@ -476,7 +528,7 @@
 </div>
 </section>
 <section id="conditional-operators">
-<h3>Conditional Operators<a class="headerlink" href="#conditional-operators" title="Link to this heading">¶</a></h3>
+<h3>Conditional Operators<a class="headerlink" href="#conditional-operators" title="Link to this heading">#</a></h3>
 <p>You can use operators to compare values in an if statement. These used to compare two values. Here’s an example:</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span>{{ if {url:segments segment=&quot;2&quot;} == &#39;categories&#39; }}
     <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Looks like you are in the categories section.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
@@ -542,7 +594,7 @@ or desc, default is asc.</p></td>
 </div>
 </section>
 <section id="checking-if-a-variable-exists">
-<h3>Checking if a Variable Exists<a class="headerlink" href="#checking-if-a-variable-exists" title="Link to this heading">¶</a></h3>
+<h3>Checking if a Variable Exists<a class="headerlink" href="#checking-if-a-variable-exists" title="Link to this heading">#</a></h3>
 <p>To check if a variable exists in a conditional, you use the exists keyword.</p>
 <p><strong>Examples</strong></p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span>{{ if exists foo }}
@@ -564,7 +616,7 @@ or desc, default is asc.</p></td>
 </div>
 </section>
 <section id="multiple-conditionals">
-<h3>Multiple Conditionals<a class="headerlink" href="#multiple-conditionals" title="Link to this heading">¶</a></h3>
+<h3>Multiple Conditionals<a class="headerlink" href="#multiple-conditionals" title="Link to this heading">#</a></h3>
 <p>You can have multiple conditionals for some more advanced conditional statements:</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span>{{ if variables:custom_var == &#39;foo&#39; }}
     <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Looks like a foo.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
@@ -577,7 +629,7 @@ or desc, default is asc.</p></td>
 </div>
 </section>
 <section id="logical-operators">
-<h3>Logical Operators<a class="headerlink" href="#logical-operators" title="Link to this heading">¶</a></h3>
+<h3>Logical Operators<a class="headerlink" href="#logical-operators" title="Link to this heading">#</a></h3>
 <p>You can also use logical operators like so:</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span>{{ if variables:custom_var != &#39;foo&#39; and variables:custom_var != &#39;bar&#39; }}
      <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>No foos and no bars!<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
@@ -596,50 +648,117 @@ or desc, default is asc.</p></td>
 </section>
 
 
-              </div>
+                </article>
               
               
-              <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../template-variables.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Template Variables</p>
-        </div>
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../template-variables.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Template Variables</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="../template-tags-reference/index.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="../template-tags-reference/index.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Template Tags Reference</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
+                </footer>
               
-          </main>
-          
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
-      </div>
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">Variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tags-vs-tag-pairs">Tags vs Tag Pairs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comments">Comments</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tag-attributes">Tag Attributes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-tags-and-variables-in-tag-parameters">Using Tags and Variables In Tag Parameters</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tag-pairs">Tag Pairs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#single-variable-loops">Single Variable Loops</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tag-conditionals">Tag Conditionals</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-conditionals">Basic Conditionals</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-operators">Conditional Operators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#checking-if-a-variable-exists">Checking if a Variable Exists</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-conditionals">Multiple Conditionals</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#logical-operators">Logical Operators</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2023, PageStudio.
+      <br/>
+    
+  </p>
+</div>
+      
     </div>
   
-    <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
-  <div class="container">
-    
-    <div class="footer-item">
-      <p class="copyright">
-    &copy; Copyright 2023, PageStudio.<br>
-</p>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.2.
+</p></div>
+      
     </div>
-    
-    <div class="footer-item">
-      <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 7.3.7.<br>
-</p>
-    </div>
-    
-  </div>
-</footer>
+  
+</div>
+
+  </footer>
   </body>
 </html>
