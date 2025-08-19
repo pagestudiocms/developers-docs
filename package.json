@@ -1,0 +1,17 @@
+{
+  "name": "pagestudio-docs-server",
+  "version": "1.0.0",
+  "description": "Node server to serve build/html with live reload for PageStudio docs.",
+  "main": "server.js",
+  "scripts": {
+    "watch-html": "node html-autobuild.js",
+    "live-reload": "node ./node_modules/@pagestudiocms/pagestudio-template-development-server/server.js -w build/html -r build/html",
+    "start": "npm-run-all --parallel live-reload watch-html"
+  },
+  "devDependencies": {
+    "@pagestudiocms/pagestudio-template-development-server": "2.0.0-beta2",
+    "npm-run-all": "^4.1.5"
+  },
+  "author": "PageStudio",
+  "license": "MIT"
+}
