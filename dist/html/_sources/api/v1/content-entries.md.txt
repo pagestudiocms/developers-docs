@@ -1,48 +1,89 @@
 # Entries
 
-## Entry
+## GET Entry List
 
-### Get Entries List 
-Returns a list of all `entries` from the database.
+<details class="opblock-details">
+    <summary class="opblock-summary opblock-summary-get">
+        <code>GET</code> <code>rest/v1/entries/entries-list</code> Returns a list of all entries from the database.
+    </summary>
 
-```
-POST rest/v1/entries/entries-list
-```
+### Module 
+
 Maps to `content/api/entries/list`.
 
-#### Params
+### Parameters
 
 Key	| Required | Type	| Example	| Description
 --- | --- | --- | --- | ---
 id | Yes | int | 1 | The entity ID of the record in the `entries` table
 
-### GET Entry Blocks (previously referred to as Portlets)
+### Responses
 
-Retrieves a the blocks object stored in the database for a given entry and returns it in JSON format.
+| http code     | content-type                      | response                                                            |
+|---------------|-----------------------------------|---------------------------------------------------------------------|
+| `201`         | `text/plain;charset=UTF-8`        | `Configuration created successfully`                                |
+| `400`         | `application/json`                | `{"code":"400","message":"Bad Request"}`                            |
+| `405`         | `text/html;charset=utf-8`         | None                                                                |
 
-```
-GET /rest/v1/content/entries/block-data/:id
-```
+</details>
+
+## GET Entry Blocks 
+
+<details class="opblock-details">
+    <summary class="opblock-summary opblock-summary-get">
+        <code>GET</code> <code>/rest/v1/content/entries/block-data/{id}</code> Returns the blocks object stored in the database for a given entry.
+    </summary>
+
 Maps to `content/api/entries/block_data_get`.
 
-#### Params
+Entry Blocks (previously referred to as Portlets)
+
+### Parameters
 
 Key	| Required | Type	| Example	| Description
 --- | --- | --- | --- | ---
 id | Yes | int | `61` | The entity id of the page being requested.
 
-### UPDATE Entry Blocks (previously referred to as Portlets)
+### Responses
+
+| http code     | content-type                      | response                                                            |
+|---------------|-----------------------------------|---------------------------------------------------------------------|
+| `201`         | `text/plain;charset=UTF-8`        | `Configuration created successfully`                                |
+| `400`         | `application/json`                | `{"code":"400","message":"Bad Request"}`                            |
+| `405`         | `text/html;charset=utf-8`         | None                                                                |
+
+</details>
+
+## UPDATE Entry Blocks
 
 Updates blocks column in the database for a given entry.
 
-```
-POST /rest/v1/content/entries/block-data
-```
+<details class="opblock-details">
+    <summary class="opblock-summary opblock-summary-post">
+        <code>POST</code> <code>/rest/v1/content/entries/block-data</code> Updates blocks column in the database for a given entry.
+    </summary>
+
 Maps to `content/api/entries/block_data_post`.
 
-#### Params
+Entry Blocks (previously referred to as Portlets)
+
+### Parameters
+
+None
+
+### Payload
 
 Key	| Required | Type	| Example	| Description
 --- | --- | --- | --- | ---
 id | Yes | int | `61` | The entity id of the page being requested.
 portlets | Yes | string | `{"portlets":{}}` | A JSON object
+
+### Responses
+
+| http code     | content-type                      | response                                                            |
+|---------------|-----------------------------------|---------------------------------------------------------------------|
+| `201`         | `text/plain;charset=UTF-8`        | `Configuration created successfully`                                |
+| `400`         | `application/json`                | `{"code":"400","message":"Bad Request"}`                            |
+| `405`         | `text/html;charset=utf-8`         | None                                                                |
+
+</details>
